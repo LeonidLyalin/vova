@@ -91,6 +91,7 @@ AppAsset::register($this);
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse',
+                    'style' => 'padding-bottom : 0'
                 ],
             ]);
             $menuItems = [
@@ -112,14 +113,14 @@ AppAsset::register($this);
                         . '</li>';
             }
             echo Nav::widget([
-                'options' => ['class' => 'navbar-nav'],
+                'options' => ['class' => 'nav-justified'],//получается реально распределенное меню. но почему-то цвет поменялся
                 'encodeLabels' => false, //для того, чтобы вывести иконки
                 'items' => $menuItems,
             ]);
             NavBar::end();
             ?>
 
-            <div class="container" style="padding-bottom: : 0">
+            <div class="container" style="padding-bottom: 0">
                 <?=
                 Breadcrumbs::widget([
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
