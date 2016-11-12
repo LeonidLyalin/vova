@@ -2,7 +2,7 @@
 /* @var $this yii\web\View */
 
 use yii\bootstrap\Carousel;
-use pollext\poll\Poll;
+use davidjeddy\yii2poll\Poll;
 
 $this->title = 'My Yii Application';
 ?>
@@ -97,17 +97,6 @@ $this->title = 'My Yii Application';
 
             </div>
         </div>
-        <div class="container">
-            <?php
-            echo Poll::widget([
-                'pollName' => 'Do you like PHP?',
-                'answerOptions' =>
-                    [
-                    'Yes',
-                    'No',
-                ],
-            ]);
-            ?>
-        </div>
+       
     </div>
 </div>

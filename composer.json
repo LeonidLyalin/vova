@@ -26,7 +26,10 @@
         "modernkernel/yii2-fontawesome": "*",
         "edofre/yii2-slider-pro": "*",
         "edofre/yii2-fullcalendar": "@dev",
-        "pollext/poll":"dev-master"
+        "hauntd/yii2-vote": "*",
+        
+        "chiliec/yii2-vote": "^3.0"
+        
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

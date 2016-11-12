@@ -93,15 +93,6 @@ return array (
       '@modernkernel/bootstrapsocial' => $vendorDir . '/modernkernel/yii2-bootstrapsocial',
     ),
   ),
-  'pollext/poll' => 
-  array (
-    'name' => 'pollext/poll',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@pollext/poll' => $vendorDir . '/pollext/poll',
-    ),
-  ),
   'yiisoft/yii2-jui' => 
   array (
     'name' => 'yiisoft/yii2-jui',
@@ -127,6 +118,24 @@ return array (
     'alias' => 
     array (
       '@edofre/fullcalendar' => $vendorDir . '/edofre/yii2-fullcalendar',
+    ),
+  ),
+  'chiliec/yii2-vote' => 
+  array (
+    'name' => 'chiliec/yii2-vote',
+    'version' => '3.0.1.0',
+    'alias' => 
+    array (
+      '@chiliec/vote' => $vendorDir . '/chiliec/yii2-vote',
+    ),
+  ),
+  'hauntd/yii2-vote' => 
+  array (
+    'name' => 'hauntd/yii2-vote',
+    'version' => '0.2.5.0',
+    'alias' => 
+    array (
+      '@hauntd/vote' => $vendorDir . '/hauntd/yii2-vote',
     ),
   ),
 );

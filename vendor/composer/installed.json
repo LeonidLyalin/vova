@@ -3494,51 +3494,6 @@
         ]
     },
     {
-        "name": "pollext/poll",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Dzhus111/pollext.git",
-            "reference": "f5d2bdc6bbec554f56bb30af5ff530bf405db03d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Dzhus111/pollext/zipball/f5d2bdc6bbec554f56bb30af5ff530bf405db03d",
-            "reference": "f5d2bdc6bbec554f56bb30af5ff530bf405db03d",
-            "shasum": ""
-        },
-        "require": {
-            "yiisoft/yii2": "*"
-        },
-        "time": "2016-06-19 19:29:30",
-        "type": "yii2-extension",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "pollext\\poll\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-2-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Sergey Dzhus",
-                "email": "Dzhus1111@gmail.com"
-            }
-        ],
-        "description": "Widget to create custom polls for Yii 2.0 framework",
-        "keywords": [
-            "poll",
-            "poll-widget",
-            "widget",
-            "yii2",
-            "yii2-poll-widget"
-        ]
-    },
-    {
         "name": "bower-asset/slider-pro",
         "version": "1.2.2",
         "version_normalized": "1.2.2.0",
@@ -3864,6 +3819,99 @@
             "event",
             "fullcalendar",
             "javascript"
+        ]
+    },
+    {
+        "name": "chiliec/yii2-vote",
+        "version": "3.0.1",
+        "version_normalized": "3.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Chiliec/yii2-vote.git",
+            "reference": "bb91c9a8e3041813a9fa2dee853f6318dc468b39"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Chiliec/yii2-vote/zipball/bb91c9a8e3041813a9fa2dee853f6318dc468b39",
+            "reference": "bb91c9a8e3041813a9fa2dee853f6318dc468b39",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "*"
+        },
+        "require-dev": {
+            "yiisoft/yii2-codeception": "^2.0"
+        },
+        "time": "2016-03-17 19:08:00",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "chiliec\\vote\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Vladimir Babin",
+                "email": "vovababin@gmail.com",
+                "homepage": "http://chiliec.ru"
+            }
+        ],
+        "description": "Provides anonymous voting for any models",
+        "keywords": [
+            "anonymous",
+            "vote",
+            "voting"
+        ]
+    },
+    {
+        "name": "hauntd/yii2-vote",
+        "version": "0.2.5",
+        "version_normalized": "0.2.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hauntd/yii2-vote.git",
+            "reference": "efc4c194518398000d9b0de98ee18b1ab83d3ab6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hauntd/yii2-vote/zipball/efc4c194518398000d9b0de98ee18b1ab83d3ab6",
+            "reference": "efc4c194518398000d9b0de98ee18b1ab83d3ab6",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "^2.0",
+            "yiisoft/yii2-bootstrap": "^2.0"
+        },
+        "time": "2016-08-16 12:15:07",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "hauntd\\vote\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Alexander Kononenko",
+                "email": "contact@hauntd.me"
+            }
+        ],
+        "description": "Votes, likes, favorites.",
+        "keywords": [
+            "Favorites",
+            "likes",
+            "module",
+            "votes",
+            "yii2"
         ]
     }
 ]

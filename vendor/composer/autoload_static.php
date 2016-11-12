@@ -28,7 +28,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         ),
         'p' => 
         array (
-            'pollext\\poll\\' => 13,
             'phpDocumentor\\Reflection\\' => 25,
         ),
         'm' => 
@@ -39,6 +38,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'modernkernel\\flagiconcss\\' => 25,
             'modernkernel\\bootstrapsocial\\' => 29,
         ),
+        'h' => 
+        array (
+            'hauntd\\vote\\' => 12,
+        ),
         'e' => 
         array (
             'edofre\\sliderpro\\' => 17,
@@ -46,6 +49,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         ),
         'c' => 
         array (
+            'chiliec\\vote\\' => 13,
             'cebe\\markdown\\' => 14,
         ),
         'W' => 
@@ -122,10 +126,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
-        'pollext\\poll\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pollext/poll',
-        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -152,6 +152,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/modernkernel/yii2-bootstrapsocial',
         ),
+        'hauntd\\vote\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hauntd/yii2-vote',
+        ),
         'edofre\\sliderpro\\' => 
         array (
             0 => __DIR__ . '/..' . '/edofre/yii2-slider-pro',
@@ -159,6 +163,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'edofre\\fullcalendar\\' => 
         array (
             0 => __DIR__ . '/..' . '/edofre/yii2-fullcalendar',
+        ),
+        'chiliec\\vote\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/chiliec/yii2-vote',
         ),
         'cebe\\markdown\\' => 
         array (

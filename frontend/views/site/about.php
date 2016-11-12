@@ -13,4 +13,12 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>This is the About page. You may modify the following file to customize its content:</p>
 
     <code><?= __FILE__ ?></code>
+    
+    <?php
+        \hauntd\vote\widgets\Vote::widget([
+            'entity' => 'itemVote',
+            'model' => $model,
+            'options' => ['class' => 'vote vote-visible-buttons']
+        ]);
+        ?>
 </div>
