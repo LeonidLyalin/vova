@@ -26,9 +26,9 @@ AppAsset::register($this);
         <div class="container">
             <div class="row" >
                 <div class="col-md-3">
-                    <img style="vertical-align: middle" src="logo.png">
+                    <img src="logo.png">
                 </div>
-                <div class="col-md-3" style="vertical-align: middle">
+                <div class="col-md-3">
                     <h3>Управляющая </br>компания</h3>
                 </div>
                 <div class="col-md-3" style="vertical-align: middle">
@@ -72,16 +72,13 @@ AppAsset::register($this);
                         'label' => 'Button label', // button label
                     ])
                     ?>
-                    <div class="row">
-                        <a>(4212) 47-60-31, 47-60-32</br>
-                            WhatsApp: 8-914-770-21-27</br>
-                            Skype: upraw28</a>
+                    <div class="row">(4212) 47-60-31, 47-60-32</br>WhatsApp: 8-914-770-21-27</br>Skype: upraw28
                     </div>    
 
 
                     <div class="input-group">
                         <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
-                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="Поиск" aria-describedby="basic-addon1">
                     </div>
 
                 </div>
@@ -122,7 +119,7 @@ AppAsset::register($this);
             NavBar::end();
             ?>
 
-            <div class="container">
+            <div class="container" style="padding-bottom: : 0">
                 <?=
                 Breadcrumbs::widget([
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

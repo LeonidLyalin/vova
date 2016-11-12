@@ -1,17 +1,34 @@
 <?php
-
 /* @var $this yii\web\View */
-
+use yii\bootstrap\Carousel;
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+    <div class="jumbotron" style="padding-top: 0">
+        <?php echo Carousel::widget ( [
+        'items' => [
+//        [
+//        'content' => '<img src="slide1.png"/>',
+//        'caption' => '<h2>Yii Gii</h2><p>Удобный встроенный генератор кода. Модули, модели на основе таблиц в БД и, конечно же, CRUD</p>',
+//        'options' => []
+//        ],
+        [
+        'content' => '<img  src="slide2.jpg"/>',
+        'caption' => '',//'<h2>Отличный отладчик</h2><p>Легко подключается, помнит все запросы http, БД и логи</p>',
+        'options' => []
+        ],
+        [
+        'content' => '<img src="slide3.jpg"/>',
+        'caption' => '',//<h2>Быстрый старт</h2><p>Установка и обновление через composer</p>',
+        'options' => []
+        ]
+        ],
+//      'options' => [
+//        'style' => 'width:474px;' // Задаем ширину контейнера
+//        ]
+        ]);
+        ?>
     </div>
 
     <div class="body-content">
