@@ -1,0 +1,31 @@
+{
+  "name": "modernkernel/yii2-bootstrapsocial",
+  "description": "Bootstrap Social extension for Yii2",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "bootstrap",
+    "social"
+  ],
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/modernkernel/yii2-bootstrapsocial/issues?state=open",
+    "source": "https://github.com/modernkernel/yii2-bootstrapsocial"
+  },
+  "authors": [
+    {
+      "name": "Harry Tang",
+      "email": "harry@modernkernel.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "*",
+    "bower-asset/bootstrap-social": "5.*",
+    "modernkernel/yii2-fontawesome": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "modernkernel\\bootstrapsocial\\": ""
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "modernkernel/yii2-ionicons",
+    "description": "Ionicons extension for Yii2",
+    "type": "yii2-extension",
+    "keywords": ["ionicons"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Harry Tang",
+            "email": "harry@modernkernel.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/ionicons": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "modernkernel\\ionicons\\": ""
+        }
+    }
+}
