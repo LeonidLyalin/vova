@@ -72,26 +72,39 @@ AppAsset::register($this);
                         'label' => 'Button label', // button label
                     ])
                     ?>
+                    <div class="row">
+                        <a>(4212) 47-60-31, 47-60-32</br>
+                            WhatsApp: 8-914-770-21-27</br>
+                            Skype: upraw28</a>
+                    </div>    
+
+
+                    <div class="input-group">
+                        <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
+                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+
                 </div>
             </div>
         </div>
         <div class="wrap">
             <?php
             NavBar::begin([
-                'brandLabel' => 'My Company',
+                'brandLabel' => false,
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse',
                 ],
             ]);
             $menuItems = [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
-                    ['label' => 'Contact', 'url' => ['/site/contact']],
+                    ['label' => '<span class="glyphicon glyphicon-home"></span> ГЛАВНАЯ', 'url' => ['/site/index']],
+                    ['label' => '<span class="glyphicon glyphicon-file"></span> О КОМПАНИИ', 'url' => ['/site/about']],
+                    ['label' => '<span class="glyphicon glyphicon-info-sign"></span> ИНФОРМАЦИЯ', 'url' => ['/site/contact']],
+                    ['label' => '<span class="glyphicon glyphicon-envelope"></span> КОНТАКТЫ', 'url' => ['/site/contact']],
             ];
             if (Yii::$app->user->isGuest) {
-                $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-                $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                $menuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> РЕГИСТРАЦИЯ', 'url' => ['/site/signup']];
+                $menuItems[] = ['label' => '<span class="glyphicon glyphicon-log-in"></span> ВОЙТИ', 'url' => ['/site/login']];
             } else {
                 $menuItems[] = '<li>'
                         . Html::beginForm(['/site/logout'], 'post')
@@ -102,7 +115,8 @@ AppAsset::register($this);
                         . '</li>';
             }
             echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
+                'options' => ['class' => 'navbar-nav'],
+                'encodeLabels' => false, //для того, чтобы вывести иконки
                 'items' => $menuItems,
             ]);
             NavBar::end();
@@ -114,8 +128,8 @@ AppAsset::register($this);
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 ])
                 ?>
-<?= Alert::widget() ?>
-<?= $content ?>
+                <?= Alert::widget() ?>
+                <?= $content ?>
             </div>
         </div>
 
@@ -127,7 +141,7 @@ AppAsset::register($this);
             </div>
         </footer>
 
-<?php $this->endBody() ?>
+        <?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>
