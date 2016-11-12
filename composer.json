@@ -25,7 +25,8 @@
         "modernkernel/yii2-bootstrapsocial": "*",
         "modernkernel/yii2-fontawesome": "*",
         "edofre/yii2-slider-pro": "*",
-        "edofre/yii2-fullcalendar": "@dev"
+        "edofre/yii2-fullcalendar": "@dev",
+        "pollext/poll":"dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

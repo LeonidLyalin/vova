@@ -18,6 +18,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'y' => 
         array (
             'yii\\swiftmailer\\' => 16,
+            'yii\\jui\\' => 8,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
             'yii\\debug\\' => 10,
@@ -27,6 +28,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         ),
         'p' => 
         array (
+            'pollext\\poll\\' => 13,
             'phpDocumentor\\Reflection\\' => 25,
         ),
         'm' => 
@@ -36,6 +38,11 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'modernkernel\\fontawesome\\' => 25,
             'modernkernel\\flagiconcss\\' => 25,
             'modernkernel\\bootstrapsocial\\' => 29,
+        ),
+        'e' => 
+        array (
+            'edofre\\sliderpro\\' => 17,
+            'edofre\\fullcalendar\\' => 20,
         ),
         'c' => 
         array (
@@ -87,6 +94,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
         ),
+        'yii\\jui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-jui',
+        ),
         'yii\\gii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-gii',
@@ -110,6 +121,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'pollext\\poll\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pollext/poll',
         ),
         'phpDocumentor\\Reflection\\' => 
         array (
@@ -136,6 +151,14 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'modernkernel\\bootstrapsocial\\' => 
         array (
             0 => __DIR__ . '/..' . '/modernkernel/yii2-bootstrapsocial',
+        ),
+        'edofre\\sliderpro\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/edofre/yii2-slider-pro',
+        ),
+        'edofre\\fullcalendar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/edofre/yii2-fullcalendar',
         ),
         'cebe\\markdown\\' => 
         array (

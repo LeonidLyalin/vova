@@ -93,4 +93,40 @@ return array (
       '@modernkernel/bootstrapsocial' => $vendorDir . '/modernkernel/yii2-bootstrapsocial',
     ),
   ),
+  'pollext/poll' => 
+  array (
+    'name' => 'pollext/poll',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@pollext/poll' => $vendorDir . '/pollext/poll',
+    ),
+  ),
+  'yiisoft/yii2-jui' => 
+  array (
+    'name' => 'yiisoft/yii2-jui',
+    'version' => '2.0.6.0',
+    'alias' => 
+    array (
+      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
+    ),
+  ),
+  'edofre/yii2-slider-pro' => 
+  array (
+    'name' => 'edofre/yii2-slider-pro',
+    'version' => '1.1.1.0',
+    'alias' => 
+    array (
+      '@edofre/sliderpro' => $vendorDir . '/edofre/yii2-slider-pro',
+    ),
+  ),
+  'edofre/yii2-fullcalendar' => 
+  array (
+    'name' => 'edofre/yii2-fullcalendar',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@edofre/fullcalendar' => $vendorDir . '/edofre/yii2-fullcalendar',
+    ),
+  ),
 );

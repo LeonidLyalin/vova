@@ -72,7 +72,8 @@ AppAsset::register($this);
                         'label' => 'Button label', // button label
                     ])
                     ?>
-                    <div class="row">(4212) 47-60-31, 47-60-32</br>WhatsApp: 8-914-770-21-27</br>Skype: upraw28
+                    <div class="row">
+                        <h5 class="pull-right">(4212) 47-60-31, 47-60-32</br>WhatsApp: 8-914-770-21-27</br>Skype: upraw28</h5>
                     </div>    
 
 
