@@ -32,6 +32,19 @@ return [
   ],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        
+    'assetManager' => [
+        'bundles' => [
+            'dosamigos\google\maps\MapAsset' => [
+                'options' => [
+                    'key' => 'AIzaSyA44qDfpv4Qw3affwiOAAhKOtcu7Duqfko',
+                    'language' => 'ru-Ru',
+                    'version' => '3.1.18'
+                ]
+            ]
+        ]
+    ],
+
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],

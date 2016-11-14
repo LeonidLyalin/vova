@@ -27,6 +27,9 @@
         "edofre/yii2-slider-pro": "*",
         "edofre/yii2-fullcalendar": "@dev",
         "hauntd/yii2-vote": "*",
+        "2amigos/yii2-google-maps-library" : "*",
+        "voime/yii2-google-maps": "*",
+        "mirocow/yii2-yandex-maps" : "*",
         
         "chiliec/yii2-vote": "^3.0"
         

@@ -138,4 +138,13 @@ return array (
       '@hauntd/vote' => $vendorDir . '/hauntd/yii2-vote',
     ),
   ),
+  'voime/yii2-google-maps' => 
+  array (
+    'name' => 'voime/yii2-google-maps',
+    'version' => '1.4.0.0',
+    'alias' => 
+    array (
+      '@voime/GoogleMaps' => $vendorDir . '/voime/yii2-google-maps',
+    ),
+  ),
 );

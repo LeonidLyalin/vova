@@ -9,8 +9,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
     public static $files = array (
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '180092cfc969a12e06f2132a203a3184' => __DIR__ . '/..' . '/codeception/verify/src/Codeception/function.php',
     );
 
@@ -25,6 +27,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'yii\\composer\\' => 13,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
+        ),
+        'v' => 
+        array (
+            'voime\\GoogleMaps\\' => 17,
         ),
         'p' => 
         array (
@@ -46,6 +52,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             'edofre\\sliderpro\\' => 17,
             'edofre\\fullcalendar\\' => 20,
+        ),
+        'd' => 
+        array (
+            'dosamigos\\google\\maps\\' => 22,
         ),
         'c' => 
         array (
@@ -76,6 +86,8 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
         ),
         'F' => 
         array (
@@ -126,6 +138,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
+        'voime\\GoogleMaps\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/voime/yii2-google-maps',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -163,6 +179,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'edofre\\fullcalendar\\' => 
         array (
             0 => __DIR__ . '/..' . '/edofre/yii2-fullcalendar',
+        ),
+        'dosamigos\\google\\maps\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/2amigos/yii2-google-maps-library',
         ),
         'chiliec\\vote\\' => 
         array (
@@ -223,6 +243,14 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'Faker\\' => 
         array (
