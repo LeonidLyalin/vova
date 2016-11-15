@@ -16,6 +16,15 @@ use dosamigos\google\maps\services\DirectionsRequest;
 use dosamigos\google\maps\overlays\Polygon;
 use dosamigos\google\maps\layers\BicyclingLayer;
 
+
+use yii\grid\ListView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel frontend\models\HouseSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+
+
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 $this->registerJsFile('/vova/frontend/APSMX-302/web/jquery.js',  ['position' => yii\web\View::POS_END]);
@@ -132,6 +141,23 @@ $this->registerJsFile('/vova/frontend/APSMX-302/web/ajax-poll.php',  ['position'
 // Display the map -finally :)
     echo $map->display();
     ?>
+    
+    
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            //'id',
+            'street:ntext',
+            'adress',
+           // 'number',
+           // 'letter',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
     
     
 

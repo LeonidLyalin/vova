@@ -13,6 +13,9 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 
+use frontend\models\House;       //added to show gridview in about
+use frontend\models\HouseSearch;
+
 /**
  * Site controller
  */
@@ -138,7 +141,14 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
-        return $this->render('about');
+        
+        $searchModel = new HouseSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+         return $this->render('about', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+        //return $this->render('about');
     }
 
     /**

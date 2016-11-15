@@ -18,6 +18,7 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
         
         "modernkernel/yii2-slugify": "*",
         "modernkernel/yii2-flag-icon-css": "*",
