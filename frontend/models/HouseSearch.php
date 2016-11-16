@@ -20,7 +20,7 @@ class HouseSearch extends House
     public function rules()
     {
         return [
-            [['id' ], 'integer'],
+         //   [['id' ], 'integer'],
                 //['id', 'number'], 'integer'],
             [['adress','street'], 'safe'],
                 //['street', 'letter'], 'safe'],
@@ -62,14 +62,14 @@ class HouseSearch extends House
         }
 
         // grid filtering conditions
-        $query->andFilterWhere([
-            'id' => $this->id,
-                //,
-            //'number' => $this->number,
-        ]);
+//        $query->andFilterWhere([
+//            'id' => $this->id,
+//                //,
+//            //'number' => $this->number,
+//        ]);
         
-        $query->andFilterWhere(['like', 'street', $this->street])
-            ->andFilterWhere(['like', 'adress', $this->adress]);
+        $query->andFilterWhere(['like', 'street', $this->street]);
+       //     ->andFilterWhere(['like', 'adress', $this->adress]);
 
       //  $query->andFilterWhere(['like', 'street', $this->street])
       //      ->andFilterWhere(['like', 'letter', $this->letter]);

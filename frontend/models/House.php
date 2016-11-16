@@ -28,10 +28,11 @@ class House extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['street', 'number'], 'required'],
-            [['street'], 'string'],
-            [['number'], 'integer'],
-            [['letter'], 'string', 'max' => 2],
+            [['streed','adress'], 'required'],
+           // [['street', 'number'], 'required'],
+            [['street','adress'], 'string'],
+           // [['number'], 'integer'],
+         //   [['letter'], 'string', 'max' => 2],
         ];
     }
 
@@ -59,7 +60,7 @@ class House extends \yii\db\ActiveRecord
     }
     
     public function getAdress() {
-        return (string) $this->number . $this->letter;
+        return trim((string) $this->number) . trim((string)$this->letter);
         
     }
 }

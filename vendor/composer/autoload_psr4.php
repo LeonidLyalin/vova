@@ -14,6 +14,7 @@ return array(
     'yii\\composer\\' => array($vendorDir . '/yiisoft/yii2-composer'),
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
+    'yii2mod\\google\\maps\\markers\\' => array($vendorDir . '/yii2mod/yii2-google-maps-markers'),
     'voime\\GoogleMaps\\' => array($vendorDir . '/voime/yii2-google-maps'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/type-resolver/src', $vendorDir . '/phpdocumentor/reflection-docblock/src'),
     'modernkernel\\slugify\\' => array($vendorDir . '/modernkernel/yii2-slugify'),

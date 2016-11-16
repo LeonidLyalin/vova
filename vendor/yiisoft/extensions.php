@@ -147,4 +147,13 @@ return array (
       '@voime/GoogleMaps' => $vendorDir . '/voime/yii2-google-maps',
     ),
   ),
+  'yii2mod/yii2-google-maps-markers' => 
+  array (
+    'name' => 'yii2mod/yii2-google-maps-markers',
+    'version' => '1.0.0.0',
+    'alias' => 
+    array (
+      '@yii2mod/google/maps/markers' => $vendorDir . '/yii2mod/yii2-google-maps-markers',
+    ),
+  ),
 );

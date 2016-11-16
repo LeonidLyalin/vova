@@ -27,6 +27,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'yii\\composer\\' => 13,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
+            'yii2mod\\google\\maps\\markers\\' => 28,
         ),
         'v' => 
         array (
@@ -137,6 +138,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'yii2mod\\google\\maps\\markers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yii2mod/yii2-google-maps-markers',
         ),
         'voime\\GoogleMaps\\' => 
         array (
