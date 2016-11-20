@@ -12,8 +12,16 @@
         {
             "name": "Dmitry Semenov",
             "email": "disemx@gmail.com"
+        },
+        {
+            "name": "Alexander Harchenko",
+            "email": "morontt@gmail.com",
+            "homepage": "https://morontt.info"
         }
     ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
     "autoload": {
         "psr-4": {
             "yii2mod\\google\\maps\\markers\\": ""

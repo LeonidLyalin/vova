@@ -100,6 +100,7 @@ AppAsset::register($this);
                     ['label' => '<span class="glyphicon glyphicon-file"></span> О КОМПАНИИ', 'url' => ['/site/about']],
                     ['label' => '<span class="glyphicon glyphicon-info-sign"></span> ИНФОРМАЦИЯ', 'url' => ['/site/contact']],
                     ['label' => '<span class="glyphicon glyphicon-envelope"></span> КОНТАКТЫ', 'url' => ['/site/contact']],
+                ['label' => '<span class="glyphicon glyphicon-envelope"></span> 2 ГИС', 'url' => ['/site/2gis']],
             ];
             if (Yii::$app->user->isGuest) {
                 $menuItems[] = ['label' => '<span class="glyphicon glyphicon-user"></span> РЕГИСТРАЦИЯ', 'url' => ['/site/signup']];

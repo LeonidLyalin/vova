@@ -55,6 +55,13 @@ class HouseController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+    
+     public function actionLink($id)
+    {
+        return $this->render('link',[
+            'model' => $this->findModel($id),]
+        );
+    }
 
     /**
      * Creates a new House model.

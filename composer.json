@@ -32,6 +32,8 @@
         "voime/yii2-google-maps": "*",
         "yii2mod/yii2-google-maps-markers": "*",
         
+        "yiisoft/yii2-jui": "~2.0.0",
+        
         "chiliec/yii2-vote": "^3.0"
         
     },

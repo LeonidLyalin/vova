@@ -54,8 +54,9 @@ class GooglePlaceAutoload extends \yii\bootstrap\Widget {
     private function getJs() {
 //Ваш js код должен быть здесь. 
 //Это ваше домашнее задание.))
+        echo "get JS"."</br>";
         $script = <<< JS
-
+print('Hello' + ' ' + 'World!' + "\\n");
 var mapOptions = {
 zoom: 8,
  center: new google.maps.LatLng(40.417181, -3.700823),

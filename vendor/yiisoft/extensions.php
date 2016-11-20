@@ -111,15 +111,6 @@ return array (
       '@edofre/sliderpro' => $vendorDir . '/edofre/yii2-slider-pro',
     ),
   ),
-  'edofre/yii2-fullcalendar' => 
-  array (
-    'name' => 'edofre/yii2-fullcalendar',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@edofre/fullcalendar' => $vendorDir . '/edofre/yii2-fullcalendar',
-    ),
-  ),
   'chiliec/yii2-vote' => 
   array (
     'name' => 'chiliec/yii2-vote',
@@ -150,10 +141,19 @@ return array (
   'yii2mod/yii2-google-maps-markers' => 
   array (
     'name' => 'yii2mod/yii2-google-maps-markers',
-    'version' => '1.0.0.0',
+    'version' => '1.1.0.0',
     'alias' => 
     array (
       '@yii2mod/google/maps/markers' => $vendorDir . '/yii2mod/yii2-google-maps-markers',
+    ),
+  ),
+  'edofre/yii2-fullcalendar' => 
+  array (
+    'name' => 'edofre/yii2-fullcalendar',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@edofre/fullcalendar' => $vendorDir . '/edofre/yii2-fullcalendar',
     ),
   ),
 );

@@ -55,8 +55,7 @@ class GoogleMaps extends Widget
     /**
      * libraries - Example: geometry, places. Default - empty string
      * version - 3.exp (Default)
-     * signed_in - true (Default)
-     * @var array google maps url options(v, language, key, libraries, signed_in)
+     * @var array google maps url options(v, language, key, libraries)
      */
     public $googleMapsUrlOptions = [];
 
@@ -139,7 +138,7 @@ class GoogleMaps extends Widget
 
     /**
      * Executes the widget.
-     * @return string the result of widget execution to be outputted.
+     * @return void
      */
     public function run()
     {
@@ -203,7 +202,6 @@ class GoogleMaps extends Widget
         }
         return ArrayHelper::merge($this->googleMapsUrlOptions, array_filter([
             'v' => '3.exp',
-            'signed_in' => 'true',
             'key' => null,
             'libraries' => null,
             'language' => 'en'
@@ -256,5 +254,4 @@ class GoogleMaps extends Widget
             'infoWindowOptions' => $this->infoWindowOptions,
         ]);
     }
-
 }
