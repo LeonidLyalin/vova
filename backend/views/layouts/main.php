@@ -28,7 +28,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Управляющая компания',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -37,8 +37,9 @@ AppAsset::register($this);
     $menuItems = [
         ['label' => Yii::t('app','Главная'), 'url' => ['/site/index']],
         ['label' => Yii::t('app','Дома'), 'url' => ['/house/index']],
-        ['label' => Yii::t('app','Карта'), 'url' => ['/house/map']],
-        
+        ['label' => Yii::t('app','Карта'), 'url' => ['/site/map']],
+        ['label' => Yii::t('app','Опросы'), 'url' => ['/polls/index']],
+        ['label' => Yii::t('app','Ответы'), 'url' => ['/polls-answers/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -70,7 +71,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; LSL-soft<?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

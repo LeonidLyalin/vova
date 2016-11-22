@@ -56,6 +56,8 @@ class HouseController extends Controller
         ]);
     }
     
+    
+    
      public function actionLink($id)
     {
         return $this->render('link',[

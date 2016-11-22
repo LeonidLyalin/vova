@@ -19,7 +19,27 @@ if ( get_magic_quotes_gpc() ) {
 			stripslashes( $value );
 		return $value;
 	}
+        
+ ?>       
+        <table>
+<?php 
 
+
+    foreach ($_POST as $key => $value) {
+        echo "<tr>";
+        echo "<td>";
+        echo $key;
+        echo "</td>";
+        echo "<td>";
+        echo $value;
+        echo "</td>";
+        echo "</tr>";
+    }
+
+
+?>
+</table>
+<?php
 	$_POST = array_map( 'stripslashes_deep', $_POST );
 	$_GET = array_map( 'stripslashes_deep', $_GET );
 	$_COOKIE = array_map( 'stripslashes_deep', $_COOKIE );

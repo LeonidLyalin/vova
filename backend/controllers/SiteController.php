@@ -26,7 +26,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['logout', 'index','map'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -63,6 +63,12 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    
+    public function actionMap()//play with google maps
+    {
+        return $this->render('map');
+        
+    }
     /**
      * Login action.
      *

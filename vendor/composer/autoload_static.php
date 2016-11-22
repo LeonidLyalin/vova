@@ -45,6 +45,13 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'modernkernel\\flagiconcss\\' => 25,
             'modernkernel\\bootstrapsocial\\' => 29,
         ),
+        'k' => 
+        array (
+            'kartik\\mpdf\\' => 12,
+            'kartik\\grid\\' => 12,
+            'kartik\\dialog\\' => 14,
+            'kartik\\base\\' => 12,
+        ),
         'h' => 
         array (
             'hauntd\\vote\\' => 12,
@@ -172,6 +179,22 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'modernkernel\\bootstrapsocial\\' => 
         array (
             0 => __DIR__ . '/..' . '/modernkernel/yii2-bootstrapsocial',
+        ),
+        'kartik\\mpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-mpdf',
+        ),
+        'kartik\\grid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-grid',
+        ),
+        'kartik\\dialog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-dialog',
+        ),
+        'kartik\\base\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base',
         ),
         'hauntd\\vote\\' => 
         array (
@@ -311,9 +334,19 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
     );
 
     public static $classMap = array (
+        'CGIF' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/gif.php',
+        'CGIFCOLORTABLE' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/gif.php',
+        'CGIFFILEHEADER' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/gif.php',
+        'CGIFIMAGE' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/gif.php',
+        'CGIFIMAGEHEADER' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/gif.php',
+        'CGIFLZW' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/gif.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
+        'INDIC' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/indic.php',
+        'MYANMAR' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/myanmar.php',
+        'OTLdump' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/otl_dump.php',
+        'PDFBarcode' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/barcode.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
@@ -689,6 +722,8 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'SEA' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/sea.php',
+        'SVG' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/svg.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -768,7 +803,20 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'TTFontFile' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/ttfontsuni.php',
+        'TTFontFile_Analysis' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/ttfontsuni_analysis.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'UCDN' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/ucdn.php',
+        'bmp' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/bmp.php',
+        'cssmgr' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/cssmgr.php',
+        'directw' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/directw.php',
+        'grad' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/grad.php',
+        'mPDF' => __DIR__ . '/..' . '/kartik-v/mpdf/mpdf.php',
+        'meter' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/meter.php',
+        'mpdfform' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/mpdfform.php',
+        'otl' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/otl.php',
+        'tocontents' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/tocontents.php',
+        'wmf' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/wmf.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

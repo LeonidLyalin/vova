@@ -29,7 +29,7 @@ use voime\GoogleMaps\Map;
 $this->title = 'О компании';
 $this->params['breadcrumbs'][] = $this->title;
 //$this->registerJsFile('/vova/frontend/APSMX-302/web/jquery.js', ['position' => yii\web\View::POS_END]);
-//$this->registerJsFile('/vova/frontend/APSMX-302/web/ajax-poll.php', ['position' => yii\web\View::POS_END]);
+$this->registerJsFile('/vova/frontend/APSMX-302/web/ajax-poll.php', ['position' => yii\web\View::POS_END]);
 ?>
 <!--<head>
    <script type="text/javascript" src="/vova/frontend/APSMX-302/web/jquery.js"></script>
@@ -38,9 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>This is the About page. You may modify the following file to customize its content:</p>
+<!--    <p>This is the About page. You may modify the following file to customize its content:</p>
 
-    <code><?= __FILE__ ?></code>
+    <code><?
+    //= __FILE__ 
+    ?></code>-->
 
 
     <div class="row"> 

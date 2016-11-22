@@ -12,7 +12,10 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log', 'gii'],
     'modules' => ['gii' => [
-            'class' => 'yii\gii\Module'],],
+            'class' => 'yii\gii\Module'],
+        'gridview' =>  [
+        'class' => '\kartik\grid\Module'],
+        ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',
