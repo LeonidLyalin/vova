@@ -43,6 +43,15 @@ class PollsController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    
+    public function actionShowanswers2()
+    {
+       // $searchModel = new PollsSearch();
+       // $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('showanswers2');
+    }
+
 
     /**
      * Displays a single Polls model.

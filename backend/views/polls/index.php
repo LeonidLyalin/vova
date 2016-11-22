@@ -1,12 +1,14 @@
 <?php
 
 use yii\helpers\Html;
+use yii\web\View;
 //use yii\grid\GridView;
 use kartik\grid\GridView;
 use backend\controllers\PollsAnswersController;
 use backend\models\PollsAnswers;
 use backend\models\PollsAnswersSearch;
 
+require_once 'showanswers.php';
 //use yii\widgets\
 
 /* @var $this yii\web\View */
@@ -15,48 +17,81 @@ use backend\models\PollsAnswersSearch;
 
 $this->title = Yii::t('app', 'Опросы');
 $this->params['breadcrumbs'][] = $this->title;
+$this->registerJS(
+        '$(document).ready(function () {
+
+            $(".kv-grid-table tr").on("click", function (ev) {
+
+
+                var text4 = $("td:first", $(this)).text();
+                $(".mess7").text(text4);
+                var text5 = $("td:nth-child(2)", $(this)).text();
+                $(".mess9").text(text5);
+                $(".tablename").text(text5);
+               
+  $.ajax({
+                type: "GET",
+                url: "showanswers2",
+                data: "id_poll="+text4,
+                success: function (msg) {
+                    //alert(msg);
+                    $(".tablename").html(msg);
+                }}
+            );
+
+            }
+            )
+        });'
+        , View::POS_READY
+);
+//$url1 ='showanswers2';// yii\helpers\Url::toRoute('polls/showanswers2');
+//$s='$(document).ready(function () {
+//            
+//         var url1="'.$url1 .'"; 
+//         //alert(url1);
+//            $.ajax({
+//                type: "GET",
+//                url: url1,
+//                data: "id_poll=2",
+//                success: function (msg) {
+//                    //alert(msg);
+//                    $(".tablename").html(msg);
+//                }}
+//            );
+//        });';
+//$this->registerJS(
+//        $s
+//        , View::POS_READY
+//        )
+
 ?>
 <div class="polls-index">
-    <div class="mess"></div>
-    <div class="mess1">data-key</div>
-    <div class="mess2"></div>
-    <div class="mess4">обращение к элементу</div>
+
     <div class="mess5"></div>
     <div class="mess6">первый элемент</div>
     <div class="mess7"></div>
     <div class="mess8">второй элемент</div>
     <div class="mess9"></div>
-    <script type="text/javascript">
-$(document).ready(function () {
 
-$(".kv-grid-table tr").on('click',function(ev){
+    <script>
+//        $(document).ready(function () {
+//            
+//         var url1=//"@app/views/polls/example.php"
+//         alert(url1);
+//            $.ajax({
+//                type: 'GET',
+//                url: url1, //showanswers_1.php',
+//                data: 'id_poll=2',
+//                success: function (msg) {
+//                    alert(msg);
+//                    $(".tablename").text(msg);
+//                }}
+//            );
+//        });
+    </script>
 
-var text1=$(this).text();
-$(".mess").text(text1);
-var text2= $(this).attr("data-key");
-$(".mess2").text(text2);
-
-var text3= $(".kv-grid-table tr td:first-child").text();
-$(".kv-grid-table tr td:first-child").css( "text-decoration", "underline" );
-$(".mess5").text(text3);
-
-var text4 = $('td:first', $(this)).text();
-//$(".kv-grid-table tr td:nth-child(1").css( "text-decoration", "underline" );
-$(".mess7").text(text4);
-
-var text5 = $('td:nth-child(2)', $(this)).text();
-//$(".kv-grid-table tr td:nth-child(1").css( "text-decoration", "underline" );
-$(".mess9").text(text5);
-
-
-});
-
-});
-
-</script>
-    
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <h1><?php Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]);  ?>
 
     <p>
         <?= Html::a(Yii::t('app', 'Создать опрос'), ['create'], ['class' => 'btn btn-success']) ?>
@@ -65,11 +100,7 @@ $(".mess9").text(text5);
     GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        //'showFooter'=>true,
-        //	'showHeader' => FALSE,
-        // 'rowOptions' => function ($model, $index, $widget, $grid) {
         'columns' => [
-            //   ['class' => 'yii\grid\SerialColumn'],
             'id',
             'question:ntext',
             'date_beg',
@@ -84,29 +115,40 @@ $(".mess9").text(text5);
         'responsive' => true,
         'hover' => true,
         'showPageSummary' => false,
-//        'panel' => [
-//            'type' => GridView::TYPE_PRIMARY,
-//            'heading' => true,
-//        ],
         'persistResize' => false,
         'exportConfig' => true,
     ]);
-    ShowAnswers(3);
     ?>
+    <div class="secondtable">
+        <div class="tablename">
+            second table
+        </div>
+        <?php //Html::encode(ShowAnswers(1)); ?>
+        <?php
+//  Html::encode(\Yii::$app->view->renderFile('@app/views/polls/showanswers_1.php', ['id_poll' => 1]));
+//$renderFile = \Yii::$app->view->renderFile('@app/views/polls/showanswers_1.php', ['id_poll' => 1]);
+//echo $renderFile;
+//        
+        ?>
+    </div>
 
-    <?php
+<!--    <script>
+        $(document).ready(function () {
+            var s = $.get('<?php
+            //"@app/views/polls/showanswers_1.php" ?>',
+                    {id_poll: 1})
+                    .done(function (data) {
+                        $(".tablename").text(data);
 
-    function ShowAnswers($id_poll) {
-        $searchAnswersModel = new PollsAnswersSearch();
-        // $FFF=Yii::$app->request->queryParams;
-        // $FFF=['PollsAnswerSearch'=>['id_poll'=>$num]];
-        //$myModels = $search->search([$search->formName()=>['att3'=>3]]);
-        //    $dataAnswersProvider = $searchAnswersModel->search($FFF);
-        $dataAnswersProvider = $searchAnswersModel->search([$searchAnswersModel->formName() => ['id_poll' => $id_poll]]);
-        
-        
-        echo \Yii::$app->view->renderFile('@app/views/polls-answers/index_part.php', ['searchModel' => $searchAnswersModel,
-            'dataProvider' => $dataAnswersProvider]);
-    }
-    ?>
+                    });
+
+            $(".tablename").html(s);
+        });
+
+    </script>-->
+
+
+
+
 </div>
+

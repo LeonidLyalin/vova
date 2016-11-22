@@ -42,14 +42,14 @@ return [
             'errorAction' => 'site/error',
         ],
         
-        /*
-        'urlManager' => [
+        
+       'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [
+            'rules' => ['<alias:\w+>' => 'site/<alias>',
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
