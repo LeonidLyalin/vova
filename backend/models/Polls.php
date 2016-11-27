@@ -46,7 +46,7 @@ class Polls extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', '№ опроса'),
-            'question' => Yii::t('app', 'вопрос в опросе1'),
+            'question' => Yii::t('app', 'вопрос в опросе'),
             'date_beg' => Yii::t('app', 'начало опроса'),
             'date_end' => Yii::t('app', 'окончание опроса'),
         ];

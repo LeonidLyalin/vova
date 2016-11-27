@@ -121,4 +121,12 @@ class PollsAnswersController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    
+    public function actionIndexpart($id_poll) {
+        $searchModel = new PollsAnswersSearch();
+        $dataProvider = $searchModel->search([$searchModel->formName() => ['id_poll' => $id_poll]]);      
+        return $this->renderPartial('indexpart', ['searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider], false
+        );
+    }
 }

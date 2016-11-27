@@ -32,9 +32,14 @@
         "voime/yii2-google-maps": "*",
         "yii2mod/yii2-google-maps-markers": "*",
         
+        "lajax/yii2-language-picker": "1.*",
+        
         "yiisoft/yii2-jui": "~2.0.0",
         "kartik-v/yii2-grid": "@dev",
         "kartik-v/yii2-mpdf": "*",
+        
+        
+        "phpdocumentor/phpdocumentor": "2.*",
         
         "chiliec/yii2-vote": "^3.0"
         
@@ -60,3 +65,5 @@
         "post-install-cmd": "php init --env=Development --overwrite=n"
     }
 }
+
+

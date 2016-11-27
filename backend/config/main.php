@@ -1,22 +1,37 @@
 <?php
+
 $params = array_merge(
-    require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+        require(__DIR__ . '/../../common/config/params.php'), require(__DIR__ . '/../../common/config/params-local.php'), require(__DIR__ . '/params.php'), require(__DIR__ . '/params-local.php')
 );
 
 return [
     'id' => 'app-backend',
+    //'language'=>'en-En',
+    
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log', 'gii'],
     'modules' => ['gii' => [
             'class' => 'yii\gii\Module'],
-        'gridview' =>  [
-        'class' => '\kartik\grid\Module'],
-        ],
+        'gridview' => [
+            'class' => '\kartik\grid\Module'],
+    ],
     'components' => [
+//        'i18n' => [
+//            'translations' => [
+//                'app*' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@app/messages',
+//              
+//                    //'sourceLanguage' => 'en-US',
+//                    'sourceLanguage'=>'ru-Ru',
+//                    'fileMap' => [
+//                        'app' => 'app.php',
+//                        'app/error' => 'error.php',
+//                    ],
+//                ],
+//            ],
+//        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
@@ -32,7 +47,7 @@ return [
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
-                [
+                    [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                 ],
@@ -41,15 +56,12 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        
-        
-       'urlManager' => [
+        'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => ['<alias:\w+>' => 'site/<alias>',
             ],
         ],
-        
     ],
     'params' => $params,
 ];

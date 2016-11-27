@@ -1,0 +1,19 @@
+a:2:{i:0;s:1408:"<a href="#" onClick="activityShowItem(8); return false;">    <li class="activity-entry">
+        <div class="media">
+                            <!-- Show user image -->
+                <img class="media-object img-rounded pull-left" data-src="holder.js/32x32" alt="32x32"
+                     style="width: 32px; height: 32px;"
+                     src="/humhub/uploads/profile_image/53876303-315e-40a0-981e-3faf6243364a.jpg?m=1480110857">
+            
+            <!-- Show space image, if you are outside from a space -->
+                            <div class="img-space pull-left space-profile-acronym-1 space-acronym" style=" background-color: #6fdbe8; width: 20px; height: 20px; font-size: 8.8px; padding: 3.6px 0; border-radius: 2px;">ДП</div><img class="img-space pull-left space-profile-image-1 img-rounded profile-user-photo hidden" src="/humhub/img/default_space.jpg" alt="Добро пожаловать в пространство" style=" width: 20px; height: 20px">            
+            <div class="media-body text-break">
+
+                <!-- Show content -->
+                <strong>Sara Schuster</strong> нравится Комментарий "Nike – Просто купите это."<br/>
+
+                <!-- show time -->
+                <span class="time" title="2016-11-26T00:54:18+01:00">26 нояб. 2016 г. - 0:54</span>            </div>
+        </div>
+    </li>
+</a>";i:1;N;}

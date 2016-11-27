@@ -15,13 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="house-view">
 
 
-<!--    <div id="notMe"><p>id="notMe"</p></div>
-    <div id="myDiv">id="myDiv"</div>
 
-    <script>
-        $("#myDiv").css("color", "red");
-        $("#notMe").css("color", "blue");
-    </script>-->
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>

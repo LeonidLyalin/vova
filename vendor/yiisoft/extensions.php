@@ -21,15 +21,6 @@ return array (
       '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
     ),
   ),
-  'yiisoft/yii2-debug' => 
-  array (
-    'name' => 'yiisoft/yii2-debug',
-    'version' => '2.0.6.0',
-    'alias' => 
-    array (
-      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
-    ),
-  ),
   'yiisoft/yii2-gii' => 
   array (
     'name' => 'yiisoft/yii2-gii',
@@ -138,24 +129,6 @@ return array (
       '@voime/GoogleMaps' => $vendorDir . '/voime/yii2-google-maps',
     ),
   ),
-  'yii2mod/yii2-google-maps-markers' => 
-  array (
-    'name' => 'yii2mod/yii2-google-maps-markers',
-    'version' => '1.1.0.0',
-    'alias' => 
-    array (
-      '@yii2mod/google/maps/markers' => $vendorDir . '/yii2mod/yii2-google-maps-markers',
-    ),
-  ),
-  'edofre/yii2-fullcalendar' => 
-  array (
-    'name' => 'edofre/yii2-fullcalendar',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@edofre/fullcalendar' => $vendorDir . '/edofre/yii2-fullcalendar',
-    ),
-  ),
   'kartik-v/yii2-krajee-base' => 
   array (
     'name' => 'kartik-v/yii2-krajee-base',
@@ -174,15 +147,6 @@ return array (
       '@kartik/dialog' => $vendorDir . '/kartik-v/yii2-dialog',
     ),
   ),
-  'kartik-v/yii2-grid' => 
-  array (
-    'name' => 'kartik-v/yii2-grid',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
-    ),
-  ),
   'kartik-v/yii2-mpdf' => 
   array (
     'name' => 'kartik-v/yii2-mpdf',
@@ -190,6 +154,51 @@ return array (
     'alias' => 
     array (
       '@kartik/mpdf' => $vendorDir . '/kartik-v/yii2-mpdf',
+    ),
+  ),
+  'yii2mod/yii2-google-maps-markers' => 
+  array (
+    'name' => 'yii2mod/yii2-google-maps-markers',
+    'version' => '1.2.0.0',
+    'alias' => 
+    array (
+      '@yii2mod/google/maps/markers' => $vendorDir . '/yii2mod/yii2-google-maps-markers',
+    ),
+  ),
+  'yiisoft/yii2-debug' => 
+  array (
+    'name' => 'yiisoft/yii2-debug',
+    'version' => '2.0.7.0',
+    'alias' => 
+    array (
+      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
+    ),
+  ),
+  'lajax/yii2-language-picker' => 
+  array (
+    'name' => 'lajax/yii2-language-picker',
+    'version' => '1.2.0.0',
+    'alias' => 
+    array (
+      '@lajax/languagepicker' => $vendorDir . '/lajax/yii2-language-picker',
+    ),
+  ),
+  'edofre/yii2-fullcalendar' => 
+  array (
+    'name' => 'edofre/yii2-fullcalendar',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@edofre/fullcalendar' => $vendorDir . '/edofre/yii2-fullcalendar',
+    ),
+  ),
+  'kartik-v/yii2-grid' => 
+  array (
+    'name' => 'kartik-v/yii2-grid',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
     ),
   ),
 );

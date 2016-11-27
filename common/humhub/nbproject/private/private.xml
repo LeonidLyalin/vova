@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/views/layouts/user.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/views/dashboardApproval.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/index.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/SpaceMenu.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/space/components/UrlRule.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/vendor/yiisoft/yii2/base/Widget.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/views/user/add.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/vendor/yiisoft/yii2/web/UploadedFile.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/views/prerequisitesList.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/AdminMenu.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/vendor/yiisoft/yii2/views/_foreignTables.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/SettingsMenu.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/views/layouts/main.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/controllers/InformationController.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/views/user-profile/index.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/Module.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/views/layouts/head.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/views/approval/approve.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/Events.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/views/user-profile/editCategory.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/components/Application.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/DashboardApproval.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/GroupMenu.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/space/activities/views/created.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/AuthenticationMenu.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/controllers/IndexController.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/components/Controller.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/views/user/index.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/docs/guide/dev-stream.md</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/views/layouts/main.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/widgets/SpaceGridView.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/admin/views/group/index.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/space/activities/Created.php</file>
+            <file>file:/Applications/MAMP/htdocs/humhub/protected/humhub/modules/space/activities/MemberAdded.php</file>
+        </group>
+    </open-files>
+</project-private>

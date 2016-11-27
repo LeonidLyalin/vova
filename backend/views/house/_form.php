@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
+
 /* @var $this yii\web\View */
 /* @var $model backend\models\House */
 /* @var $form yii\widgets\ActiveForm */
@@ -13,6 +14,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?php
+    
     //$form->field($model, 'id')->textInput() autoincrement and primary key in base
     ?>
 

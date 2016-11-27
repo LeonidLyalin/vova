@@ -348,12 +348,10 @@ class ErrorHandler
     /**
      * Handles errors by filtering then logging them according to the configured bit fields.
      *
-     * @param int    $type      One of the E_* constants
-     * @param string $message
+     * @param int    $type    One of the E_* constants
      * @param string $file
      * @param int    $line
      * @param array  $context
-     * @param array  $backtrace
      *
      * @return bool Returns false when no handling happens so that the PHP engine can handle the error itself
      *
@@ -370,10 +368,6 @@ class ErrorHandler
 
         if (!$type || (!$log && !$throw)) {
             return $type && $log;
-        }
-
-        if (isset($context['GLOBALS']) && ($this->scopedErrors & $type)) {
-            unset($context['GLOBALS']);
         }
 
         if (null !== $backtrace && $type & E_ERROR) {
