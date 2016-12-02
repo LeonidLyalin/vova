@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'yii\\swiftmailer\\' => array($vendorDir . '/yiisoft/yii2-swiftmailer'),
+    'yii\\redactor\\' => array($vendorDir . '/yiidoc/yii2-redactor'),
     'yii\\jui\\' => array($vendorDir . '/yiisoft/yii2-jui'),
     'yii\\gii\\' => array($vendorDir . '/yiisoft/yii2-gii'),
     'yii\\faker\\' => array($vendorDir . '/yiisoft/yii2-faker'),
@@ -21,6 +22,7 @@ return array(
     'modernkernel\\fontawesome\\' => array($vendorDir . '/modernkernel/yii2-fontawesome'),
     'modernkernel\\flagiconcss\\' => array($vendorDir . '/modernkernel/yii2-flag-icon-css'),
     'modernkernel\\bootstrapsocial\\' => array($vendorDir . '/modernkernel/yii2-bootstrapsocial'),
+    'mdm\\admin\\' => array($vendorDir . '/mdmsoft/yii2-admin'),
     'lajax\\languagepicker\\' => array($vendorDir . '/lajax/yii2-language-picker'),
     'kartik\\mpdf\\' => array($vendorDir . '/kartik-v/yii2-mpdf'),
     'kartik\\grid\\' => array($vendorDir . '/kartik-v/yii2-grid'),

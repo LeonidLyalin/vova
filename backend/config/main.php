@@ -10,28 +10,19 @@ return [
     
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log', 'gii'],
+    'bootstrap' => ['log', 'gii', 'debug'],
     'modules' => ['gii' => [
             'class' => 'yii\gii\Module'],
         'gridview' => [
             'class' => '\kartik\grid\Module'],
+        
+        'debug' => [
+            'class' => 'yii\debug\Module',
+        ],
     ],
     'components' => [
-//        'i18n' => [
-//            'translations' => [
-//                'app*' => [
-//                    'class' => 'yii\i18n\PhpMessageSource',
-//                    'basePath' => '@app/messages',
-//              
-//                    //'sourceLanguage' => 'en-US',
-//                    'sourceLanguage'=>'ru-Ru',
-//                    'fileMap' => [
-//                        'app' => 'app.php',
-//                        'app/error' => 'error.php',
-//                    ],
-//                ],
-//            ],
-//        ],
+//'user' => ['identityClass' => 'common\models\User',
+//            'enableAutoLogin' => true,],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
@@ -56,12 +47,8 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => ['<alias:\w+>' => 'site/<alias>',
-            ],
-        ],
+        
     ],
+    
     'params' => $params,
 ];

@@ -27,8 +27,7 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    $path1="@app\messages";
-    echo $path1;
+    
     NavBar::begin([
         'brandLabel' => Yii::t('app','Управляющая компания'),
         'brandUrl' => Yii::$app->homeUrl,
@@ -42,7 +41,8 @@ AppAsset::register($this);
         ['label' => Yii::t('app','Карта'), 'url' => ['/site/map']],
         ['label' => Yii::t('app','Опросы'), 'url' => ['/polls/index']],
         ['label' => Yii::t('app','Ответы'), 'url' => ['/polls-answers/index']],
-        ['label' => Yii::t('app','Голосование'), 'url' => ['/humhub/modules/polls']],
+        ['label' => Yii::t('app','Голосование'), 'url' => ['/site/vote']],
+        ['label' => Yii::t('app','Администрирование'), 'url' => ['/admin']],
     ];
     
     if (Yii::$app->user->isGuest) {

@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Управляюая комнпания админка';
+$this->title = Yii::t('app','Управляющая компания. Админка');
 ?>
 <div class="site-index">
 

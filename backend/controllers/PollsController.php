@@ -114,7 +114,28 @@ class PollsController extends Controller
 
         return $this->redirect(['index']);
     }
-
+    /**
+     * Create new pool according humhub example
+     * @param type $id
+     * @return type
+     * @throws HttpException
+     */
+    public function actionCreatehumhub($id)
+    {if (!$this->contentContainer->permissionManager->can(new \humhub\modules\polls\permissions\CreatePoll())) {
+            throw new HttpException(400, 'Access denied!');
+        }
+        
+        $poll = new Poll();
+        $poll->scenario = Poll::SCENARIO_CREATE;
+        $poll->question = Yii::$app->request->post('question');
+        $poll->setNewAnswers(Yii::$app->request->post('newAnswers'));
+        $poll->allow_multiple = Yii::$app->request->post('allowMultiple', 0);
+        $poll->anonymous = Yii::$app->request->post('anonymous', 0);
+        $poll->is_random = Yii::$app->request->post('is_random', 0);
+        return \humhub\modules\polls\widgets\WallCreateForm::create($poll, $this->contentContainer);
+    
+    }
+    
     /**
      * Finds the Polls model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -130,4 +151,6 @@ class PollsController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+    
+    
 }

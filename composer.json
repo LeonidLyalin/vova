@@ -25,12 +25,13 @@
         "modernkernel/yii2-ionicons": "*",
         "modernkernel/yii2-bootstrapsocial": "*",
         "modernkernel/yii2-fontawesome": "*",
-        "edofre/yii2-slider-pro": "*",
-        "edofre/yii2-fullcalendar": "@dev",
+        
         "hauntd/yii2-vote": "*",
         "2amigos/yii2-google-maps-library" : "*",
         "voime/yii2-google-maps": "*",
         "yii2mod/yii2-google-maps-markers": "*",
+        
+        "yiidoc/yii2-redactor": "*",
         
         "lajax/yii2-language-picker": "1.*",
         
@@ -41,7 +42,9 @@
         
         "phpdocumentor/phpdocumentor": "2.*",
         
-        "chiliec/yii2-vote": "^3.0"
+        "chiliec/yii2-vote": "^3.0",
+        "mdmsoft/yii2-admin": "~2.0"
+        
         
     },
     "require-dev": {
@@ -51,6 +54,7 @@
 
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1"
+        
     },
     "config": {
         "process-timeout": 1800
@@ -65,5 +69,3 @@
         "post-install-cmd": "php init --env=Development --overwrite=n"
     }
 }
-
-

@@ -26,7 +26,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index','map'],
+                        'actions' => ['logout', 'index','map','vote','admin'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -100,5 +100,24 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+    /**
+     * Play with humhub vote
+     * @return type
+     */
+    public function actionVote()//play with google maps
+    {
+        return $this->render('vote');
+        
+    }
+    
+    /**
+     * Play with admin mdmsoft
+     * @return type
+     */
+    public function actionAdmin()//play with google maps
+    {
+        return $this->render('admin');
+        
     }
 }

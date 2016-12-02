@@ -66,6 +66,10 @@ class User extends ActiveRecord implements IdentityInterface
 
     /**
      * @inheritdoc
+     * comment added according to http://www.open-open.com/lib/view/open1434638805348.html
+     * class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface  
+     * 这个类需实现IdentityInterface接口中的5个函数,必须实现的有2个方法  
+     * findIdentity($id) //根据id查询用户信息  getId() //获取用户id 
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {

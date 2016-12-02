@@ -23,6 +23,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'y' => 
         array (
             'yii\\swiftmailer\\' => 16,
+            'yii\\redactor\\' => 13,
             'yii\\jui\\' => 8,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
@@ -43,6 +44,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'modernkernel\\fontawesome\\' => 25,
             'modernkernel\\flagiconcss\\' => 25,
             'modernkernel\\bootstrapsocial\\' => 29,
+            'mdm\\admin\\' => 10,
         ),
         'l' => 
         array (
@@ -150,6 +152,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
         ),
+        'yii\\redactor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiidoc/yii2-redactor',
+        ),
         'yii\\jui\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-jui',
@@ -205,6 +211,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'modernkernel\\bootstrapsocial\\' => 
         array (
             0 => __DIR__ . '/..' . '/modernkernel/yii2-bootstrapsocial',
+        ),
+        'mdm\\admin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mdmsoft/yii2-admin',
         ),
         'lajax\\languagepicker\\' => 
         array (
