@@ -6,14 +6,14 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content;
+namespace common\humhub\modules\content;
 
 use Yii;
-use humhub\modules\content\models\Content;
-use humhub\modules\content\components\MailUpdateSender;
-use humhub\modules\user\models\User;
-use humhub\commands\CronController;
-use humhub\models\Setting;
+use common\humhub\modules\content\models\Content;
+use common\humhub\modules\content\components\MailUpdateSender;
+use common\humhub\modules\user\models\User;
+use common\humhub\commands\CronController;
+use common\humhub\models\Setting;
 use yii\helpers\Console;
 use yii\base\Exception;
 
@@ -135,7 +135,7 @@ class Events extends \yii\base\Object
     {
         foreach (Content::find()->all() as $content) {
             $contentObject = $content->getPolymorphicRelation();
-            if ($contentObject instanceof \humhub\modules\search\interfaces\Searchable) {
+            if ($contentObject instanceof  \common\humhub\modules\search\interfaces\Searchable) {
                 Yii::$app->search->add($contentObject);
             }
         }
@@ -148,7 +148,7 @@ class Events extends \yii\base\Object
      */
     public static function onContentActiveRecordSave($event)
     {
-        if ($event->sender instanceof \humhub\modules\search\interfaces\Searchable) {
+        if ($event->sender instanceof  \common\humhub\modules\search\interfaces\Searchable) {
             Yii::$app->search->update($event->sender);
         }
     }
@@ -160,7 +160,7 @@ class Events extends \yii\base\Object
      */
     public static function onContentActiveRecordDelete($event)
     {
-        if ($event->sender instanceof \humhub\modules\search\interfaces\Searchable) {
+        if ($event->sender instanceof  \common\humhub\modules\search\interfaces\Searchable) {
             Yii::$app->search->delete($event->sender);
         }
     }

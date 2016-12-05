@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\components\behaviors;
+namespace common\humhub\modules\content\components\behaviors;
 
 use Yii;
 use yii\base\Behavior;

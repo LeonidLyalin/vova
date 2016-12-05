@@ -41,7 +41,7 @@ return [
     'components' => [
         'i18n' => [
             'translations' => [
-                'sourceLanguage' => 'ru-Ru',
+                'sourceLanguage' => 'en-En',
 //                'frontend*' => [
 //                    'class' => 'yii\i18n\PhpMessageSource',
 //                    'basePath' => '@common/messages',
@@ -50,8 +50,38 @@ return [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
                 ],
+                
+                'base' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@humhub/messages'
+                ],
+                'security' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@humhub/messages'
+                ],
+                'error' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@humhub/messages'
+                ],
+                'widgets_views_markdownEditor' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@humhub/messages'
+                ],
+                
             ],
+            
+            
+            
+            
         ],
+//        'formatter' => [
+//            'class' => 'yii\i18n\Formatter',
+//            'dateFormat' => 'php:d.m.Y',
+//            'datetimeFormat' => 'php:j F, H:i',
+//            'timeFormat' => 'php:H:i:s',
+//            'defaultTimeZone' => 'Europe/Moscow',
+//            'locale' => 'ru-RU'
+//        ],
         /**
          * http://www.open-open.com/lib/view/open1434638805348.html
          * Yii2-admin RBAC权限管理的实现
@@ -81,7 +111,8 @@ return [
             'admin/*',
             'polls/*',
             'polls-answers/*',
-            'debug/*'
+            'debug/*',
+            'house/*'
         ]
     ],
 ];

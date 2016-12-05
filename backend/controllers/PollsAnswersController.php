@@ -61,15 +61,17 @@ class PollsAnswersController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($id_poll)
     {
         $model = new PollsAnswers();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            $lastInsertID = $model->getPrimaryKey();
+           // $redirectPath='/polls/index?id_poll='+$id_poll
+            return $this->redirect(['/polls/index', 'id_poll' => $id_poll]);//$lastInsertID]);//$model->id]);
         } else {
             return $this->render('create', [
-                'model' => $model,
+                'model' => $model,'id_poll' => $id_poll
             ]);
         }
     }
@@ -126,7 +128,7 @@ class PollsAnswersController extends Controller
         $searchModel = new PollsAnswersSearch();
         $dataProvider = $searchModel->search([$searchModel->formName() => ['id_poll' => $id_poll]]);      
         return $this->renderPartial('indexpart', ['searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider], false
+                    'dataProvider' => $dataProvider, 'id_poll' => $id_poll], false
         );
     }
 }

@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-use humhub\modules\space\models\Space;
+use common\humhub\modules\space\models\Space;
 ?>
 
 <div class="panel panel-default">
@@ -25,7 +25,7 @@ use humhub\modules\space\models\Space;
             }
 
             /* add UserPickerWidget to notify members */
-            echo \humhub\modules\user\widgets\UserPicker::widget(array(
+            echo \common\humhub\modules\user\widgets\UserPicker::widget(array(
                 'inputId' => 'notifyUserInput',
                 'userSearchUrl' => $userSearchUrl,
                 'maxUsers' => 10,
@@ -47,10 +47,10 @@ use humhub\modules\space\models\Space;
 
             <div class="btn_container">
 
-                <?php echo \humhub\widgets\LoaderWidget::widget(['id' => 'postform-loader', 'cssClass' => 'loader-postform hidden']); ?>
+                <?php echo \common\humhub\widgets\LoaderWidget::widget(['id' => 'postform-loader', 'cssClass' => 'loader-postform hidden']); ?>
                 
                 <?php
-                echo \humhub\widgets\AjaxButton::widget([
+                echo \common\humhub\widgets\AjaxButton::widget([
                     'label' => $submitButtonText,
                     'ajaxOptions' => [
                         'url' => $submitUrl,
@@ -69,7 +69,7 @@ use humhub\modules\space\models\Space;
                 ?>
                 <?php
                 // Creates Uploading Button
-                echo humhub\modules\file\widgets\FileUploadButton::widget(array(
+                echo common\humhub\modules\file\widgets\FileUploadButton::widget(array(
                     'uploaderId' => 'contentFormFiles',
                     'fileListFieldName' => 'fileList',
                 ));
@@ -125,7 +125,7 @@ use humhub\modules\space\models\Space;
 
             <?php
             // Creates a list of already uploaded Files
-            echo \humhub\modules\file\widgets\FileUploadList::widget(array(
+            echo \common\humhub\modules\file\widgets\FileUploadList::widget(array(
                 'uploaderId' => 'contentFormFiles'
             ));
             ?>
@@ -154,11 +154,11 @@ use humhub\modules\space\models\Space;
     setDefaultVisibility();
         
     function setDefaultVisibility() {
-        <?php if ($defaultVisibility == humhub\modules\content\models\Content::VISIBILITY_PRIVATE) : ?>
+        <?php if ($defaultVisibility == common\humhub\modules\content\models\Content::VISIBILITY_PRIVATE) : ?>
             setPrivateVisibility();
         <?php endif ;?>
                 
-        <?php if ($defaultVisibility == humhub\modules\content\models\Content::VISIBILITY_PUBLIC) : ?>
+        <?php if ($defaultVisibility == common\humhub\modules\content\models\Content::VISIBILITY_PUBLIC) : ?>
             setPublicVisibility();
         <?php endif ;?>
     }

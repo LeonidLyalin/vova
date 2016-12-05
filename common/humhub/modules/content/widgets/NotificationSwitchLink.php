@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
 /**
  * NotificationSwitch for Wall Entries

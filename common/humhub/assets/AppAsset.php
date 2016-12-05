@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\assets;
+namespace common\humhub\assets;
 
 use yii\web\AssetBundle;
 
@@ -51,13 +51,13 @@ class AppAsset extends AssetBundle
          * Temporary disabled
          * https://github.com/inuyaksa/jquery.nicescroll/issues/574
          */
-        //'humhub\assets\JqueryNiceScrollAsset', 
-        'humhub\assets\JqueryTimeAgoAsset',
-        'humhub\assets\JqueryKnobAsset',
-        'humhub\assets\JqueryWidgetAsset',
-        'humhub\assets\JqueryPlaceholderAsset',
-        'humhub\assets\FontAwesomeAsset',
-        'humhub\assets\BlueimpFileUploadAsset',
+        //'common\humhub\assets\JqueryNiceScrollAsset', 
+        'common\humhub\assets\JqueryTimeAgoAsset',
+        'common\humhub\assets\JqueryKnobAsset',
+        'common\humhub\assets\JqueryWidgetAsset',
+        'common\humhub\assets\JqueryPlaceholderAsset',
+        'common\humhub\assets\FontAwesomeAsset',
+        'common\humhub\assets\BlueimpFileUploadAsset',
     ];
 
 }

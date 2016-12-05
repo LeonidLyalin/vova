@@ -93,15 +93,6 @@ return array (
       '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
     ),
   ),
-  'edofre/yii2-slider-pro' => 
-  array (
-    'name' => 'edofre/yii2-slider-pro',
-    'version' => '1.1.1.0',
-    'alias' => 
-    array (
-      '@edofre/sliderpro' => $vendorDir . '/edofre/yii2-slider-pro',
-    ),
-  ),
   'chiliec/yii2-vote' => 
   array (
     'name' => 'chiliec/yii2-vote',
@@ -183,15 +174,6 @@ return array (
       '@lajax/languagepicker' => $vendorDir . '/lajax/yii2-language-picker',
     ),
   ),
-  'edofre/yii2-fullcalendar' => 
-  array (
-    'name' => 'edofre/yii2-fullcalendar',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@edofre/fullcalendar' => $vendorDir . '/edofre/yii2-fullcalendar',
-    ),
-  ),
   'kartik-v/yii2-grid' => 
   array (
     'name' => 'kartik-v/yii2-grid',
@@ -217,6 +199,24 @@ return array (
     'alias' => 
     array (
       '@yii/redactor' => '/',
+    ),
+  ),
+  '2amigos/yii2-date-picker-widget' => 
+  array (
+    'name' => '2amigos/yii2-date-picker-widget',
+    'version' => '1.0.5.0',
+    'alias' => 
+    array (
+      '@dosamigos/datepicker' => $vendorDir . '/2amigos/yii2-date-picker-widget/src',
+    ),
+  ),
+  'kartik-v/yii2-field-range' => 
+  array (
+    'name' => 'kartik-v/yii2-field-range',
+    'version' => '1.3.1.0',
+    'alias' => 
+    array (
+      '@kartik/field' => $vendorDir . '/kartik-v/yii2-field-range',
     ),
   ),
 );

@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\assets;
+namespace common\humhub\assets;
 
 use Yii;
 use yii\web\AssetBundle;

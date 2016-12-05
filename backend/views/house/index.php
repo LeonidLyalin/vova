@@ -7,8 +7,9 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\HouseSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Дома');
+$this->title = Yii::t('app', 'Houses');
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="house-index">
 
@@ -16,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Добавить дом'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create house'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?=
     GridView::widget([

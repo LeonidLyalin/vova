@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\commands;
+namespace common\humhub\commands;
 
 use Yii;
 use yii\console\Controller;

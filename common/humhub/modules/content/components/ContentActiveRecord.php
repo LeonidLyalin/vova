@@ -10,8 +10,8 @@ namespace common\humhub\modules\content\components;
 
 use Yii;
 use yii\base\Exception;
-use humhub\components\ActiveRecord;
-use humhub\modules\content\models\Content;
+use common\humhub\components\ActiveRecord;
+use common\humhub\modules\content\models\Content;
 
 /**
  * ContentActiveRecord is the base ActiveRecord [[\yii\db\ActiveRecord]] for Content.
@@ -41,7 +41,7 @@ use humhub\modules\content\models\Content;
  * 
  * @author Luke
  */
-class ContentActiveRecord extends ActiveRecord implements \humhub\modules\content\interfaces\ContentTitlePreview
+class ContentActiveRecord extends ActiveRecord implements \common\humhub\modules\content\interfaces\ContentTitlePreview
 {
 
     /**
@@ -64,7 +64,7 @@ class ContentActiveRecord extends ActiveRecord implements \humhub\modules\conten
     public function init()
     {
         parent::init();
-        $this->attachBehavior('FollowableBehavior', \humhub\modules\user\behaviors\Followable::className());
+        $this->attachBehavior('FollowableBehavior', \common\humhub\modules\user\behaviors\Followable::className());
     }
 
     /**
@@ -176,7 +176,7 @@ class ContentActiveRecord extends ActiveRecord implements \humhub\modules\conten
     public function afterSave($insert, $changedAttributes)
     {
         // Auto follow this content
-        if ($this->className() != \humhub\modules\activity\models\Activity::className()) {
+        if ($this->className() != \common\humhub\modules\activity\models\Activity::className()) {
             $this->follow($this->content->created_by);
         }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
-use humhub\modules\content\components\ContentContainerActiveRecord;
+use common\humhub\modules\content\components\ContentContainerActiveRecord;
 use Yii;
 use yii\base\Exception;
 use yii\helpers\Url;
@@ -124,7 +124,7 @@ class Stream extends \yii\base\Widget
             'filters' => '-filter-',
             'sort' => '-sort-',
             'from' => '-from-',
-            'mode' => \humhub\modules\content\components\actions\Stream::MODE_NORMAL
+            'mode' => \common\humhub\modules\content\components\actions\Stream::MODE_NORMAL
         ], $this->streamActionParams);
 
         if ($this->contentContainer) {

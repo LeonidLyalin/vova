@@ -34,8 +34,8 @@ class PollsAnswers extends \yii\db\ActiveRecord
             [['id_poll', 'answer'], 'required'],
             [['id_poll'], 'integer'],
             [['answer'], 'string'],
-            [['id_poll'], 'unique'],
-            [['id_poll'], 'exist', 'skipOnError' => true, 'targetClass' => Polls::className(), 'targetAttribute' => ['id_poll' => 'id']],
+           
+         //   [['id_poll'], 'exist', 'skipOnError' => true, 'targetClass' => Polls::className(), 'targetAttribute' => ['id_poll' => 'id']],
         ];
     }
 
@@ -45,9 +45,9 @@ class PollsAnswers extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', '№ ответа'),
-            'id_poll' => Yii::t('app', '№ опроса'),
-            'answer' => Yii::t('app', 'ответ'),
+            'id' => Yii::t('app', '№'),
+            'id_poll' => Yii::t('app', '№ poll'),
+            'answer' => Yii::t('app', 'Answer'),
         ];
     }
 

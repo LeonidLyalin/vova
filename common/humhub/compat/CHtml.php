@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\compat;
+namespace common\humhub\compat;
 
 /**
  * CHtml - Yii1 compatiblity

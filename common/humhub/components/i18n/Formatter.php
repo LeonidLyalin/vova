@@ -6,10 +6,10 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\components\i18n;
+namespace common\humhub\components\i18n;
 
 use Yii;
-use humhub\models\Setting;
+use common\humhub\models\Setting;
 
 /**
  * @inheritdoc

@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\assets;
+namespace common\humhub\assets;
 
 use yii\web\AssetBundle;
 
@@ -35,7 +35,7 @@ class BlueimpFileUploadAsset extends AssetBundle
      * @inheritdoc
      */
     public $depends = [
-        'humhub\assets\JqueryWidgetAsset',
+        'common\humhub\assets\JqueryWidgetAsset',
     ];
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
 /**
  * WallEntryAddonWidget is an instance of StackWidget for wall entries.
@@ -10,7 +10,7 @@ namespace humhub\modules\content\widgets;
  *
  * @package humhub.modules_core.wall.widgets
  */
-class WallEntryAddons extends \humhub\widgets\BaseStack
+class WallEntryAddons extends  \common\humhub\widgets\BaseStack
 {
 
     /**

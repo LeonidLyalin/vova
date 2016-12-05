@@ -17,7 +17,7 @@ $config = [
     'name' => 'HumHub',
     'version' => '1.1.1',
     'basePath' => dirname(__DIR__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR,
-    'bootstrap' => ['log', 'commonhumhub\components\bootstrap\ModuleAutoLoader'],
+    'bootstrap' => ['log', 'common\humhub\components\bootstrap\ModuleAutoLoader'],
     'sourceLanguage' => 'en',
     'components' => [
         'moduleManager' => [
@@ -46,27 +46,28 @@ $config = [
             'class' => 'common\humhub\components\SettingsManager',
             'moduleId' => 'base',
         ),
-        'i18n' => [
-            'class' => 'common\humhub\components\i18n\I18N',
-            'translations' => [
-                'base' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@humhub/messages'
-                ],
-                'security' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@humhub/messages'
-                ],
-                'error' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@humhub/messages'
-                ],
-                'widgets_views_markdownEditor' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@humhub/messages'
-                ],
-            ],
-        ],
+        //надо перенести в общие настройки common
+//        'i18n' => [
+//            'class' => 'common\humhub\components\i18n\I18N',
+//            'translations' => [
+//                'base' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@humhub/messages'
+//                ],
+//                'security' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@humhub/messages'
+//                ],
+//                'error' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@humhub/messages'
+//                ],
+//                'widgets_views_markdownEditor' => [
+//                    'class' => 'yii\i18n\PhpMessageSource',
+//                    'basePath' => '@humhub/messages'
+//                ],
+//            ],
+//        ],
         'formatter' => [
             'class' => 'common\humhub\components\i18n\Formatter',
         ],

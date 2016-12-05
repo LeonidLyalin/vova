@@ -2,7 +2,7 @@
 
 use \yii\web\View;
 
-\humhub\modules\content\assets\Stream::register($this);
+\common\humhub\modules\content\assets\Stream::register($this);
 
 $this->registerJs('var streamUrl="' . $streamUrl . '"', View::POS_BEGIN);
 
@@ -61,7 +61,7 @@ $this->registerJsVar('defaultStreamSort', ($defaultStreamSort != '') ? $defaultS
     <div class="s2_stream" style="display:none">
 
         <div class="s2_streamContent"></div>
-        <?php echo \humhub\widgets\LoaderWidget::widget(['cssClass' => 'streamLoader']); ?>
+        <?php echo \common\humhub\widgets\LoaderWidget::widget(['cssClass' => 'streamLoader']); ?>
 
         <div class="emptyStreamMessage">
 

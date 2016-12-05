@@ -6,15 +6,15 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\activities;
+namespace common\humhub\modules\content\activities;
 
 use Yii;
-use humhub\modules\activity\components\BaseActivity;
+use common\humhub\modules\activity\components\BaseActivity;
 
 /**
  * Activity for created content 
  *
- * @see \humhub\modules\content\components\ContentActiveRecord
+ * @see \common\humhub\modules\content\components\ContentActiveRecord
  * @author luke
  */
 class ContentCreated extends BaseActivity

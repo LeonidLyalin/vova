@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\assets;
+namespace common\humhub\assets;
 
 use yii\web\AssetBundle;
 
@@ -36,7 +36,7 @@ class Select2Asset extends AssetBundle
     public $css = ['dist/css/select2.min.css'];
     
     public $depends = [
-        'humhub\assets\AppAsset'
+        'common\humhub\assets\AppAsset'
     ];
 
 }

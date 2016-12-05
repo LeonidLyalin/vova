@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\components\i18n;
+namespace common\humhub\components\i18n;
 
 use Yii;
 
@@ -59,7 +59,7 @@ class I18N extends \yii\i18n\I18N
                 $reflector = new \ReflectionClass($className);
 
                 $this->translations[$moduleCategory . '*'] = [
-                    'class' => 'humhub\components\i18n\MessageSource',
+                    'class' => 'common\humhub\components\i18n\MessageSource',
                     'sourceLanguage' => Yii::$app->sourceLanguage,
                     'sourceCategory' => $moduleCategory,
                     'basePath' => dirname($reflector->getFileName()) . '/messages',

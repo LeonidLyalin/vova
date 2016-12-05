@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\assets;
+namespace common\humhub\assets;
 
 use yii\web\AssetBundle;
 
@@ -29,7 +29,7 @@ class TabbedFormAsset extends AssetBundle
     public $js = ['js/tabbedForm.js'];
     
     public $depends = [
-        'humhub\assets\AppAsset'
+        'common\humhub\assets\AppAsset'
     ];
     
 }

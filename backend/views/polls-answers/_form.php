@@ -12,7 +12,12 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id_poll')->textInput() ?>
+    <?=
+    
+    $form->field($model, 'id_poll')->textInput(['value'=>$id_poll, 'readonly'=>true])
+    ?>
+    <?php
+    //$form->field($model,'id_poll')->label($id_poll) ?>
 
     <?= $form->field($model, 'answer')->textarea(['rows' => 6]) ?>
 

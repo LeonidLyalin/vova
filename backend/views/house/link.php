@@ -5,7 +5,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model backend\models\House */
 
-$this->title = Yii::t('app', 'Карта');
+$this->title = Yii::t('app', 'Map');
 $this->params['breadcrumbs'][] = $this->title;
 echo 'а вот и я';
 echo $model->id;
@@ -19,11 +19,11 @@ echo $model->id;
 <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Изменить'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Удалить'), ['delete', 'id' => $model->id], [
+        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'Вы уверены, что хотите удалить?'),
+                'confirm' => Yii::t('app', 'Are you sure you want to delete?'),
                 'method' => 'post',
             ],
         ]) ?>

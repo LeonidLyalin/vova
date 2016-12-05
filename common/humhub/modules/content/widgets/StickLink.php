@@ -6,11 +6,11 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
 use Yii;
 use yii\helpers\Url;
-use humhub\modules\content\components\ContentContainerController;
+use common\humhub\modules\content\components\ContentContainerController;
 
 /**
  * StickLinkWidget for Wall Entries shows a stick link.
@@ -25,7 +25,7 @@ class StickLink extends \yii\base\Widget
 {
 
     /**
-     * @var \humhub\modules\content\components\ContentActiveRecord
+     * @var \common\humhub\modules\content\components\ContentActiveRecord
      */
     public $content;
 

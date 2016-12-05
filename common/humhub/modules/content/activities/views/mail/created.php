@@ -8,4 +8,4 @@ echo Yii::t('ContentModule.activities_views_created', '{displayName} created a n
 ));
 ?>
 <br />
-<em>"<?php echo \humhub\widgets\RichText::widget(['text' => $source->getContentDescription(), 'minimal' => true]); ?>"</em>
+<em>"<?php echo \common\humhub\widgets\RichText::widget(['text' => $source->getContentDescription(), 'minimal' => true]); ?>"</em>

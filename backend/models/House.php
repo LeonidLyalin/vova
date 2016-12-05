@@ -29,7 +29,7 @@ class House extends \yii\db\ActiveRecord
     {
         return [
             [[ 'street', 'number'], 'required'],
-            [['id', 'number'], 'integer'],
+            [['number'], 'integer'],//id was removed
             [['street'], 'string'],
             [['letter'], 'string', 'max' => 2],
         ];
@@ -42,9 +42,9 @@ class House extends \yii\db\ActiveRecord
     {
         return [
            // 'id' => Yii::t('app', '№'),
-            'street' => Yii::t('app', 'Улица'),
-            'number' => Yii::t('app', 'Дом'),
-            'letter' => Yii::t('app', 'Буква номера'),
+            'street' => Yii::t('app', 'Street'),
+            'number' => Yii::t('app', 'House'),
+            'letter' => Yii::t('app', 'Letter'),
         ];
     }
 

@@ -1,5 +1,5 @@
 <?php
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
 
 /**

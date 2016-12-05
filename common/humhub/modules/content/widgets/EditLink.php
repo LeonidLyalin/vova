@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
 /**
  * Edit Link for Wall Entries
@@ -21,12 +21,12 @@ class EditLink extends \yii\base\Widget
 {
 
     /**
-     * @var \humhub\modules\content\components\ContentActiveRecord
+     * @var \common\humhub\modules\content\components\ContentActiveRecord
      */
     public $content = null;
 
     /**
-     * @var \humhub\modules\content\models\WallEntry
+     * @var \common\humhub\modules\content\models\WallEntry
      */
     public $wallEntryWidget;
 

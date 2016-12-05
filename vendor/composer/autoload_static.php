@@ -54,6 +54,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             'kartik\\mpdf\\' => 12,
             'kartik\\grid\\' => 12,
+            'kartik\\field\\' => 13,
             'kartik\\dialog\\' => 14,
             'kartik\\base\\' => 12,
         ),
@@ -61,14 +62,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             'hauntd\\vote\\' => 12,
         ),
-        'e' => 
-        array (
-            'edofre\\sliderpro\\' => 17,
-            'edofre\\fullcalendar\\' => 20,
-        ),
         'd' => 
         array (
             'dosamigos\\google\\maps\\' => 22,
+            'dosamigos\\datepicker\\' => 21,
         ),
         'c' => 
         array (
@@ -228,6 +225,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-grid',
         ),
+        'kartik\\field\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-field-range',
+        ),
         'kartik\\dialog\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-dialog',
@@ -240,17 +241,13 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/hauntd/yii2-vote',
         ),
-        'edofre\\sliderpro\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/edofre/yii2-slider-pro',
-        ),
-        'edofre\\fullcalendar\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/edofre/yii2-fullcalendar',
-        ),
         'dosamigos\\google\\maps\\' => 
         array (
             0 => __DIR__ . '/..' . '/2amigos/yii2-google-maps-library',
+        ),
+        'dosamigos\\datepicker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/2amigos/yii2-date-picker-widget/src',
         ),
         'chiliec\\vote\\' => 
         array (
@@ -558,7 +555,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'MYANMAR' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/myanmar.php',
         'OTLdump' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/otl_dump.php',
         'PDFBarcode' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/barcode.php',
+        'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
+        'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',
+        'PHPUnit\\Framework\\TestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestListener.php',
         'PHPUnit_Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit_Extensions_GroupTestSuite' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/GroupTestSuite.php',
         'PHPUnit_Extensions_PhptTestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/Extensions/PhptTestCase.php',

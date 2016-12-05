@@ -6,9 +6,9 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\compat;
+namespace common\humhub\compat;
 
-use \humhub\compat\CHtml;
+use \common\humhub\compat\CHtml;
 use yii\helpers\Html;
 
 /**

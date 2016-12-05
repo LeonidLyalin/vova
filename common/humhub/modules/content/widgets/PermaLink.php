@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
 use yii\helpers\Url;
 
@@ -23,7 +23,7 @@ class PermaLink extends \yii\base\Widget
 {
 
     /**
-     * @var \humhub\modules\content\components\ContentActiveRecord
+     * @var \common\humhub\modules\content\components\ContentActiveRecord
      */
     public $content;
 

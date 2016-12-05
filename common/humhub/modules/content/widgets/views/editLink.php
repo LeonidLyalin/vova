@@ -3,11 +3,11 @@
 use yii\helpers\Url;
 use yii\web\JsExpression;
 
-/* @var $this humhub\components\View */
+/* @var $this common\humhub\components\View */
 ?>
 <li>
     <?php
-    echo \humhub\widgets\AjaxButton::widget([
+    echo \common\humhub\widgets\AjaxButton::widget([
         'label' => '<i class="fa fa-pencil"></i> ' . Yii::t('ContentModule.widgets_views_editLink', 'Edit'),
         'tag' => 'a',
         'ajaxOptions' => [

@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\compat;
+namespace common\humhub\compat;
 
 use Yii;
 
@@ -248,7 +248,7 @@ class HForm extends \yii\base\Component
                     case 'markdown':
                         $options['id'] = $name;
                         $returnField = $this->form->field($model, $name)->textarea($options);
-                        $returnField .= \humhub\widgets\MarkdownEditor::widget(array('fieldId' => $name));
+                        $returnField .= \common\humhub\widgets\MarkdownEditor::widget(array('fieldId' => $name));
                         return $returnField;
                     default:
                         return "Field Type " . $definition['type'] . " not supported by Compat HForm";

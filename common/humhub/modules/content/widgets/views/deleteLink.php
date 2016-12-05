@@ -2,12 +2,12 @@
 
 use yii\helpers\Url;
 
-/* @var $this humhub\components\View */
+/* @var $this common\humhub\components\View */
 ?>
 <li>
     <!-- load modal confirm widget -->
     <?php
-    echo humhub\widgets\ModalConfirm::widget(array(
+    echo common\humhub\widgets\ModalConfirm::widget(array(
         'uniqueID' => 'modal_postdelete_' . $id,
         'linkOutput' => 'a',
         'title' => Yii::t('ContentModule.widgets_views_deleteLink', '<strong>Confirm</strong> post deleting'),

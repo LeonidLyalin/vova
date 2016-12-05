@@ -1,9 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use humhub\modules\user\models\User;
-use humhub\modules\space\models\Space;
-use humhub\modules\content\components\ContentContainerController;
+use common\humhub\modules\user\models\User;
+use common\humhub\modules\space\models\Space;
+use common\humhub\modules\content\components\ContentContainerController;
 
 $user = $object->content->user;
 $container = $object->content->container;
@@ -19,7 +19,7 @@ $container = $object->content->container;
                 <li class="dropdown ">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu pull-right">
-                        <?php echo \humhub\modules\content\widgets\WallEntryControls::widget(['object' => $object, 'wallEntryWidget' => $wallEntryWidget]); ?>
+                        <?php echo \common\humhub\modules\content\widgets\WallEntryControls::widget(['object' => $object, 'wallEntryWidget' => $wallEntryWidget]); ?>
                     </ul>
                 </li>
             </ul>
@@ -34,7 +34,7 @@ $container = $object->content->container;
 
             <!-- Show space image, if you are outside from a space -->
             <?php if (!Yii::$app->controller instanceof ContentContainerController && $object->content->container instanceof Space): ?>
-                <?php echo \humhub\modules\space\widgets\Image::widget([
+                <?php echo \common\humhub\modules\space\widgets\Image::widget([
                     'space' => $object->content->container,
                     'width' => 20,
                     'htmlOptions' => [
@@ -62,10 +62,10 @@ $container = $object->content->container;
                             <strong><a href="<?php echo $container->getUrl(); ?>"><?php echo Html::encode($container->displayName); ?></a></strong>&nbsp;
                         <?php endif; ?>
 
-                        <?php echo \humhub\widgets\TimeAgo::widget(['timestamp' => $object->content->created_at]); ?>
+                        <?php echo \common\humhub\widgets\TimeAgo::widget(['timestamp' => $object->content->created_at]); ?>
 
                         <?php if ($object->content->created_at !== $object->content->updated_at && $object->content->updated_at != ''): ?>
-                            (<?php echo Yii::t('ContentModule.views_wallLayout', 'Updated :timeago', array(':timeago' => \humhub\widgets\TimeAgo::widget(['timestamp' => $object->content->updated_at]))); ?>)
+                            (<?php echo Yii::t('ContentModule.views_wallLayout', 'Updated :timeago', array(':timeago' => \common\humhub\widgets\TimeAgo::widget(['timestamp' => $object->content->updated_at]))); ?>)
                         <?php endif; ?>
 
                         <!-- show space name -->
@@ -74,7 +74,7 @@ $container = $object->content->container;
                                     href="<?php echo $container->getUrl(); ?>"><?php echo Html::encode($container->name); ?></a></strong>&nbsp;
                         <?php endif; ?>
 
-                        <?php echo \humhub\modules\content\widgets\WallEntryLabels::widget(['object' => $object]); ?>
+                        <?php echo \common\humhub\modules\content\widgets\WallEntryLabels::widget(['object' => $object]); ?>
 
                     </small>
                 </h4>
@@ -84,13 +84,13 @@ $container = $object->content->container;
             <hr/>
 
             <div class="content" id="wall_content_<?php echo $object->getUniqueId(); ?>">
-                <?php if (!$object instanceof \humhub\modules\post\models\Post) : ?>
+                <?php if (!$object instanceof \common\humhub\modules\post\models\Post) : ?>
                     <span class="label label-default pull-right"><?php echo $object->getContentName(); ?></span>
                 <?php endif; ?>
                 <?php echo $content; ?>
             </div>
 
-            <?php echo \humhub\modules\content\widgets\WallEntryAddons::widget(['object' => $object]); ?>
+            <?php echo \common\humhub\modules\content\widgets\WallEntryAddons::widget(['object' => $object]); ?>
         </div>
 
 

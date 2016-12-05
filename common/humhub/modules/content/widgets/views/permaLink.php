@@ -2,12 +2,12 @@
 
 use yii\helpers\Url;
 
-/* @var $this humhub\components\View */
+/* @var $this common\humhub\components\View */
 ?>
 <li>
 
     <?php
-    echo humhub\widgets\ModalConfirm::widget(array(
+    echo common\humhub\widgets\ModalConfirm::widget(array(
         'uniqueID' => 'modal_permalink_' . $id,
         'linkOutput' => 'a',
         'title' => Yii::t('ContentModule.widgets_views_permaLink', '<strong>Permalink</strong> to this post'),

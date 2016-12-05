@@ -6,12 +6,12 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\commands;
+namespace common\humhub\commands;
 
 use Yii;
 use yii\console\Controller;
 use yii\helpers\Console;
-use humhub\models\Setting;
+use common\humhub\models\Setting;
 
 /**
  * Cronjobs

@@ -29,20 +29,20 @@ AppAsset::register($this);
     <?php
     
     NavBar::begin([
-        'brandLabel' => Yii::t('app','Управляющая компания'),
+        'brandLabel' => Yii::t('app','House company'),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => Yii::t('app','Главная'), 'url' => ['/site/index']],
-        ['label' => Yii::t('app','Дома'), 'url' => ['/house/index']],
-        ['label' => Yii::t('app','Карта'), 'url' => ['/site/map']],
-        ['label' => Yii::t('app','Опросы'), 'url' => ['/polls/index']],
-        ['label' => Yii::t('app','Ответы'), 'url' => ['/polls-answers/index']],
-        ['label' => Yii::t('app','Голосование'), 'url' => ['/site/vote']],
-        ['label' => Yii::t('app','Администрирование'), 'url' => ['/admin']],
+        ['label' => Yii::t('app','Home'), 'url' => ['/site/index']],
+        ['label' => Yii::t('app','House'), 'url' => ['/house/index']],
+        ['label' => Yii::t('app','Map'), 'url' => ['/site/map']],
+        ['label' => Yii::t('app','Polls'), 'url' => ['/polls/index']],
+        ['label' => Yii::t('app','Answers'), 'url' => ['/polls-answers/index']],
+        ['label' => Yii::t('app','Vote'), 'url' => ['/site/vote']],
+        ['label' => Yii::t('app','Admin'), 'url' => ['/admin']],
     ];
     
     if (Yii::$app->user->isGuest) {

@@ -6,12 +6,12 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\components\actions;
+namespace common\humhub\modules\content\components\actions;
 
 use Yii;
-use humhub\modules\content\models\Content;
-use humhub\modules\content\models\WallEntry;
-use humhub\modules\user\models\User;
+use common\humhub\modules\content\models\Content;
+use common\humhub\modules\content\models\WallEntry;
+use common\humhub\modules\user\models\User;
 use yii\base\ActionEvent;
 use yii\base\Exception;
 

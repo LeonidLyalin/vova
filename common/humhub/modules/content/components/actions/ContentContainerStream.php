@@ -18,10 +18,10 @@
  * GNU Affero General Public License for more details.
  */
 
-namespace humhub\modules\content\components\actions;
+namespace common\humhub\modules\content\components\actions;
 
 use Yii;
-use humhub\modules\content\models\Content;
+use common\humhub\modules\content\models\Content;
 
 /**
  * ContentContainerStreamAction

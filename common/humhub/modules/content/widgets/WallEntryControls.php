@@ -1,17 +1,17 @@
 <?php
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
-class WallEntryControls extends \humhub\widgets\BaseStack
+class WallEntryControls extends  \common\humhub\widgets\BaseStack
 {
 
     /**
-     * @var \humhub\modules\content\components\ContentActiveRecord
+     * @var  \common\humhub\modules\content\components\ContentActiveRecord
      */
     public $object;
 
     /**
-     * @var \humhub\modules\content\models\WallEntry
+     * @var  \common\humhub\modules\content\models\WallEntry
      */
     public $wallEntryWidget;
 }

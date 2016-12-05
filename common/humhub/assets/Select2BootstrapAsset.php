@@ -6,7 +6,7 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\assets;
+namespace common\humhub\assets;
 
 use yii\web\AssetBundle;
 
@@ -33,7 +33,7 @@ class Select2BootstrapAsset extends AssetBundle
      * @var type 
      */
     public $depends = [
-        'humhub\assets\Select2Asset'
+        'common\humhub\assets\Select2Asset'
     ];
 
 }

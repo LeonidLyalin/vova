@@ -33,7 +33,7 @@ class PollsController extends Controller
      * Lists all Polls models.
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($id_poll=0)
     {
         $searchModel = new PollsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -41,6 +41,7 @@ class PollsController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'id_poll' => $id_poll
         ]);
     }
     

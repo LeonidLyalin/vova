@@ -6,16 +6,16 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
 use Yii;
 use yii\web\HttpException;
-use humhub\components\Widget;
-use humhub\modules\user\models\User;
-use humhub\modules\space\models\Space;
-use humhub\modules\content\models\Content;
-use humhub\modules\content\components\ContentContainerActiveRecord;
-use humhub\modules\content\components\ContentActiveRecord;
+use common\humhub\components\Widget;
+use common\humhub\modules\user\models\User;
+use common\humhub\modules\space\models\Space;
+use common\humhub\modules\content\models\Content;
+use common\humhub\modules\content\components\ContentContainerActiveRecord;
+use common\humhub\modules\content\components\ContentActiveRecord;
 
 /**
  * WallCreateContentForm is the base widget to create  "quick" create content forms above Stream/Wall.
@@ -81,7 +81,7 @@ class WallCreateContentForm extends Widget
         }
 
         $canSwitchVisibility = false;
-        if ($this->contentContainer->permissionManager->can(new \humhub\modules\content\permissions\CreatePublicContent())) {
+        if ($this->contentContainer->permissionManager->can(new \common\humhub\modules\content\permissions\CreatePublicContent())) {
             $canSwitchVisibility = true;
         } else {
             $defaultVisibility = Content::VISIBILITY_PRIVATE;
@@ -115,7 +115,7 @@ class WallCreateContentForm extends Widget
         Yii::$app->response->format = 'json';
 
         $visibility = Yii::$app->request->post('visibility');
-        if ($visibility == Content::VISIBILITY_PUBLIC && !$contentContainer->permissionManager->can(new \humhub\modules\content\permissions\CreatePublicContent())) {
+        if ($visibility == Content::VISIBILITY_PUBLIC && !$contentContainer->permissionManager->can(new \common\humhub\modules\content\permissions\CreatePublicContent())) {
             $visibility = Content::VISIBILITY_PRIVATE;
         }
         $record->content->visibility = $visibility;

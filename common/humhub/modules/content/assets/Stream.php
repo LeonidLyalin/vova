@@ -1,6 +1,6 @@
 <?php
 
-namespace humhub\modules\content\assets;
+namespace common\humhub\modules\content\assets;
 
 use yii\web\AssetBundle;
 

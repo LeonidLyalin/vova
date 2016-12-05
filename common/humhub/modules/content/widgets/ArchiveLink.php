@@ -6,10 +6,10 @@
  * @license https://www.humhub.com/licences
  */
 
-namespace humhub\modules\content\widgets;
+namespace common\humhub\modules\content\widgets;
 
 use Yii;
-use humhub\modules\content\components\ContentContainerController;
+use common\humhub\modules\content\components\ContentContainerController;
 
 /**
  * StickLink for Wall Entries
@@ -23,7 +23,7 @@ class ArchiveLink extends \yii\base\Widget
 {
 
     /**
-     * @var \humhub\modules\content\components\ContentActiveRecord
+     * @var \common\humhub\modules\content\components\ContentActiveRecord
      */
     public $content;
 

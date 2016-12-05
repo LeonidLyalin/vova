@@ -2,16 +2,16 @@
 
 $config = [
     'id' => 'humhub',
-    'bootstrap' => ['humhub\components\bootstrap\LanguageSelector'],
+    'bootstrap' => ['common\humhub\components\bootstrap\LanguageSelector'],
     'defaultRoute' => '/dashboard/dashboard',
     'layoutPath' => '@humhub/views/layouts',
     'components' => [
         'request' => [
-            'class' => 'humhub\components\Request',
+            'class' => 'common\humhub\components\Request',
         ],
         'user' => [
-            'class' => 'humhub\modules\user\components\User',
-            'identityClass' => 'humhub\modules\user\models\User',
+            'class' => 'common\humhub\modules\user\components\User',
+            'identityClass' => 'common\humhub\modules\user\models\User',
             'enableAutoLogin' => true,
             'loginUrl' => ['/user/auth/login']
         ],
@@ -19,7 +19,7 @@ $config = [
             'errorAction' => 'error/index',
         ],
         'session' => [
-            'class' => 'humhub\modules\user\components\Session',
+            'class' => 'common\humhub\modules\user\components\Session',
             'sessionTable' => 'user_http_session',
         ],
     ],
