@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="polls-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
+<? //   var_dump($this) ?>
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>

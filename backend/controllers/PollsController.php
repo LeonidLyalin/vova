@@ -12,18 +12,17 @@ use yii\filters\VerbFilter;
 /**
  * PollsController implements the CRUD actions for Polls model.
  */
-class PollsController extends Controller
-{
+class PollsController extends Controller {
+
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['post'],
                 ],
             ],
         ];
@@ -31,27 +30,27 @@ class PollsController extends Controller
 
     /**
      * Lists all Polls models.
+     * @var $id_poll integer id of poll 
      * @return mixed
      */
-    public function actionIndex($id_poll=0)
-    {
+    public function actionIndex($id_poll = 0) {
         $searchModel = new PollsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-            'id_poll' => $id_poll
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
+                    'id_poll' => $id_poll
         ]);
     }
-    
-    public function actionShowanswers2()
-    {
-       // $searchModel = new PollsSearch();
-       // $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        return $this->render('showanswers2');
-    }
+//    public function actionShowanswers2()
+//    {
+//       // $searchModel = new PollsSearch();
+//       // $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+//
+//        return $this->render('showanswers2');
+//    }
 
 
     /**
@@ -59,27 +58,30 @@ class PollsController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
+//    public function actionView($id)
+//    {
+//        return $this->render('view', [
+//            'model' => $this->findModel($id),
+//        ]);
+//    }
 
     /**
      * Creates a new Polls model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new Polls();
+        //var_dump($model->load(Yii::$app->request->post()));
+        //var_dump($model->save());
 
+      //  var_dump(Yii::$app->user);
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index', 'id_poll' => $model->id]);
+            //$this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
@@ -90,15 +92,15 @@ class PollsController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index', 'id_poll' => $model->id]);
+            //$this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
@@ -109,23 +111,23 @@ class PollsController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
-    {
+    public function actionDelete($id) {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
+
     /**
      * Create new pool according humhub example
      * @param type $id
      * @return type
      * @throws HttpException
      */
-    public function actionCreatehumhub($id)
-    {if (!$this->contentContainer->permissionManager->can(new \humhub\modules\polls\permissions\CreatePoll())) {
+    public function actionCreatehumhub($id) {
+        if (!$this->contentContainer->permissionManager->can(new \humhub\modules\polls\permissions\CreatePoll())) {
             throw new HttpException(400, 'Access denied!');
         }
-        
+
         $poll = new Poll();
         $poll->scenario = Poll::SCENARIO_CREATE;
         $poll->question = Yii::$app->request->post('question');
@@ -134,9 +136,8 @@ class PollsController extends Controller
         $poll->anonymous = Yii::$app->request->post('anonymous', 0);
         $poll->is_random = Yii::$app->request->post('is_random', 0);
         return \humhub\modules\polls\widgets\WallCreateForm::create($poll, $this->contentContainer);
-    
     }
-    
+
     /**
      * Finds the Polls model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -144,14 +145,12 @@ class PollsController extends Controller
      * @return Polls the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = Polls::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-    
-    
+
 }

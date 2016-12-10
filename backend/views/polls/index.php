@@ -22,7 +22,7 @@ $url = "/vova/backend/web/polls-answers/indexpart";
 $this->registerJS(
         '
             $(document).ready(function () {
-            $("tr").on("dblclick", function (ev) {
+            $(".kv-grid-table tr").on("dblclick", function (ev) {
                 var text_id = $("td:first", $(this)).text();
                 var text_question = $("td:nth-child(2)", $(this)).text();
                 $(".questionnumber").html("<h1>"+text_id+"</h>");
@@ -59,21 +59,24 @@ $this->registerJS(
     <?=
     GridView::widget([
         'dataProvider' => $dataProvider,
+        /**
+         * Choose special color for actual pool (which today is valid)
+         */
+        'rowOptions' => function ($model) {
+            $time1 = date('Y-m-d', strtotime($model->date_beg));
+            $time2 = date('Y-m-d', strtotime($model->date_end));
+            $time3 = date('Y-m-d');
+            if ($time2 >= $time3 && $time1 <= $time3) {
+                return ['class' => 'info'];
+            }
+        },
         'filterModel' => $searchModel,
         'columns' => [
             'id',
                 ['attribute' => 'question', 'value' => 'question'], //:ntext',
-            // 'date_beg',
             ['attribute' => 'date_beg', 'format' => ['date', 'php:d-m-Y']],
                 ['attribute' => 'date_end', 'format' => ['date', 'php:d-m-Y']],
-            //'allow_mulitple',
-            //'is_random',
-            // [atribute=>'anonymous',
-            //     values=>'anonymousLabel'],
-//                ['attribute' => 'allowMultipleLabel', 'label' => 'Multiple answer'],
-//                ['attribute' => 'anonymousLabel', 'label' => 'Anonymous answer'],
-//                ['attribute' => 'isRandomLabel', 'label' => 'Random order'],//
-            ['class' => 'kartik\grid\BooleanColumn', 'value' => 'anonymous',
+                ['class' => 'kartik\grid\BooleanColumn', 'value' => 'anonymous',
                 'trueLabel' => 'Yes',
                 'falseLabel' => 'Yes',
                 'label' => Yii::t('app', 'Anonymous votes')
@@ -93,8 +96,9 @@ $this->registerJS(
                 'falseLabel' => 'Yes',
                 'label' => Yii::t('app', 'Show votes')
             ],
-//                ['attribute' => 'showVoteLabel', 'label' => 'Show votes'],
-            ['class' => 'yii\grid\ActionColumn'],
+                ['class' => 'yii\grid\ActionColumn',
+                'template' => '{update}{delete}',
+            ],
         ],
         'responsive' => true,
         'hover' => true,
@@ -170,7 +174,29 @@ $this->registerJS(
     </script>
 
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#pollanswerbutton").click(function (ev) {
+                // var text_id = $("td:first", $(this)).text();
+                // var text_question = $("td:nth-child(2)", $(this)).text();
+                //  $(".questionnumber").html("<h1>"+text_id+"</h>");
+                //  $(".questiontext").html("<h1>"+text_question+"</h>"); 
+                $(".createanswer").text("<p> Im working, almost </p>");
+                $.ajax({
+                    type: "GET",
+                    url: "createpart",
+                    data: "id_poll=" +<?= $id_poll ?>,
+                    success: function (msg) {
+                        if (msg.length > 0) {
+                            $(".createanswer").html(msg);
 
+                        }
+                    }}
+                );//  $.ajax({
+
+            })//$(".kv-grid-table tr").on("click", function (ev) 
+        });
+    </script>
 
 </div>
 

@@ -37,7 +37,7 @@ return [
             ],
         ]
     ],
-    'language' => 'en-En',
+    'language' => 'en-EN',
     'components' => [
         'i18n' => [
             'translations' => [

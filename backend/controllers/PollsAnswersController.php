@@ -76,22 +76,51 @@ class PollsAnswersController extends Controller
         }
     }
 
+    public function actionCreatepart($id_poll)
+    {
+        $model = new PollsAnswers();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $lastInsertID = $model->getPrimaryKey();
+           // $redirectPath='/polls/index?id_poll='+$id_poll
+            return $this->redirect(['/polls/index', 'id_poll' => $id_poll]);//$lastInsertID]);//$model->id]);
+        } else {
+            return $this->renderpartial('create', [
+                'model' => $model,'id_poll' => $id_poll
+            ],false);
+        }
+    }
+    
     /**
      * Updates an existing PollsAnswers model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id, $id_poll)
     {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return$this->redirect(['polls/index', 'id_poll' => $id_poll]);
+            //$this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
-                'model' => $model,
+                'model' => $model,'id_poll'=>$id_poll,
             ]);
+        }
+    }
+    public function actionUpdatepart($id, $id_poll)
+    {
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return$this->redirect(['polls/index', 'id_poll' => $id_poll]);
+            //$this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->renderPartial('updatepart', [
+                'model' => $model,'id_poll'=>$id_poll,
+            ],false);
         }
     }
 
@@ -101,11 +130,11 @@ class PollsAnswersController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($id, $id_poll)
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(['polls/index', 'id_poll' => $id_poll]);
     }
 
     /**

@@ -23,12 +23,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
             'id',
             'id_poll',
             'answer:ntext',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 </div>
+indexpart
