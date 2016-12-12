@@ -7,44 +7,49 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'gii', 'debug'],
     'modules' => [
-    'vote' => [
-      'class' => hauntd\vote\Module::class,
-        'guestTimeLimit' => 3600,
-        'entities' => [
-          // Entity -> Settings
-          'itemVote' => app\models\Item::class, // your model
-          'itemVoteGuests' => [
-              'modelName' => app\models\Item::class, // your model
-              'allowGuests' => true,
-          ],
-          'itemLike' => [
-              'modelName' => app\models\Item::class, // your model
-              'type' => hauntd\vote\Module::TYPE_TOGGLE, // like/favorite button
-          ],
-          'itemFavorite' => [
-              'modelName' => app\models\Item::class, // your model
-              'type' => hauntd\vote\Module::TYPE_TOGGLE, // like/favorite button
-          ],
-      ],
+        'gii' => [
+            'class' => 'yii\gii\Module'],
+        'debug' => [
+            'class' => 'yii\debug\Module',
+            'allowedIPs' => ['*'],
+
+        ],
+//        'vote' => [
+//            'class' => hauntd\vote\Module::class,
+//            'guestTimeLimit' => 3600,
+//            'entities' => [
+//                // Entity -> Settings
+//                'itemVote' => app\models\Item::class, // your model
+//                'itemVoteGuests' => [
+//                    'modelName' => app\models\Item::class, // your model
+//                    'allowGuests' => true,
+//                ],
+//                'itemLike' => [
+//                    'modelName' => app\models\Item::class, // your model
+//                    'type' => hauntd\vote\Module::TYPE_TOGGLE, // like/favorite button
+//                ],
+//                'itemFavorite' => [
+//                    'modelName' => app\models\Item::class, // your model
+//                    'type' => hauntd\vote\Module::TYPE_TOGGLE, // like/favorite button
+//                ],
+//            ],
+//        ],
     ],
-  ],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
-        
-    'assetManager' => [
-        'bundles' => [
-            'dosamigos\google\maps\MapAsset' => [
-                'options' => [
-                    'key' => 'AIzaSyA44qDfpv4Qw3affwiOAAhKOtcu7Duqfko',
-                    'language' => 'ru-Ru',
-                    'version' => '3.1.18'
+        'assetManager' => [
+            'bundles' => [
+                'dosamigos\google\maps\MapAsset' => [
+                    'options' => [
+                        'key' => 'AIzaSyA44qDfpv4Qw3affwiOAAhKOtcu7Duqfko',
+                        'language' => 'ru-Ru',
+                        'version' => '3.1.18'
+                    ]
                 ]
             ]
-        ]
-    ],
-
+        ],
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
@@ -69,14 +74,14 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-    /*
+    
       'urlManager' => [
       'enablePrettyUrl' => true,
       'showScriptName' => false,
       'rules' => [
+      ]
       ],
-      ],
-     */
+     
     ],
     'params' => $params,
 ];

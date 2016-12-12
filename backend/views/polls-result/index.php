@@ -18,17 +18,21 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a(Yii::t('app', 'Create Polls Result'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?= GridView::widget([
+    <?=
+    GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
+                ['class' => 'yii\grid\SerialColumn'],
+//                ['attribute' => 'idAnswer',
+//                'value' => 'idAnswer.answer'],
+          //  'idAnswer.answer',
+            'answer',
             'num',
             'id_poll',
             'id_answer',
-
-            ['class' => 'yii\grid\ActionColumn'],
+                ['class' => 'yii\grid\ActionColumn'],
         ],
-    ]); ?>
+    ]);
+    ?>
 </div>

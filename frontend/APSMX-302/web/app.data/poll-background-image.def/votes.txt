@@ -1,9 +1,0 @@
-London=0
-Barcelona=0
-Paris=1
-New York=0
-San Francisco=0
-Puerto Rico=0
-Vancouver=0
-Virgin Islands=0
-Edinburgh=0

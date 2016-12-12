@@ -41,8 +41,10 @@ AppAsset::register($this);
         ['label' => Yii::t('app','Map'), 'url' => ['/site/map']],
         ['label' => Yii::t('app','Polls'), 'url' => ['/polls/index']],
         ['label' => Yii::t('app','Answers'), 'url' => ['/polls-answers/index']],
+        ['label' => Yii::t('app','Results'), 'url' => ['/polls-result/index']],
         ['label' => Yii::t('app','Vote'), 'url' => ['/site/vote']],
         ['label' => Yii::t('app','Admin'), 'url' => ['/admin']],
+        ['label' => Yii::t('app','Person'), 'url' => ['/person/index']],
     ];
     
     if (Yii::$app->user->isGuest) {

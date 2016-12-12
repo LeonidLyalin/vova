@@ -13,7 +13,6 @@ use Yii;
  *
  * @property Polls $idPoll
  * @property PollsResult[] $pollsResults
- * @property Polls[] $idPolls
  */
 class PollsAnswers extends \yii\db\ActiveRecord
 {
@@ -31,11 +30,10 @@ class PollsAnswers extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_poll', 'answer'], 'required'],
             [['id_poll'], 'integer'],
+            [['answer'], 'required'],
             [['answer'], 'string'],
-           
-         //   [['id_poll'], 'exist', 'skipOnError' => true, 'targetClass' => Polls::className(), 'targetAttribute' => ['id_poll' => 'id']],
+            [['id_poll'], 'exist', 'skipOnError' => true, 'targetClass' => Polls::className(), 'targetAttribute' => ['id_poll' => 'id']],
         ];
     }
 
@@ -45,9 +43,9 @@ class PollsAnswers extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', '№'),
+            'id' => Yii::t('app', '№ answer'),
             'id_poll' => Yii::t('app', '№ poll'),
-            'answer' => Yii::t('app', 'Answer'),
+            'answer' => Yii::t('app', 'answer'),
         ];
     }
 
@@ -65,22 +63,5 @@ class PollsAnswers extends \yii\db\ActiveRecord
     public function getPollsResults()
     {
         return $this->hasMany(PollsResult::className(), ['id_answer' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIdPolls()
-    {
-        return $this->hasMany(Polls::className(), ['id' => 'id_poll'])->viaTable('polls_result', ['id_answer' => 'id']);
-    }
-
-    /**
-     * @inheritdoc
-     * @return PollsAnswersQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new PollsAnswersQuery(get_called_class());
     }
 }

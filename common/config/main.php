@@ -51,21 +51,9 @@ return [
                     'basePath' => '@common/messages',
                 ],
                 
-                'base' => [
+                'frontend*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@humhub/messages'
-                ],
-                'security' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@humhub/messages'
-                ],
-                'error' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@humhub/messages'
-                ],
-                'widgets_views_markdownEditor' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@humhub/messages'
+                    'basePath' => '@common/messages',
                 ],
                 
             ],
@@ -104,15 +92,16 @@ return [
             ],
         
     ],
-    'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
-        'allowActions' => [
-            'site/*',
-            'admin/*',
-            'polls/*',
-            'polls-answers/*',
-            'debug/*',
-            'house/*'
-        ]
-    ],
+//    'as access' => [
+//        'class' => 'mdm\admin\components\AccessControl',
+//        'allowActions' => [
+//            'site/*',
+//            'admin/*',
+//            'polls/*',
+//            'polls-answers/*',
+//            'debug/*',
+//            'house/*'
+//            
+//        ]
+//    ],
 ];

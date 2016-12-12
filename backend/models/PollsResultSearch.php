@@ -15,10 +15,13 @@ class PollsResultSearch extends PollsResult
     /**
      * @inheritdoc
      */
+    public $answer;
+    
     public function rules()
     {
         return [
             [['num', 'id_poll', 'id_answer'], 'integer'],
+            [['answer'], 'safe']
         ];
     }
 
@@ -40,6 +43,7 @@ class PollsResultSearch extends PollsResult
      */
     public function search($params)
     {
+        
         $query = PollsResult::find();
 
         // add conditions that should always apply here
@@ -48,20 +52,21 @@ class PollsResultSearch extends PollsResult
             'query' => $query,
         ]);
 
-        $this->load($params);
-
-        if (!$this->validate()) {
+         if (!($this->load($params) && $this->validate())) {
             // uncomment the following line if you do not want to return any records when validation fails
             // $query->where('0=1');
+             $query->joinWith(['idAnswer']);
             return $dataProvider;
         }
 
+        $query->joinWith('idAnswer');
         // grid filtering conditions
         $query->andFilterWhere([
             'num' => $this->num,
             'id_poll' => $this->id_poll,
             'id_answer' => $this->id_answer,
         ]);
+        $query->andFilterWhere(['like','polls_answers.answer',$this->answer]);
 
         return $dataProvider;
     }

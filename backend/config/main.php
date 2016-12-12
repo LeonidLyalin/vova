@@ -11,18 +11,17 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log', 'gii', 'debug'],
-    'modules' => ['gii' => [
+    'modules' => [
+        'gii' => [
             'class' => 'yii\gii\Module'],
         'gridview' => [
             'class' => '\kartik\grid\Module'],
-        
         'debug' => [
             'class' => 'yii\debug\Module',
         ],
     ],
     'components' => [
-//'user' => ['identityClass' => 'common\models\User',
-//            'enableAutoLogin' => true,],
+
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
