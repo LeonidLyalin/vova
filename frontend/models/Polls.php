@@ -79,11 +79,17 @@ class Polls extends \yii\db\ActiveRecord
      * Return polls which are active today (date_beg>=today <=date_end
      * @param type $date - today date
      */
-    public static function getPollToday($date) {
+    public static function getPollsDate($date) {
         return $this::find()
                 ->where('date_beg<=:dateToday',['dateToday'=>$date])
                 ->andWhere('date_end>=:dateToday',['dateToday'=>$date])
                 ->all();
+    }
+    public static function getPollsToday() {
+        return self::find()
+                ->where('date_beg<=:dateToday',['dateToday'=>date('Y-m-d')])
+                ->andWhere('date_end>=:dateToday',['dateToday'=>date('Y-m-d')])
+                ->one();
     }
     
 }

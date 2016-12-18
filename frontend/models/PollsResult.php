@@ -12,22 +12,27 @@ use Yii;
  * @property integer $id_answer
  * @property integer $id_user
  */
-class PollsResult extends \yii\db\ActiveRecord
-{
+class PollsResult extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
-    
+
     /**
-     * @var field allow_multiple in polls is true
+     * @const field allow_multiple in polls is true
      */
-    
-    //const SCENARIO_MULTIPLE='allow_multiple';
-    
+    const SCENARIO_MULTIPLE = 'allow_multiple';
+
     /**
-     * @var field allow_multiple in polls is false
+     * @const field allow_multiple in polls is false
      */
-  //  const SCENARIO_SINGLE='not_allow_multiple';
+    const SCENARIO_SINGLE = 'not_allow_multiple';
+
+    /**
+     * @const
+     * 
+     */
+    const SCENARIO_ANONYMOUS = 'anonymous';
+
     /**
      *
      * @property array for checkboxlist checked items
@@ -35,30 +40,25 @@ class PollsResult extends \yii\db\ActiveRecord
      * @todo make this property to work in form checkBoxList instead of 'id_poll'
      */
     //public $result;
-    
-    public static function tableName()
-    {
+
+    public static function tableName() {
         return 'polls_result';
     }
 
     /**
      * @inheritdoc
+     * 
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-           [['num', 'id_poll', 'id_answer', 'id_user'], 'integer'],
-            [['id_poll', 'id_answer', 'id_user'], 'required'],
-////            
-//            [['num', 'id_poll', 'id_answer', 'id_user'], 'integer','on'=>self::SCENARIO_SINGLE],
-//            [['id_poll', 'id_answer', 'id_user'], 'required','on'=>self::SCENARIO_SINGLE],
-//        
-//                
-//                [['num', 'id_poll',  'id_user'], 'integer','on'=>self::SCENARIO_MULTIPLE],
-//            [['id_poll', 'id_answer', 'id_user'], 'required','on'=>self::SCENARIO_MULTIPLE],
-        
-                
-                ];
+        [['num', 'id_poll', 'id_answer', 'id_user'], 'integer', 'on' => 'default'],
+        [['id_poll', 'id_answer', 'id_user'], 'required', 'on' => 'default'],
+        [['create_at'], 'date', 'format' => 'php:Y-m-d H:i:s', 'on' => ['default', self::SCENARIO_ANONYMOUS]],
+        [['ip'], 'ip', 'on' => ['default', self::SCENARIO_ANONYMOUS]],
+        [['host'], 'string', 'length' => [0, 20], 'on' => ['default', self::SCENARIO_ANONYMOUS]],
+        [['num', 'id_poll', 'id_answer'], 'integer', 'on' => self::SCENARIO_ANONYMOUS],
+        [['id_poll', 'id_answer'], 'required', 'on' => self::SCENARIO_ANONYMOUS],
+        ];
     }
 
     /**
@@ -76,13 +76,15 @@ class PollsResult extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'num' => Yii::t('app', 'Number of answers'),
             'id_poll' => Yii::t('app', '№ poll'),
-            'id_answer' => Yii::t('app', '№ ответа'),
+            'id_answer' => Yii::t('app', '№ answer'),
             'id_user' => Yii::t('app', 'Id User'),
+            'create_at' => Yii::t('app', 'Created at'),
+            'ip' => Yii::t('app', 'User IP'),
+            'host' => Yii::t('app', 'User host'),
         ];
     }
 
@@ -90,8 +92,8 @@ class PollsResult extends \yii\db\ActiveRecord
      * @inheritdoc
      * @return PollsResultQuery the active query used by this AR class.
      */
-    public static function find()
-    {
+    public static function find() {
         return new PollsResultQuery(get_called_class());
     }
+
 }

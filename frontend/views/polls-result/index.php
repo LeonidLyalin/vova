@@ -18,18 +18,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a(Yii::t('app', 'Create Polls Result'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-<?php Pjax::begin(); ?>    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+    
+<? $columns = [['class' => 'yii\grid\SerialColumn'],
 
             'num',
             'id_poll',
             'id_answer',
             'id_user',
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
+            ['class' => 'yii\grid\ActionColumn'],] ?>    
+<?php Pjax::begin(); ?>    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => $columns,
+            
+        
     ]); ?>
 <?php Pjax::end(); ?></div>

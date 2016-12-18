@@ -59,7 +59,7 @@ class PollsResultSearch extends PollsResult {
                     'polls_result.id_poll' => $this->id_poll,
                     'polls_result.id_answer' => $this->id_answer,
                     'polls_result.id_user' => $this->id_user,
-                ])
+                ]);
                
 
         return $dataProvider;

@@ -22,17 +22,14 @@ use yii\helpers\ArrayHelper
 
         echo "<h1>" . $pollsProvider->question . "</h1>";
 
-       // echo $form->field($model,'id_poll')->textInput(['value'=>$poll->id]);
-       // echo $form->field($model,'num')->textInput(['value'=>1]);
-       // $model->num = 1; //now alway one vote
-      // echo $form->field($model,'id_user')->textInput(['value'=>Yii::$app->user->getId()]);
-        //$model->id_user = Yii::$app->user->getId();
+     
         $answersProvider = PollsAnswers::find()
                 ->where('id_poll=:id', ['id' => $pollsProvider->id])
                 ->all();
         $answer = ArrayHelper::map($answersProvider, 'id', 'answer');
+        
+       
         if ($pollsProvider->allow_mulitple) {
-
         //    $model->scenario = PollsResult::SCENARIO_MULTIPLE;
             echo $form->field($model, 'id_answer')
                     ->checkBoxList($answer,['separator'=>'</br>']                        
@@ -43,7 +40,6 @@ use yii\helpers\ArrayHelper
            
            echo $form->field($model, 'id_answer')
                     ->radioList($answer, ['separator'=>'</br>',
-
                     ])
                    ->label(false);
         }
