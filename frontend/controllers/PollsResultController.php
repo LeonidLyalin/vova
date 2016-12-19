@@ -22,7 +22,7 @@ class PollsResultController extends Controller {
      *
      * @var type dataProvider PollsResut
      */
-    private $pollsProvider= array();
+    private $pollsProvider;
 
 
 
@@ -128,7 +128,6 @@ class PollsResultController extends Controller {
 
     public function actionCreate() {
         $model = new PollsResult();
-
         /**
          * Let's prepare  more providers
          */
@@ -137,7 +136,6 @@ class PollsResultController extends Controller {
         if ($model->load(Yii::$app->request->post())) {
             /**
              * fill attributes of model
-             *
              */
             $model = $this->setModel($model);
             /**
@@ -149,7 +147,6 @@ class PollsResultController extends Controller {
                 $modelsaved = $model->save();
             }
         }
-
         if ($modelsaved) {
             return $this->redirect(['site/index']); //, 'id' => $model->getPrimaryKey()]);
         } else {

@@ -104,7 +104,7 @@ AppAsset::register($this);
                     ['label' => '<span class="glyphicon glyphicon-file"></span>' . Yii::t('frontend', 'ABOUT'), 'url' => ['/site/about']],
                     ['label' => '<span class="glyphicon glyphicon-info-sign"></span>' . Yii::t('frontend', 'INFO'), 'url' => ['/site/contact']],
                     ['label' => '<span class="glyphicon glyphicon-envelope"></span>' . Yii::t('frontend', 'CONTACT'), 'url' => ['/site/contact']],
-                    ['label' => '<span class="glyphicon glyphicon-envelope"></span>' . Yii::t('frontend', 'POLL'), 'url' => ['/polls-result/create']],
+                  //  ['label' => '<span class="glyphicon glyphicon-envelope"></span>' . Yii::t('frontend', 'POLL'), 'url' => ['/polls-result/create']],
                   //  ['label' => '<span class="glyphicon glyphicon-envelope"></span>' . Yii::t('frontend', ' 2 ГИС'), 'url' => ['/site/2gis']],
             ];
             if (Yii::$app->user->isGuest) {
