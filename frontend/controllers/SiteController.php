@@ -155,6 +155,17 @@ class SiteController extends Controller
         ]);
         //return $this->render('about');
     }
+    
+    
+     public function actionInfo()
+    {
+        
+        
+         return $this->render('info', [
+            
+        ]);
+        //return $this->render('about');
+    }
 
     /**
      * Signs user up.

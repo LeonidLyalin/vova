@@ -93,24 +93,6 @@ return array (
       '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
     ),
   ),
-  'chiliec/yii2-vote' => 
-  array (
-    'name' => 'chiliec/yii2-vote',
-    'version' => '3.0.1.0',
-    'alias' => 
-    array (
-      '@chiliec/vote' => $vendorDir . '/chiliec/yii2-vote',
-    ),
-  ),
-  'hauntd/yii2-vote' => 
-  array (
-    'name' => 'hauntd/yii2-vote',
-    'version' => '0.2.5.0',
-    'alias' => 
-    array (
-      '@hauntd/vote' => $vendorDir . '/hauntd/yii2-vote',
-    ),
-  ),
   'voime/yii2-google-maps' => 
   array (
     'name' => 'voime/yii2-google-maps',
@@ -174,15 +156,6 @@ return array (
       '@lajax/languagepicker' => $vendorDir . '/lajax/yii2-language-picker',
     ),
   ),
-  'kartik-v/yii2-grid' => 
-  array (
-    'name' => 'kartik-v/yii2-grid',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
-    ),
-  ),
   'mdmsoft/yii2-admin' => 
   array (
     'name' => 'mdmsoft/yii2-admin',
@@ -217,6 +190,15 @@ return array (
     'alias' => 
     array (
       '@kartik/field' => $vendorDir . '/kartik-v/yii2-field-range',
+    ),
+  ),
+  'kartik-v/yii2-grid' => 
+  array (
+    'name' => 'kartik-v/yii2-grid',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
     ),
   ),
 );

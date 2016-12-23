@@ -16,26 +16,7 @@ return [
             'allowedIPs' => ['*'],
 
         ],
-//        'vote' => [
-//            'class' => hauntd\vote\Module::class,
-//            'guestTimeLimit' => 3600,
-//            'entities' => [
-//                // Entity -> Settings
-//                'itemVote' => app\models\Item::class, // your model
-//                'itemVoteGuests' => [
-//                    'modelName' => app\models\Item::class, // your model
-//                    'allowGuests' => true,
-//                ],
-//                'itemLike' => [
-//                    'modelName' => app\models\Item::class, // your model
-//                    'type' => hauntd\vote\Module::TYPE_TOGGLE, // like/favorite button
-//                ],
-//                'itemFavorite' => [
-//                    'modelName' => app\models\Item::class, // your model
-//                    'type' => hauntd\vote\Module::TYPE_TOGGLE, // like/favorite button
-//                ],
-//            ],
-//        ],
+
     ],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [

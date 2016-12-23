@@ -6,30 +6,44 @@ use yii\bootstrap\Carousel;
 use yii\helpers\Url;
 use yii\web\View;
 
-$this->title = 'Управляющая компания';
+$this->title = Yii::t('frontend','House company');
 ?>
 <div class="site-index">
 
-    <div class="jumbotron" style="padding-top: 0; padding-bottom: 0">
-        <?php
-        echo Carousel::widget([
-            'items' => [
-                    [
-                    'content' => '<img  src="' . Url::to("@web/images/slide2.jpg") . '"/>',
-                    'caption' => '',
-                    'options' => []
+    <div class="jumbotron" style="padding-top: 0px; padding-bottom: 0px;">
+        <div class="row">
+            <?php
+            echo Carousel::widget([
+                'items' => [
+                        [
+                        'content' => '<img  style="width:100%;height:600px" src="' . Url::to("@web/images/slide5.jpg") . '"/>',
+                        'caption' => '',
+                        'options' => []
+                    ],
+                        [
+                        'content' => '<img style="width:100%;height:600px" src="' . Url::to("@web/images/slide2.jpg") . '"/>',
+                        'caption' => '',
+                        'options' => []
+                    ],
+                        [
+                        'content' => '<img style="width:100%;height:600px" src="' . Url::to("@web/images/slide3.jpg") . '"/>',
+                        'caption' => '',
+                        'options' => []
+                    ],
+                        [
+                        'content' => '<img style="width:100%;height:600px"" src="' . Url::to("@web/images/slide4.jpg") . '"/>',
+                        'caption' => '',
+                        'options' => []
+                    ]
                 ],
-                    [
-                    'content' => '<img  src="' . Url::to("@web/images/slide3.jpg") . '"/>',
-                    'caption' => '',
-                    'options' => []
+                'options' => [
+                    //'style' => 'width:800px;height:600px;',
+                    'style' => 'width:100%;height:600px;',
+                    'margin: auto;' // Задаем ширину контейнера
                 ]
-            ],
-//      'options' => [
-//        'style' => 'width:474px;' // Задаем ширину контейнера
-//        ]
-        ]);
-        ?>
+            ]);
+            ?>
+        </div>
     </div>
 
     <div class="body-content">
@@ -95,8 +109,8 @@ $this->title = 'Управляющая компания';
             </div>
         </div>
         <div class="row">
-            
-            
+
+
 
             <?= PollWidget::widget(); ?>
         </div>

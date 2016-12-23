@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
 
         </div>
-        <div class='ajax-poll' tclass='poll-background-image' style='width:420px;'></div>
+       
 
 
 

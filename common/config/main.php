@@ -37,15 +37,25 @@ return [
             ],
         ]
     ],
-    'language' => 'en-EN',
+    'language' => 'ru-Ru',
     'components' => [
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'viewPath' => '@app/mailer',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.gmail.com',
+                'username' => 'f.gvozd',
+                'password' => 'fedorgvozd',
+                'port' => '587',
+                'encryption' => 'tls',
+            ],],
+        
         'i18n' => [
             'translations' => [
                 'sourceLanguage' => 'en-En',
-//                'frontend*' => [
-//                    'class' => 'yii\i18n\PhpMessageSource',
-//                    'basePath' => '@common/messages',
-//                ],
+
                 'app*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
@@ -83,7 +93,7 @@ return [
 //        ],
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'  
-            'defaultRoles' => ['Guest'],
+            'defaultRoles' => ['guest'],
         ],
         'urlManager' => [
             'class' => 'yii\web\UrlManager',

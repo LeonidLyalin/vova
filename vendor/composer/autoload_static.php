@@ -58,10 +58,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'kartik\\dialog\\' => 14,
             'kartik\\base\\' => 12,
         ),
-        'h' => 
-        array (
-            'hauntd\\vote\\' => 12,
-        ),
         'd' => 
         array (
             'dosamigos\\google\\maps\\' => 22,
@@ -69,7 +65,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         ),
         'c' => 
         array (
-            'chiliec\\vote\\' => 13,
             'cebe\\markdown\\' => 14,
         ),
         'Z' => 
@@ -237,10 +232,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base',
         ),
-        'hauntd\\vote\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hauntd/yii2-vote',
-        ),
         'dosamigos\\google\\maps\\' => 
         array (
             0 => __DIR__ . '/..' . '/2amigos/yii2-google-maps-library',
@@ -248,10 +239,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'dosamigos\\datepicker\\' => 
         array (
             0 => __DIR__ . '/..' . '/2amigos/yii2-date-picker-widget/src',
-        ),
-        'chiliec\\vote\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/chiliec/yii2-vote',
         ),
         'cebe\\markdown\\' => 
         array (

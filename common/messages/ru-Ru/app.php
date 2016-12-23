@@ -54,6 +54,13 @@ return [
      'Display answers in random order' => 'Показывать ответы в случайном порядке',
      'Anonymous votes' => 'Разрешить голосование без регистрации',
      'Action' => 'Действия',
-     'Showing <strong>{begin}-{end}</strong> of <strong>{totalCount}</strong>.' => 'Показаны записи1  <strong>{begin}-{end}</strong> из <strong>{totalCount}</strong>.'
-     
+     'About' => 'О компании',
+     'Showing <strong>{begin}-{end}</strong> of <strong>{totalCount}</strong>.' => 'Показаны записи  <strong>{begin}-{end}</strong> из <strong>{totalCount}</strong>.',
+     'Submit' =>'Отправить',
+     'Name' => 'Имя',
+     'Contact' => 'Контакты',
+     'Subject' => 'Тема',
+     'Body' => 'Сообщение',
+     'Email' => 'Электронная почта',
+     'Verification Code' => 'Код проверки',
 ];

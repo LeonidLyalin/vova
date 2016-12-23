@@ -26,7 +26,7 @@
         "modernkernel/yii2-bootstrapsocial": "*",
         "modernkernel/yii2-fontawesome": "*",
         
-        "hauntd/yii2-vote": "*",
+       
         "2amigos/yii2-google-maps-library" : "*",
         "voime/yii2-google-maps": "*",
         "yii2mod/yii2-google-maps-markers": "*",
@@ -43,10 +43,11 @@
         
         "phpdocumentor/phpdocumentor": "2.*",
         
-        "chiliec/yii2-vote": "^3.0",
+       
         "mdmsoft/yii2-admin": "~2.0",
         
         "2amigos/yii2-date-picker-widget" : "~1.0"
+        
         
         
     },
