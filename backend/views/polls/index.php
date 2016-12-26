@@ -3,22 +3,23 @@
 /**
  * List of polls with ability to see answers for each poll on double click
  */
-use yii\helpers\Html;
-use yii\web\View;
 //use yii\grid\GridView;
-use kartik\grid\GridView;
-use backend\controllers\PollsAnswersController;
-use backend\models\PollsAnswers;
-use backend\models\PollsAnswersSearch;
-use backend\models\PollsSearch;
 
-/* @var $this yii\web\View */
-/* @var $searchModel backend\models\PollsSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
+
+use backend\models\PollsSearch;
+use kartik\grid\GridView;
+use yii\data\ActiveDataProvider;
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\web\View;
+
+/* @var $this View */
+/* @var $searchModel PollsSearch */
+/* @var $dataProvider ActiveDataProvider */
 //echo $id_poll;
 $this->title = Yii::t('app', 'Polls');
 $this->params['breadcrumbs'][] = $this->title;
-$url = "/vova/backend/web/polls-answers/indexpart";
+$url = Url::to("@web/polls-answers/indexpart");
 $this->registerJS(
         '
             $(document).ready(function () {
@@ -121,11 +122,7 @@ $this->registerJS(
 
 
     <?
-//    try {
-//        echo $id_poll;
-//    } catch (Exception $e) {
-//        echo 'Выброшено исключение: ', $e->getMessage(), "\n";
-//    }
+
 
     $model1 = $dataProvider->getModels();
 
@@ -149,14 +146,7 @@ $this->registerJS(
             break;
         }
     }
-//$val1 = $model1[1]['question'];
-//var_dump($val1);
-//$questionprovider = new PollsSearch;
-//        $questionmodels=$questionprovider->search(['id'=>$id_poll]);
-//        $question=$questionmodels->getModels();
-//var_dump($questionprovider);
-//var_dump($questionmodels);
-//var_dump($question);
+
     ?>
     <script type="text/javascript">
         $(".questionnumber").html("<h2><?= $id_poll ?></h2>");
@@ -177,10 +167,7 @@ $this->registerJS(
     <script type="text/javascript">
         $(document).ready(function () {
             $("#pollanswerbutton").click(function (ev) {
-                // var text_id = $("td:first", $(this)).text();
-                // var text_question = $("td:nth-child(2)", $(this)).text();
-                //  $(".questionnumber").html("<h1>"+text_id+"</h>");
-                //  $(".questiontext").html("<h1>"+text_question+"</h>"); 
+
                 $(".createanswer").text("<p> Im working, almost </p>");
                 $.ajax({
                     type: "GET",

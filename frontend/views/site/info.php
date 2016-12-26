@@ -88,7 +88,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <? $content4 .= '<a href="' . Url::to('@web/files/minutes/Протокол собрания 15.06.15 Княжничная 5.docx') . '" download>Протокол собрания 15.06.15 Княжничная 5.docx</a></br>' ?>
     <? $content4 .= '<a href="' . Url::to('@web/files/minutes/Протокол 15.06.15 ул.Княжничная 5А.docx') . '" download>Протокол 15.06.15 ул.Княжничная 5А.docx</a></br>' ?>
 
-    <? $content5 = '<a href="' . Url::to('@web/files/pasports/ПАСПОРТ ОБЪЕКТОВ.xlsx') . '" download>ПАСПОРТ ОБЪЕКТОВ.xlsx</a></br>' ?>
+    <? $content5 = '<a href="' . Url::to('@web/files/passports/ПАСПОРТ ОБЪЕКТОВ.xlsx') . '" download>ПАСПОРТ ОБЪЕКТОВ.xlsx</a></br>' ?>
 
 
     <?=
@@ -115,7 +115,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label' => Yii::t('frontend','More...'),
                 'items' => [
                     [
-                        'label' => Yii::t('frontend', 'Pasports'),
+                        'label' => Yii::t('frontend', 'Passports'),
                         'content' => $content5,
                     ],
                     [

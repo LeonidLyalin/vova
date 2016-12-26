@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "efa1ffa33581b4d11e609b2ea57fb976",
-    "content-hash": "5e25f4b01b2783bbbe6be43f34c717a4",
+    "hash": "30e10a4930256ce0f49dbaaa2ac11c1b",
+    "content-hash": "7e6a5dc6409ff94bb995653ed418df99",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -67,56 +67,6 @@
                 "yii2"
             ],
             "time": "2015-04-02 11:48:05"
-        },
-        {
-            "name": "2amigos/yii2-google-maps-library",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/2amigos/yii2-google-maps-library.git",
-                "reference": "1d8f69c7983522c99f511268b6cca5952f1c5fe6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/2amigos/yii2-google-maps-library/zipball/1d8f69c7983522c99f511268b6cca5952f1c5fe6",
-                "reference": "1d8f69c7983522c99f511268b6cca5952f1c5fe6",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "6.*",
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii-extension",
-            "autoload": {
-                "psr-4": {
-                    "dosamigos\\google\\maps\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Antonio Ramirez",
-                    "email": "ramirez.cobos@gmail.com",
-                    "homepage": "http://www.ramirezcobos.com"
-                },
-                {
-                    "name": "2amigOS! Consulting LLC",
-                    "email": "hola@2amigos.us",
-                    "homepage": "http://2amigos.us"
-                }
-            ],
-            "description": "Google Maps API library for Yii2.",
-            "keywords": [
-                "extension",
-                "google",
-                "library",
-                "maps",
-                "yii"
-            ],
-            "time": "2016-10-11 08:35:17"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -572,16 +522,16 @@
         },
         {
             "name": "bower-asset/speakingurl",
-            "version": "v10.0.0",
+            "version": "v11.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pid/speakingurl.git",
-                "reference": "25ca66e59bda0a303687ae98a3722ab52649496b"
+                "reference": "62fe65ed3489d436332a5cd2efe5b379a0cc6a42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pid/speakingurl/zipball/25ca66e59bda0a303687ae98a3722ab52649496b",
-                "reference": "25ca66e59bda0a303687ae98a3722ab52649496b",
+                "url": "https://api.github.com/repos/pid/speakingurl/zipball/62fe65ed3489d436332a5cd2efe5b379a0cc6a42",
+                "reference": "62fe65ed3489d436332a5cd2efe5b379a0cc6a42",
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -1122,177 +1072,6 @@
             "time": "2016-07-16 12:58:58"
         },
         {
-            "name": "guzzlehttp/guzzle",
-            "version": "6.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
-                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.3.1",
-                "php": ">=5.5"
-            },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "^4.0",
-                "psr/log": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.2-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle is a PHP HTTP client library",
-            "homepage": "http://guzzlephp.org/",
-            "keywords": [
-                "client",
-                "curl",
-                "framework",
-                "http",
-                "http client",
-                "rest",
-                "web service"
-            ],
-            "time": "2016-10-08 15:01:37"
-        },
-        {
-            "name": "guzzlehttp/promises",
-            "version": "1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/promises.git",
-                "reference": "2693c101803ca78b27972d84081d027fca790a1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/2693c101803ca78b27972d84081d027fca790a1e",
-                "reference": "2693c101803ca78b27972d84081d027fca790a1e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "Guzzle promises library",
-            "keywords": [
-                "promise"
-            ],
-            "time": "2016-11-18 17:47:58"
-        },
-        {
-            "name": "guzzlehttp/psr7",
-            "version": "1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/psr7.git",
-                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
-                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "psr/http-message": "~1.0"
-            },
-            "provide": {
-                "psr/http-message-implementation": "1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
-            "description": "PSR-7 message implementation",
-            "keywords": [
-                "http",
-                "message",
-                "stream",
-                "uri"
-            ],
-            "time": "2016-06-24 23:00:38"
-        },
-        {
             "name": "herrera-io/json",
             "version": "1.0.3",
             "source": {
@@ -1788,12 +1567,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-grid.git",
-                "reference": "866290c6b55554e067d9adc7c7494855ad6d53f3"
+                "reference": "58deb2ca56172dd325a87b09644f5af62d47654f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/866290c6b55554e067d9adc7c7494855ad6d53f3",
-                "reference": "866290c6b55554e067d9adc7c7494855ad6d53f3",
+                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/58deb2ca56172dd325a87b09644f5af62d47654f",
+                "reference": "58deb2ca56172dd325a87b09644f5af62d47654f",
                 "shasum": ""
             },
             "require": {
@@ -1833,7 +1612,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-12-15 13:26:46"
+            "time": "2016-12-19 21:36:49"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -2247,22 +2026,22 @@
         },
         {
             "name": "modernkernel/yii2-slugify",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/modernkernel/yii2-slugify.git",
-                "reference": "59f967547d1cf263cf91385daa10ea43f8b5c4bf"
+                "reference": "c7a85135f626f7e8105a6d9d5746a07a162b0c20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/modernkernel/yii2-slugify/zipball/59f967547d1cf263cf91385daa10ea43f8b5c4bf",
-                "reference": "59f967547d1cf263cf91385daa10ea43f8b5c4bf",
+                "url": "https://api.github.com/repos/modernkernel/yii2-slugify/zipball/c7a85135f626f7e8105a6d9d5746a07a162b0c20",
+                "reference": "c7a85135f626f7e8105a6d9d5746a07a162b0c20",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/jquery-slugify": "*",
+                "bower-asset/jquery-slugify": "~1.0.0",
                 "bower-asset/speakingurl": "*",
-                "yiisoft/yii2": "*"
+                "yiisoft/yii2": "~2.0.0"
             },
             "type": "yii2-extension",
             "autoload": {
@@ -2285,7 +2064,7 @@
                 "slugify",
                 "yii2"
             ],
-            "time": "2016-08-27 17:54:52"
+            "time": "2016-12-25 14:43:45"
         },
         {
             "name": "monolog/monolog",
@@ -2867,56 +2646,6 @@
                 "dependency injection"
             ],
             "time": "2013-11-22 08:30:29"
-        },
-        {
-            "name": "psr/http-message",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for HTTP messages",
-            "homepage": "https://github.com/php-fig/http-message",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr",
-                "psr-7",
-                "request",
-                "response"
-            ],
-            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "psr/log",
@@ -3692,16 +3421,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.29.0",
+            "version": "v1.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "74f723e542368ca2080b252740be5f1113ebb898"
+                "reference": "c6ff71094fde15d12398eaba029434b013dc5e59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/74f723e542368ca2080b252740be5f1113ebb898",
-                "reference": "74f723e542368ca2080b252740be5f1113ebb898",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c6ff71094fde15d12398eaba029434b013dc5e59",
+                "reference": "c6ff71094fde15d12398eaba029434b013dc5e59",
                 "shasum": ""
             },
             "require": {
@@ -3714,7 +3443,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.29-dev"
+                    "dev-master": "1.30-dev"
                 }
             },
             "autoload": {
@@ -3749,7 +3478,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-13 17:28:18"
+            "time": "2016-12-23 11:06:22"
         },
         {
             "name": "voime/yii2-google-maps",
@@ -3790,55 +3519,6 @@
                 "yii2"
             ],
             "time": "2016-04-13 12:58:11"
-        },
-        {
-            "name": "yii2mod/yii2-google-maps-markers",
-            "version": "1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yii2mod/yii2-google-maps-markers.git",
-                "reference": "f1238ed6cbbd6c0087a62be1fd90c462e75889cb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yii2mod/yii2-google-maps-markers/zipball/f1238ed6cbbd6c0087a62be1fd90c462e75889cb",
-                "reference": "f1238ed6cbbd6c0087a62be1fd90c462e75889cb",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "yii2mod\\google\\maps\\markers\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dmitry Semenov",
-                    "email": "disemx@gmail.com"
-                },
-                {
-                    "name": "Igor Chepurnoy",
-                    "email": "igorzfort@gmail.com"
-                },
-                {
-                    "name": "Alexander Harchenko",
-                    "email": "morontt@gmail.com",
-                    "homepage": "https://morontt.info"
-                }
-            ],
-            "description": "Google Maps Markers displays a set of user addresses as markers on the map.",
-            "keywords": [
-                "extension",
-                "yii2"
-            ],
-            "time": "2016-11-22 14:13:11"
         },
         {
             "name": "yiidoc/yii2-redactor",
@@ -4030,20 +3710,23 @@
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "7452fd908a5023b8bb5ea1b123a174ca080de464"
+                "reference": "3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/7452fd908a5023b8bb5ea1b123a174ca080de464",
-                "reference": "7452fd908a5023b8bb5ea1b123a174ca080de464",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2",
+                "reference": "3f4923c2bde6caf3f5b88cc22fdd5770f52f8df2",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -4073,7 +3756,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2016-02-06 00:49:24"
+            "time": "2016-12-20 13:26:02"
         },
         {
             "name": "yiisoft/yii2-gii",
@@ -4355,26 +4038,26 @@
         },
         {
             "name": "zendframework/zend-eventmanager",
-            "version": "3.0.1",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-eventmanager.git",
-                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e"
+                "reference": "c3bce7b7d47c54040b9ae51bc55491c72513b75d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/5c80bdee0e952be112dcec0968bad770082c3a6e",
-                "reference": "5c80bdee0e952be112dcec0968bad770082c3a6e",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/c3bce7b7d47c54040b9ae51bc55491c72513b75d",
+                "reference": "c3bce7b7d47c54040b9ae51bc55491c72513b75d",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5 || ^7.0"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
                 "athletic/athletic": "^0.1",
                 "container-interop/container-interop": "^1.1.0",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "^2.0",
+                "phpunit/phpunit": "^5.6",
+                "zendframework/zend-coding-standard": "~1.0.0",
                 "zendframework/zend-stdlib": "^2.7.3 || ^3.0"
             },
             "suggest": {
@@ -4384,8 +4067,8 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev",
-                    "dev-develop": "3.1-dev"
+                    "dev-master": "3.1-dev",
+                    "dev-develop": "3.2-dev"
                 }
             },
             "autoload": {
@@ -4405,7 +4088,7 @@
                 "events",
                 "zf2"
             ],
-            "time": "2016-02-18 20:53:00"
+            "time": "2016-12-19 21:47:12"
         },
         {
             "name": "zendframework/zend-filter",
@@ -4701,16 +4384,16 @@
         },
         {
             "name": "zendframework/zend-servicemanager",
-            "version": "2.7.7",
+            "version": "2.7.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-servicemanager.git",
-                "reference": "eeecb78945c2a9f653caded36ba5274e8a8f5468"
+                "reference": "2ae3b6e4978ec2e9ff52352e661946714ed989f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/eeecb78945c2a9f653caded36ba5274e8a8f5468",
-                "reference": "eeecb78945c2a9f653caded36ba5274e8a8f5468",
+                "url": "https://api.github.com/repos/zendframework/zend-servicemanager/zipball/2ae3b6e4978ec2e9ff52352e661946714ed989f9",
+                "reference": "2ae3b6e4978ec2e9ff52352e661946714ed989f9",
                 "shasum": ""
             },
             "require": {
@@ -4749,7 +4432,7 @@
                 "servicemanager",
                 "zf2"
             ],
-            "time": "2016-09-01 19:03:15"
+            "time": "2016-12-19 19:14:29"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -5160,6 +4843,64 @@
             "time": "2016-04-29 12:21:54"
         },
         {
+            "name": "guzzlehttp/psr7",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                }
+            ],
+            "description": "PSR-7 message implementation",
+            "keywords": [
+                "http",
+                "message",
+                "stream",
+                "uri"
+            ],
+            "time": "2016-06-24 23:00:38"
+        },
+        {
             "name": "myclabs/deep-copy",
             "version": "1.5.5",
             "source": {
@@ -5200,6 +4941,111 @@
                 "object graph"
             ],
             "time": "2016-10-31 17:19:45"
+        },
+        {
+            "name": "pdepend/pdepend",
+            "version": "2.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pdepend/pdepend.git",
+                "reference": "8d7ab8fe8c1f9de5056bb7ea2c0852f4ddd44f90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/8d7ab8fe8c1f9de5056bb7ea2c0852f4ddd44f90",
+                "reference": "8d7ab8fe8c1f9de5056bb7ea2c0852f4ddd44f90",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.7",
+                "symfony/config": "^2.3.0|^3",
+                "symfony/dependency-injection": "^2.3.0|^3",
+                "symfony/filesystem": "^2.3.0|^3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.4.0,<4.8",
+                "squizlabs/php_codesniffer": "^2.0.0"
+            },
+            "bin": [
+                "src/bin/pdepend"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PDepend\\": "src/main/php/PDepend"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Official version of pdepend to be handled with Composer",
+            "time": "2016-11-23 20:25:02"
+        },
+        {
+            "name": "phpmd/phpmd",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpmd/phpmd.git",
+                "reference": "9298602a922cd8c46666df8d540a60bc5925ce55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/9298602a922cd8c46666df8d540a60bc5925ce55",
+                "reference": "9298602a922cd8c46666df8d540a60bc5925ce55",
+                "shasum": ""
+            },
+            "require": {
+                "pdepend/pdepend": "^2.0.4",
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "bin": [
+                "src/bin/phpmd"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-0": {
+                    "PHPMD\\": "src/main/php"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Manuel Pichler",
+                    "email": "github@manuel-pichler.de",
+                    "homepage": "https://github.com/manuelpichler",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Other contributors",
+                    "homepage": "https://github.com/phpmd/phpmd/graphs/contributors",
+                    "role": "Contributors"
+                },
+                {
+                    "name": "Marc Würth",
+                    "email": "ravage@bluewin.ch",
+                    "homepage": "https://github.com/ravage84",
+                    "role": "Project Maintainer"
+                }
+            ],
+            "description": "PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD.",
+            "homepage": "http://phpmd.org/",
+            "keywords": [
+                "mess detection",
+                "mess detector",
+                "pdepend",
+                "phpmd",
+                "pmd"
+            ],
+            "time": "2016-11-23 20:33:32"
         },
         {
             "name": "phpspec/prophecy",
@@ -5266,16 +5112,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "4.0.3",
+            "version": "4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "903fd6318d0a90b4770a009ff73e4a4e9c437929"
+                "reference": "c14196e64a78570034afd0b7a9f3757ba71c2a0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/903fd6318d0a90b4770a009ff73e4a4e9c437929",
-                "reference": "903fd6318d0a90b4770a009ff73e4a4e9c437929",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c14196e64a78570034afd0b7a9f3757ba71c2a0a",
+                "reference": "c14196e64a78570034afd0b7a9f3757ba71c2a0a",
                 "shasum": ""
             },
             "require": {
@@ -5325,7 +5171,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-11-28 16:00:31"
+            "time": "2016-12-20 15:22:42"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -5650,6 +5496,56 @@
             "time": "2016-12-08 20:27:08"
         },
         {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06 14:39:51"
+        },
+        {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.0",
             "source": {
@@ -5928,6 +5824,45 @@
             "time": "2016-11-19 08:54:04"
         },
         {
+            "name": "sebastian/finder-facade",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/finder-facade.git",
+                "reference": "2a6f7f57efc0aa2d23297d9fd9e2a03111a8c0b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/finder-facade/zipball/2a6f7f57efc0aa2d23297d9fd9e2a03111a8c0b9",
+                "reference": "2a6f7f57efc0aa2d23297d9fd9e2a03111a8c0b9",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/finder": "~2.3|~3.0",
+                "theseer/fdomdocument": "~1.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "FinderFacade is a convenience wrapper for Symfony's Finder component.",
+            "homepage": "https://github.com/sebastianbergmann/finder-facade",
+            "time": "2016-02-17 07:02:23"
+        },
+        {
             "name": "sebastian/global-state",
             "version": "1.1.1",
             "source": {
@@ -6023,6 +5958,57 @@
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
             "time": "2016-11-19 07:35:10"
+        },
+        {
+            "name": "sebastian/phpcpd",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpcpd.git",
+                "reference": "24d9a880deadb0b8c9680e9cfe78e30b704225db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpcpd/zipball/24d9a880deadb0b8c9680e9cfe78e30b704225db",
+                "reference": "24d9a880deadb0b8c9680e9cfe78e30b704225db",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpunit/php-timer": ">=1.0.6",
+                "sebastian/finder-facade": "~1.1",
+                "sebastian/version": "~1.0|~2.0",
+                "symfony/console": "~2.7|^3.0",
+                "theseer/fdomdocument": "~1.4"
+            },
+            "bin": [
+                "phpcpd"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Copy/Paste Detector (CPD) for PHP code.",
+            "homepage": "https://github.com/sebastianbergmann/phpcpd",
+            "time": "2016-04-17 19:32:49"
         },
         {
             "name": "sebastian/recursion-context",
@@ -6273,6 +6259,69 @@
             "time": "2016-11-03 08:11:03"
         },
         {
+            "name": "symfony/dependency-injection",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dependency-injection.git",
+                "reference": "037054501c41007c93b6de1b5c7a7acb83523593"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/037054501c41007c93b6de1b5c7a7acb83523593",
+                "reference": "037054501c41007c93b6de1b5c7a7acb83523593",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "conflict": {
+                "symfony/yaml": "<3.2"
+            },
+            "require-dev": {
+                "symfony/config": "~2.8|~3.0",
+                "symfony/expression-language": "~2.8|~3.0",
+                "symfony/yaml": "~3.2"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/expression-language": "For using expressions in service container configuration",
+                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\DependencyInjection\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony DependencyInjection Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-12-08 15:27:33"
+        },
+        {
             "name": "symfony/dom-crawler",
             "version": "v3.2.1",
             "source": {
@@ -6384,6 +6433,46 @@
             "time": "2016-12-10 10:07:06"
         },
         {
+            "name": "theseer/fdomdocument",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/theseer/fDOMDocument.git",
+                "reference": "d9ad139d6c2e8edf5e313ffbe37ff13344cf0684"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/theseer/fDOMDocument/zipball/d9ad139d6c2e8edf5e313ffbe37ff13344cf0684",
+                "reference": "d9ad139d6c2e8edf5e313ffbe37ff13344cf0684",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "lib-libxml": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Arne Blankerts",
+                    "email": "arne@blankerts.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "The classes contained within this repository extend the standard DOM to use exceptions at all occasions of errors instead of PHP warnings or notices. They also add various custom methods and shortcuts for convenience and to simplify the usage of DOM.",
+            "homepage": "https://github.com/theseer/fDOMDocument",
+            "time": "2015-05-27 22:58:02"
+        },
+        {
             "name": "yiisoft/yii2-debug",
             "version": "2.0.7",
             "source": {
@@ -6481,7 +6570,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kartik-v/yii2-grid": 20
+        "kartik-v/yii2-grid": 20,
+        "phpmd/phpmd": 0
     },
     "prefer-stable": false,
     "prefer-lowest": false,

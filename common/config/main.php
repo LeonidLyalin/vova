@@ -37,7 +37,7 @@ return [
             ],
         ]
     ],
-    'language' => 'ru-Ru',
+    'language' => 'zh-Cn',
     'components' => [
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -64,8 +64,12 @@ return [
                 'frontend*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
+                    
                 ],
-                
+                'home*' => [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    //'basePath' => '@common/messages',
+                ],
             ],
             
             

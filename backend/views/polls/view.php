@@ -1,17 +1,19 @@
 <?php
 
+use backend\models\Polls;
 use yii\helpers\Html;
-use yii\widgets\DetailView;
+use yii\helpers\Url;
 use yii\web\View;
+use yii\widgets\DetailView;
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\Polls */
+/* @var $this View */
+/* @var $model Polls */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Polls'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
-$url = "/vova/backend/web/polls-answers/indexpart";
+$url = Url::to("@web/polls-answers/indexpart");
 $this->registerJS(
         '
                       

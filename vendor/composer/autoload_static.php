@@ -11,10 +11,8 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'fe1bcd0336136e435eaf197895daf81a' => __DIR__ . '/..' . '/nikic/php-parser/lib/bootstrap.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         '742b7e606e92b28dd726e835467f413a' => __DIR__ . '/..' . '/herrera-io/json/src/lib/json_version.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         'f0e9d233388e461ee3c460665eb265f0' => __DIR__ . '/..' . '/herrera-io/phar-update/src/lib/constants.php',
         '180092cfc969a12e06f2132a203a3184' => __DIR__ . '/..' . '/codeception/verify/src/Codeception/function.php',
     );
@@ -31,7 +29,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'yii\\composer\\' => 13,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
-            'yii2mod\\google\\maps\\markers\\' => 28,
         ),
         'v' => 
         array (
@@ -60,7 +57,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         ),
         'd' => 
         array (
-            'dosamigos\\google\\maps\\' => 22,
             'dosamigos\\datepicker\\' => 21,
         ),
         'c' => 
@@ -92,6 +88,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\DomCrawler\\' => 29,
+            'Symfony\\Component\\DependencyInjection\\' => 38,
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
@@ -103,6 +100,7 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'PDepend\\' => 8,
         ),
         'M' => 
         array (
@@ -119,8 +117,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
-            'GuzzleHttp\\Promise\\' => 19,
-            'GuzzleHttp\\' => 11,
         ),
         'F' => 
         array (
@@ -176,10 +172,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
-        'yii2mod\\google\\maps\\markers\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/yii2mod/yii2-google-maps-markers',
-        ),
         'voime\\GoogleMaps\\' => 
         array (
             0 => __DIR__ . '/..' . '/voime/yii2-google-maps',
@@ -231,10 +223,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'kartik\\base\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base',
-        ),
-        'dosamigos\\google\\maps\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/2amigos/yii2-google-maps-library',
         ),
         'dosamigos\\datepicker\\' => 
         array (
@@ -324,6 +312,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/symfony/dom-crawler',
         ),
+        'Symfony\\Component\\DependencyInjection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dependency-injection',
+        ),
         'Symfony\\Component\\Debug\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/debug',
@@ -356,6 +348,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'PDepend\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pdepend/pdepend/src/main/php/PDepend',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -371,14 +367,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'GuzzleHttp\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
-        ),
-        'GuzzleHttp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'Faker\\' => 
         array (
@@ -451,6 +439,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'Parsedown' => 
             array (
                 0 => __DIR__ . '/..' . '/erusev/parsedown',
+            ),
+            'PHPMD\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpmd/phpmd/src/main/php',
             ),
         ),
         'M' => 
@@ -987,6 +979,8 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'SebastianBergmann\\Environment\\Console' => __DIR__ . '/..' . '/sebastian/environment/src/Console.php',
         'SebastianBergmann\\Environment\\Runtime' => __DIR__ . '/..' . '/sebastian/environment/src/Runtime.php',
         'SebastianBergmann\\Exporter\\Exporter' => __DIR__ . '/..' . '/sebastian/exporter/src/Exporter.php',
+        'SebastianBergmann\\FinderFacade\\Configuration' => __DIR__ . '/..' . '/sebastian/finder-facade/src/Configuration.php',
+        'SebastianBergmann\\FinderFacade\\FinderFacade' => __DIR__ . '/..' . '/sebastian/finder-facade/src/FinderFacade.php',
         'SebastianBergmann\\GlobalState\\Blacklist' => __DIR__ . '/..' . '/sebastian/global-state/src/Blacklist.php',
         'SebastianBergmann\\GlobalState\\CodeExporter' => __DIR__ . '/..' . '/sebastian/global-state/src/CodeExporter.php',
         'SebastianBergmann\\GlobalState\\Exception' => __DIR__ . '/..' . '/sebastian/global-state/src/Exception.php',
@@ -996,6 +990,17 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'SebastianBergmann\\ObjectEnumerator\\Enumerator' => __DIR__ . '/..' . '/sebastian/object-enumerator/src/Enumerator.php',
         'SebastianBergmann\\ObjectEnumerator\\Exception' => __DIR__ . '/..' . '/sebastian/object-enumerator/src/Exception.php',
         'SebastianBergmann\\ObjectEnumerator\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/object-enumerator/src/InvalidArgumentException.php',
+        'SebastianBergmann\\PHPCPD\\CLI\\Application' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CLI/Application.php',
+        'SebastianBergmann\\PHPCPD\\CLI\\Command' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CLI/Command.php',
+        'SebastianBergmann\\PHPCPD\\CodeClone' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeClone.php',
+        'SebastianBergmann\\PHPCPD\\CodeCloneFile' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeCloneFile.php',
+        'SebastianBergmann\\PHPCPD\\CodeCloneMap' => __DIR__ . '/..' . '/sebastian/phpcpd/src/CodeCloneMap.php',
+        'SebastianBergmann\\PHPCPD\\Detector\\Detector' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Detector.php',
+        'SebastianBergmann\\PHPCPD\\Detector\\Strategy\\AbstractStrategy' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Strategy/Abstract.php',
+        'SebastianBergmann\\PHPCPD\\Detector\\Strategy\\DefaultStrategy' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Detector/Strategy/Default.php',
+        'SebastianBergmann\\PHPCPD\\Log\\AbstractXmlLogger' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Log/AbstractXmlLogger.php',
+        'SebastianBergmann\\PHPCPD\\Log\\PMD' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Log/PMD.php',
+        'SebastianBergmann\\PHPCPD\\Log\\Text' => __DIR__ . '/..' . '/sebastian/phpcpd/src/Log/Text.php',
         'SebastianBergmann\\RecursionContext\\Context' => __DIR__ . '/..' . '/sebastian/recursion-context/src/Context.php',
         'SebastianBergmann\\RecursionContext\\Exception' => __DIR__ . '/..' . '/sebastian/recursion-context/src/Exception.php',
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
@@ -1004,6 +1009,20 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'TTFontFile' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/ttfontsuni.php',
         'TTFontFile_Analysis' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/ttfontsuni_analysis.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
+        'TheSeer\\fDOM\\CSS\\DollarEqualRule' => __DIR__ . '/..' . '/theseer/fdomdocument/src/css/DollarEqualRule.php',
+        'TheSeer\\fDOM\\CSS\\NotRule' => __DIR__ . '/..' . '/theseer/fdomdocument/src/css/NotRule.php',
+        'TheSeer\\fDOM\\CSS\\NthChildRule' => __DIR__ . '/..' . '/theseer/fdomdocument/src/css/NthChildRule.php',
+        'TheSeer\\fDOM\\CSS\\RegexRule' => __DIR__ . '/..' . '/theseer/fdomdocument/src/css/RegexRule.php',
+        'TheSeer\\fDOM\\CSS\\RuleInterface' => __DIR__ . '/..' . '/theseer/fdomdocument/src/css/RuleInterface.php',
+        'TheSeer\\fDOM\\CSS\\Translator' => __DIR__ . '/..' . '/theseer/fdomdocument/src/css/Translator.php',
+        'TheSeer\\fDOM\\XPathQuery' => __DIR__ . '/..' . '/theseer/fdomdocument/src/XPathQuery.php',
+        'TheSeer\\fDOM\\XPathQueryException' => __DIR__ . '/..' . '/theseer/fdomdocument/src/XPathQueryException.php',
+        'TheSeer\\fDOM\\fDOMDocument' => __DIR__ . '/..' . '/theseer/fdomdocument/src/fDOMDocument.php',
+        'TheSeer\\fDOM\\fDOMDocumentFragment' => __DIR__ . '/..' . '/theseer/fdomdocument/src/fDOMDocumentFragment.php',
+        'TheSeer\\fDOM\\fDOMElement' => __DIR__ . '/..' . '/theseer/fdomdocument/src/fDOMElement.php',
+        'TheSeer\\fDOM\\fDOMException' => __DIR__ . '/..' . '/theseer/fdomdocument/src/fDOMException.php',
+        'TheSeer\\fDOM\\fDOMNode' => __DIR__ . '/..' . '/theseer/fdomdocument/src/fDOMNode.php',
+        'TheSeer\\fDOM\\fDOMXPath' => __DIR__ . '/..' . '/theseer/fdomdocument/src/fDOMXPath.php',
         'UCDN' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/ucdn.php',
         'bmp' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/bmp.php',
         'cssmgr' => __DIR__ . '/..' . '/kartik-v/mpdf/classes/cssmgr.php',

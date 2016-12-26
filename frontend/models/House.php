@@ -42,9 +42,9 @@ class House extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('app', 'ID'),
-            'street' => Yii::t('app', 'Улица'),
-            'adress'=> Yii::t('app', 'Дом'),
+            'id' => Yii::t('frontend', 'ID'),
+            'street' => Yii::t('frontend', 'Street'),
+            'adress'=> Yii::t('frontend', 'House'),
            // 'number' => Yii::t('app', 'Номер'),
            // 'letter' => Yii::t('app', 'Буква'),
         ];

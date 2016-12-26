@@ -27,9 +27,9 @@
         "modernkernel/yii2-fontawesome": "*",
         
        
-        "2amigos/yii2-google-maps-library" : "*",
+        
         "voime/yii2-google-maps": "*",
-        "yii2mod/yii2-google-maps-markers": "*",
+      
         
         "yiidoc/yii2-redactor": "*",
         
@@ -50,6 +50,7 @@
         
         
         
+        
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -57,7 +58,11 @@
         "yiisoft/yii2-faker": "~2.0.0",
 
         "codeception/base": "^2.2.3",
-        "codeception/verify": "~0.3.1"
+        "codeception/verify": "~0.3.1",
+        "phpmd/phpmd" : "@stable",
+        "sebastian/phpcpd": "*",
+        "phpcheckstyle/phpcheckstyle": "dev-master"
+    
         
     },
     "config": {

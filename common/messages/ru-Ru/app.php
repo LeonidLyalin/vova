@@ -58,7 +58,7 @@ return [
      'Showing <strong>{begin}-{end}</strong> of <strong>{totalCount}</strong>.' => 'Показаны записи  <strong>{begin}-{end}</strong> из <strong>{totalCount}</strong>.',
      'Submit' =>'Отправить',
      'Name' => 'Имя',
-     'Contact' => 'Контакты',
+     'Contacts' => 'Контакты',
      'Subject' => 'Тема',
      'Body' => 'Сообщение',
      'Email' => 'Электронная почта',

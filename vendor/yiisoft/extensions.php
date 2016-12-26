@@ -39,15 +39,6 @@ return array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
     ),
   ),
-  'modernkernel/yii2-slugify' => 
-  array (
-    'name' => 'modernkernel/yii2-slugify',
-    'version' => '1.0.0.0',
-    'alias' => 
-    array (
-      '@modernkernel/slugify' => $vendorDir . '/modernkernel/yii2-slugify',
-    ),
-  ),
   'modernkernel/yii2-flag-icon-css' => 
   array (
     'name' => 'modernkernel/yii2-flag-icon-css',
@@ -129,15 +120,6 @@ return array (
       '@kartik/mpdf' => $vendorDir . '/kartik-v/yii2-mpdf',
     ),
   ),
-  'yii2mod/yii2-google-maps-markers' => 
-  array (
-    'name' => 'yii2mod/yii2-google-maps-markers',
-    'version' => '1.2.0.0',
-    'alias' => 
-    array (
-      '@yii2mod/google/maps/markers' => $vendorDir . '/yii2mod/yii2-google-maps-markers',
-    ),
-  ),
   'yiisoft/yii2-debug' => 
   array (
     'name' => 'yiisoft/yii2-debug',
@@ -199,6 +181,15 @@ return array (
     'alias' => 
     array (
       '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
+    ),
+  ),
+  'modernkernel/yii2-slugify' => 
+  array (
+    'name' => 'modernkernel/yii2-slugify',
+    'version' => '1.0.1.0',
+    'alias' => 
+    array (
+      '@modernkernel/slugify' => $vendorDir . '/modernkernel/yii2-slugify',
     ),
   ),
 );

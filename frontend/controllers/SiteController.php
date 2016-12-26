@@ -78,10 +78,7 @@ class SiteController extends Controller
         return $this->render('index');
     }
     
-    public function action2gis()
-    {
-        return $this->render('2gis');
-    }
+   
 
     /**
      * Logs in a user.

@@ -153,6 +153,14 @@
             'ﻹ': 'lai',
             'ﻵ': 'laa',
 
+            // Persian additional characters than Arabic
+            'گ': 'g',
+            'چ': 'ch',
+            'پ': 'p',
+            'ژ': 'zh',
+            'ک': 'k',
+            'ی': 'y',
+
             // Arabic diactrics
             'َ': 'a',
             'ً': 'an',
@@ -173,6 +181,18 @@
             '٧': '7',
             '٨': '8',
             '٩': '9',
+
+            // Persian numbers
+            '۰': '0',
+            '۱': '1',
+            '۲': '2',
+            '۳': '3',
+            '۴': '4',
+            '۵': '5',
+            '۶': '6',
+            '۷': '7',
+            '۸': '8',
+            '۹': '9',
 
             // Burmese consonants
             'က': 'k',
@@ -372,7 +392,7 @@
             'Φ': 'F',
             'Χ': 'X',
             'Ψ': 'PS',
-            'Ω': 'W',
+            'Ω': 'O',
             'Ά': 'A',
             'Έ': 'E',
             'Ί': 'I',
@@ -717,7 +737,18 @@
             '฿': 'THB',
             '₨': 'INR',
             '₹': 'INR',
-            '₰': 'PF'
+            '₰': 'PF',
+            '₺': 'TRY',
+            '؋': 'AFN',
+            '₼': 'AZN',
+            'лв': 'BGN',
+            '៛': 'KHR',
+            '₡': 'CRC',
+            '₸': 'KZT',
+            'ден': 'MKD',
+            'zł': 'PLN',
+            '₽': 'RUB',
+            '₾': 'GEL'
 
         };
 
@@ -989,14 +1020,14 @@
                 '¤': 'moneda'
             },
 
-            'cz': {
+            'cs': {
                 '∆': 'delta',
                 '∞': 'nekonecno',
                 '♥': 'laska',
                 '&': 'a',
                 '|': 'nebo',
-                '<': 'mene jako',
-                '>': 'vice jako',
+                '<': 'mensi nez',
+                '>': 'vetsi nez',
                 '∑': 'soucet',
                 '¤': 'mena'
             },
@@ -1049,6 +1080,30 @@
                 '¤': 'moneda'
             },
 
+            'fa': {
+                '∆': 'delta',
+                '∞': 'bi-nahayat',
+                '♥': 'eshgh',
+                '&': 'va',
+                '|': 'ya',
+                '<': 'kamtar-az',
+                '>': 'bishtar-az',
+                '∑': 'majmooe',
+                '¤': 'vahed'
+            },
+
+            'fi': {
+                '∆': 'delta',
+                '∞': 'aarettomyys',
+                '♥': 'rakkaus',
+                '&': 'ja',
+                '|': 'tai',
+                '<': 'pienempi kuin',
+                '>': 'suurempi kuin',
+                '∑': 'summa',
+                '¤': 'valuutta'
+            },
+
             'fr': {
                 '∆': 'delta',
                 '∞': 'infiniment',
@@ -1087,7 +1142,17 @@
                 '¤': 'moneta'
             },
 
-            'lt': {},
+            'lt': {
+                '∆': 'delta',
+                '∞': 'begalybe',
+                '♥': 'meile',
+                '&': 'ir',
+                '|': 'ar',
+                '<': 'maziau nei',
+                '>': 'daugiau nei',
+                '∑': 'suma',
+                '¤': 'valiuta'
+            },
 
             'lv': {
                 '∆': 'delta',
