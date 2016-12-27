@@ -1,6 +1,12 @@
 Yii Framework 2 debug extension Change Log
 ==========================================
 
+2.0.8 under development
+-----------------------
+
+- Enh #179: Increased request time logging accuracy and precision (samdark)
+
+
 2.0.7 under development
 -----------------------
 

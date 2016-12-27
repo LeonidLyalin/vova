@@ -91,7 +91,7 @@ abstract class BaseDriverTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($m);
 
         $p = new PropertyMetadata($m->name, 'price');
-        $p->type = array('name' => 'double', 'params' => array());
+        $p->type = array('name' => 'float', 'params' => array());
         $p->xmlValue = true;
         $this->assertEquals($p, $m->propertyMetadata['price']);
     }
@@ -99,7 +99,7 @@ abstract class BaseDriverTest extends \PHPUnit_Framework_TestCase
     public function testXMLListAbsentNode()
     {
         $m = $this->getDriver()->loadMetadataForClass(new \ReflectionClass('JMS\Serializer\Tests\Fixtures\ObjectWithAbsentXmlListNode'));
-        
+
         $this->assertArrayHasKey('absent', $m->propertyMetadata);
         $this->assertArrayHasKey('present', $m->propertyMetadata);
         $this->assertArrayHasKey('skipDefault', $m->propertyMetadata);
@@ -166,6 +166,23 @@ abstract class BaseDriverTest extends \PHPUnit_Framework_TestCase
             array(
                 'car' => 'JMS\Serializer\Tests\Fixtures\Discriminator\Car',
                 'moped' => 'JMS\Serializer\Tests\Fixtures\Discriminator\Moped',
+            ),
+            $m->discriminatorMap
+        );
+    }
+
+    public function testLoadDiscriminatorWithGroup()
+    {
+        /** @var $m ClassMetadata */
+        $m = $this->getDriver()->loadMetadataForClass(new \ReflectionClass('JMS\Serializer\Tests\Fixtures\DiscriminatorGroup\Vehicle'));
+
+        $this->assertNotNull($m);
+        $this->assertEquals('type', $m->discriminatorFieldName);
+        $this->assertEquals(array('foo'), $m->discriminatorGroups);
+        $this->assertEquals($m->name, $m->discriminatorBaseClass);
+        $this->assertEquals(
+            array(
+                'car' => 'JMS\Serializer\Tests\Fixtures\DiscriminatorGroup\Car'
             ),
             $m->discriminatorMap
         );

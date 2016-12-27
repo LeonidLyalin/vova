@@ -13,6 +13,9 @@ namespace Symfony\Component\DependencyInjection\Tests;
 
 use Symfony\Component\DependencyInjection\DefinitionDecorator;
 
+/**
+ * @group legacy
+ */
 class DefinitionDecoratorTest extends \PHPUnit_Framework_TestCase
 {
     public function testConstructor()

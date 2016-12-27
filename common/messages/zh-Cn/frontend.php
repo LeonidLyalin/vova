@@ -75,6 +75,13 @@ return [
     'Pasports' => '护照',
     'Administrative proceedings' => '行政诉讼',
     'About' => '关于',
+    'SIGNUP' => '注册',
+    'Signup' => '注册',
+     'Please fill out the following fields to signup:' => '请填写以下字段进行注册：',
+     'Password' => '密码',
+     'Email' => '电子邮件',
+     'Username' => '用户名',
+     'Passports' => '描述'
      
      
 ];

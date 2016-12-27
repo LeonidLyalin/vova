@@ -39,7 +39,9 @@ return [
     ],
     'language' => 'en-En',
     'components' => [
-        
+        'languageSwitcher' => [
+            'class' => 'common\components\languageSwitcher',
+        ],
 //        'languagepicker' => [
 //            'class' => 'lajax\languagepicker\Component',
 //            'languages' => ['en-En', 'ru-Ru', 'zh-Cn'], // List of available languages (icons only)
@@ -81,6 +83,10 @@ return [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
                 ],
+                'info*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages',
+                ],
                 'home*' => [
                     'class' => 'yii\i18n\DbMessageSource',
                 //'basePath' => '@common/messages',
@@ -110,7 +116,12 @@ return [
             'defaultRoles' => ['guest'],
         ],
         'urlManager' => [
-            'class' => 'yii\web\UrlManager',
+            'class' => 'codemix\localeurls\UrlManager',
+            'languages' => [
+                'ru' => 'ru-Ru',
+                'en' => 'en-En',
+                'cn' => 'zh-Cn'],
+            'enableDefaultLanguageUrlCode' => true,
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         // 'rules' => ['<alias:\w+>' => 'site/<alias>',

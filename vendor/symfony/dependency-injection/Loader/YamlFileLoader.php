@@ -11,8 +11,8 @@
 
 namespace Symfony\Component\DependencyInjection\Loader;
 
-use Symfony\Component\DependencyInjection\DefinitionDecorator;
 use Symfony\Component\DependencyInjection\Alias;
+use Symfony\Component\DependencyInjection\ChildDefinition;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
@@ -189,7 +189,7 @@ class YamlFileLoader extends FileLoader
         }
 
         if (isset($service['parent'])) {
-            $definition = new DefinitionDecorator($service['parent']);
+            $definition = new ChildDefinition($service['parent']);
         } else {
             $definition = new Definition();
         }
@@ -267,7 +267,7 @@ class YamlFileLoader extends FileLoader
 
             foreach ($service['tags'] as $tag) {
                 if (!is_array($tag)) {
-                    throw new InvalidArgumentException(sprintf('A "tags" entry must be an array for service "%s" in %s. Check your YAML syntax.', $id, $file));
+                    $tag = array('name' => $tag);
                 }
 
                 if (!isset($tag['name'])) {
@@ -302,7 +302,11 @@ class YamlFileLoader extends FileLoader
         }
 
         if (isset($service['autowire'])) {
-            $definition->setAutowired($service['autowire']);
+            if (is_array($service['autowire'])) {
+                $definition->setAutowiredMethods($service['autowire']);
+            } else {
+                $definition->setAutowired($service['autowire']);
+            }
         }
 
         if (isset($service['autowiring_types'])) {
@@ -467,14 +471,12 @@ class YamlFileLoader extends FileLoader
             }
 
             if ('=' === substr($value, -1)) {
+                @trigger_error(sprintf('The "=" suffix that used to disable strict references in Symfony 2.x is deprecated since 3.3 and will be unsupported in 4.0. Remove it in "%s".', $value), E_USER_DEPRECATED);
                 $value = substr($value, 0, -1);
-                $strict = false;
-            } else {
-                $strict = true;
             }
 
             if (null !== $invalidBehavior) {
-                $value = new Reference($value, $invalidBehavior, $strict);
+                $value = new Reference($value, $invalidBehavior);
             }
         }
 

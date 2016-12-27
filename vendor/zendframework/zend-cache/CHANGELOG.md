@@ -2,6 +2,49 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 2.8.0 - TBD
+
+### Added
+
+- [#116](https://github.com/zendframework/zend-cache/pull/116)
+  docblock method chaining consistency
+- [#46](https://github.com/zendframework/zend-cache/issues/46)
+  Add wrapper for PSR-6
+- [#79](https://github.com/zendframework/zend-cache/issues/79)
+  Add capability for the "lock-on-expire" feature (úsed by Zend Data Cache)
+
+### Deprecated
+
+- [#101](https://github.com/zendframework/zend-cache/pull/101)
+  bump minimum php version to 5.6, as 5.5 goes EOL
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- [#61](https://github.com/zendframework/zend-cache/pull/61)
+  Zend Data Cache: minTtl => 1
+
+## 2.7.3 - TBD
+
+### Added
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
 ## 2.7.2 - 2016-12-16
 
 ### Added

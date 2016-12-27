@@ -13,10 +13,10 @@ namespace Symfony\Component\DependencyInjection\Loader;
 
 use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\Config\Util\XmlUtils;
-use Symfony\Component\DependencyInjection\DefinitionDecorator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\Definition;
+use Symfony\Component\DependencyInjection\ChildDefinition;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
@@ -145,7 +145,7 @@ class XmlFileLoader extends FileLoader
         }
 
         if ($parent = $service->getAttribute('parent')) {
-            $definition = new DefinitionDecorator($parent);
+            $definition = new ChildDefinition($parent);
         } else {
             $definition = new Definition();
         }
@@ -237,6 +237,19 @@ class XmlFileLoader extends FileLoader
 
         foreach ($this->getChildren($service, 'autowiring-type') as $type) {
             $definition->addAutowiringType($type->textContent);
+        }
+
+        $autowireTags = array();
+        foreach ($this->getChildren($service, 'autowire') as $type) {
+            $autowireTags[] = $type->textContent;
+        }
+
+        if ($autowireTags) {
+            if ($service->hasAttribute('autowire')) {
+                throw new InvalidArgumentException(sprintf('The "autowire" attribute cannot be used together with "<autowire>" tags for service "%s" in %s.', (string) $service->getAttribute('id'), $file));
+            }
+
+            $definition->setAutowiredMethods($autowireTags);
         }
 
         if ($value = $service->getAttribute('decorates')) {
@@ -346,7 +359,7 @@ class XmlFileLoader extends FileLoader
                 $arg->setAttribute('key', $arg->getAttribute('name'));
             }
 
-            // this is used by DefinitionDecorator to overwrite a specific
+            // this is used by ChildDefinition to overwrite a specific
             // argument of the parent definition
             if ($arg->hasAttribute('index')) {
                 $key = 'index_'.$arg->getAttribute('index');
@@ -374,13 +387,7 @@ class XmlFileLoader extends FileLoader
                         $invalidBehavior = ContainerInterface::NULL_ON_INVALID_REFERENCE;
                     }
 
-                    if ($strict = $arg->getAttribute('strict')) {
-                        $strict = XmlUtils::phpize($strict);
-                    } else {
-                        $strict = true;
-                    }
-
-                    $arguments[$key] = new Reference($arg->getAttribute('id'), $invalidBehavior, $strict);
+                    $arguments[$key] = new Reference($arg->getAttribute('id'), $invalidBehavior);
                     break;
                 case 'expression':
                     $arguments[$key] = new Expression($arg->nodeValue);

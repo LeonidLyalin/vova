@@ -234,9 +234,10 @@ class SiteController extends Controller
         ]);
     }
     
-    public function actionLanguage($language='ru-Ru')
+    public function actionLanguage()
     {
-        Yii::$app->language = $language;
-        return $this->render('index');
+        
+        //Yii::$app->language = $language;
+        return $this->render('index',[]);
     }
 }

@@ -10,33 +10,27 @@
 
 namespace SebastianBergmann\PHPCPD;
 
-use SebastianBergmann\PHPCPD\CodeCloneFile;
-
 /**
  * Represents an exact code clone.
  *
- * @author    Sebastian Bergmann <sebastian@phpunit.de>
- * @copyright Sebastian Bergmann <sebastian@phpunit.de>
- * @license   http://www.opensource.org/licenses/BSD-3-Clause  The BSD 3-Clause License
- * @link      http://github.com/sebastianbergmann/phpcpd/tree
  * @since     Class available since Release 1.1.0
  */
 class CodeClone
 {
     /**
-     * @var integer Size of the clone (lines)
+     * @var int Size of the clone (lines)
      */
     private $size;
 
     /**
-     * @var integer Size of the clone (tokens)
+     * @var int Size of the clone (tokens)
      */
     private $tokens;
 
     /**
      * @var CodeCloneFile[] Files with this code clone
      */
-    private $files = array();
+    private $files = [];
 
     /**
      * @var string Unique ID of Code Duplicate Fragment
@@ -44,7 +38,7 @@ class CodeClone
     private $id;
 
     /**
-     * @var Lines of the clone
+     * @var string Lines of the clone
      */
     private $lines = '';
 
@@ -53,8 +47,8 @@ class CodeClone
      *
      * @param CodeCloneFile $fileA
      * @param CodeCloneFile $fileB
-     * @param integer       $size
-     * @param integer       $tokens
+     * @param int           $size
+     * @param int           $tokens
      */
     public function __construct(CodeCloneFile $fileA, CodeCloneFile $fileB, $size, $tokens)
     {
@@ -93,7 +87,8 @@ class CodeClone
     /**
      * Returns the lines of the clone.
      *
-     * @param  string $prefix
+     * @param string $prefix
+     *
      * @return string The lines of the clone
      */
     public function getLines($prefix = '')
@@ -107,11 +102,11 @@ class CodeClone
                 $this->size
             );
 
-            $indent = array();
+            $indent = [];
 
             foreach ($lines as &$line) {
                 $line    = rtrim($line, " \t\0\x0B");
-                $line    = str_replace("\t", "    ", $line);
+                $line    = str_replace("\t", '    ', $line);
                 $_indent = strlen($line) - strlen(ltrim($line));
 
                 if ($_indent > 1) {
@@ -129,7 +124,7 @@ class CodeClone
                 }
             }
 
-            $this->lines = join('', $lines);
+            $this->lines = implode('', $lines);
         }
 
         return $this->lines;
@@ -144,7 +139,7 @@ class CodeClone
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getSize()
     {
@@ -152,7 +147,7 @@ class CodeClone
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getTokens()
     {

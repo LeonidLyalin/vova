@@ -550,6 +550,7 @@ Capability | Value
 `staticTtl` | `true`
 `ttlPrecision` | 1
 `useRequestTime` | value of `apc.use_request_time` from `php.ini`
+`lockOnExpire` | 0
 `maxKeyLength` | 5182
 `namespaceIsPrefix` | `true`
 `namespaceSeparator` | Option value of `namespace_separator`
@@ -630,6 +631,7 @@ Capability | Value
 `staticTtl` | `false`
 `ttlPrecision` | 1
 `useRequestTime` | `false`
+`lockOnExpire` | 0
 `maxKeyLength` | 251
 `namespaceIsPrefix` | `true`
 `namespaceSeparator` | Option value of `namespace_separator`
@@ -674,6 +676,7 @@ Capability | Value
 `staticTtl` | `true`
 `ttlPrecision` | 1
 `useRequestTime` | `false`
+`lockOnExpire` | 0
 `maxKeyLength` | 255
 `namespaceIsPrefix` | `true`
 `namespaceSeparator` | none
@@ -706,6 +709,7 @@ Capability | Value
 `staticTtl` | `true`
 `ttlPrecision` | 1
 `useRequestTime` | `false`
+`lockOnExpire` | 0
 `maxKeyLength` | 255
 `namespaceIsPrefix` | `true`
 `namespaceSeparator` | none
@@ -755,6 +759,7 @@ Capability | Value
 `staticTtl` | `false`
 `ttlPrecision` | 0.05
 `useRequestTime` | `false`
+`lockOnExpire` | 0
 `maxKeyLength` | 0
 `namespaceIsPrefix` | `false`
 
@@ -800,8 +805,10 @@ Capability | Value
 `staticTtl` | `true`
 `ttlPrecision` | 1
 `useRequestTime` | `false`
+`lockOnExpire` | 0
 `maxKeyLength` | 255
-`namespaceIsPrefix` | <Option value of namespace_separator>
+`namespaceIsPrefix` | `true`
+`namespaceSeparator` | <Option value of namespace_separator>
 
 ### Adapter specific options
 
@@ -843,6 +850,7 @@ Capability | Value
 `staticTtl` | `true`
 `ttlPrecision` | 1
 `useRequestTime` | `apc.use_request_time` `php.ini` value.
+`lockOnExpire` | 0
 `namespaceIsPrefix` | `true`
 `namespaceSeparator` | Option value of `namespace_separator`
 
@@ -878,6 +886,7 @@ Capability | Value
 `staticTtl` | `true`
 `ttlPrecision` | 1
 `useRequestTime` | `true`
+`lockOnExpire` | 0
 `maxKeyLength` | 5182
 `namespaceIsPrefix` | `true`
 `namespaceSeparator` | Option value of `namespace_separator`
@@ -916,6 +925,7 @@ Capability | Value
 `staticTtl` | `true`
 `ttlPrecision` | 1
 `useRequestTime` | `false`
+`lockOnExpire` | if 'zend_datacache.lock_on_expire' is enabled 120 else 0
 `namespaceIsPrefix` | `true`
 `namespaceSeparator` | `::`
 
@@ -943,6 +953,7 @@ Capability | Value
 `staticTtl` | `true`
 `ttlPrecision` | 1
 `useRequestTime` | `false`
+`lockOnExpire` | if 'zend_datacache.lock_on_expire' is enabled 120 else 0
 `namespaceIsPrefix` | `true`
 `namespaceSeparator` | `::`
 

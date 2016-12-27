@@ -2,9 +2,9 @@
 /* @var $this View */
 /* @var $content string */
 
+use common\components\languageSwitcher;
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
-use lajax\languagepicker\widgets\LanguagePicker;
 use modernkernel\bootstrapsocial\Button;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -12,7 +12,6 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
 use yii\widgets\Breadcrumbs;
-use common\components\languageSwitcher;
 
 AppAsset::register($this);
 ?>
@@ -133,11 +132,11 @@ function setBootstrap($className, $option, $params, $media = '@media only screen
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <?= Html::a('Russian',['site/language', 'language'=>'ru-Ru']);?></br>
-                    <?= Html::a('English',['site/language', 'language' =>'en-En']);?></br>
-                    <?= Html::a('中文',['site/language','language' => 'zh-Cn']);?></br>
-                    <?= languageSwitcher::Widget() ?>
+                    <?= Html::a('Russian',['site/index', 'language'=>'ru-Ru']);?></br>
+                    <?= Html::a('English',['site/index', 'language' =>'en-En']);?></br>
+                    <?= Html::a('中文',['site/index','language' => 'zh-Cn']);?></br>
                     
+                     
                    
                 </div>
             </div>

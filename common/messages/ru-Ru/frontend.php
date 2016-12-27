@@ -74,6 +74,13 @@ return [
      'More...' => 'Прочее',
      'Passports' => 'Паспорта объектов',
      'Administrative proceedings' => 'Административная ответственность',
+     'About' => 'О компании',
+     'SIGNUP' => 'РЕГИСТРАЦИЯ',
+     'Signup' => 'Регистрация',
+     'Please fill out the following fields to signup:' => 'Пожалуйста, заполните форму для регистрации',
+     'Password' => 'Пароль',
+     'Email' => 'Электронная почта',
+     'Username' => 'Имя пользователя',
      
      
 ];

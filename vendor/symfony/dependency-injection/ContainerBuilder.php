@@ -711,6 +711,22 @@ class ContainerBuilder extends Container implements TaggedContainerInterface
     }
 
     /**
+     * Registers an autowired service definition.
+     *
+     * This method implements a shortcut for using setDefinition() with
+     * an autowired definition.
+     *
+     * @param string      $id    The service identifier
+     * @param null|string $class The service class
+     *
+     * @return Definition The created definition
+     */
+    public function autowire($id, $class = null)
+    {
+        return $this->setDefinition($id, (new Definition($class))->setAutowired(true));
+    }
+
+    /**
      * Adds the service definitions.
      *
      * @param Definition[] $definitions An array of service definitions
@@ -835,7 +851,7 @@ class ContainerBuilder extends Container implements TaggedContainerInterface
      */
     private function createService(Definition $definition, $id, $tryProxy = true)
     {
-        if ($definition instanceof DefinitionDecorator) {
+        if ($definition instanceof ChildDefinition) {
             throw new RuntimeException(sprintf('Constructing service "%s" from a parent definition is not supported at build time.', $id));
         }
 
@@ -1028,9 +1044,11 @@ class ContainerBuilder extends Container implements TaggedContainerInterface
     /**
      * Resolves env parameter placeholders in a string or an array.
      *
-     * @param mixed       $value     The value to resolve
-     * @param string|null $format    A sprintf() format to use as replacement for env placeholders or null to use the default parameter format
-     * @param array       &$usedEnvs Env vars found while resolving are added to this array
+     * @param mixed            $value     The value to resolve
+     * @param string|true|null $format    A sprintf() format returning the replacement for each env var name or
+     *                                    null to resolve back to the original "%env(VAR)%" format or
+     *                                    true to resolve to the actual values of the referenced env vars
+     * @param array            &$usedEnvs Env vars found while resolving are added to this array
      *
      * @return string The string with env parameters resolved
      */
@@ -1054,12 +1072,20 @@ class ContainerBuilder extends Container implements TaggedContainerInterface
         }
 
         $bag = $this->getParameterBag();
+        if (true === $format) {
+            $value = $bag->resolveValue($value);
+        }
         $envPlaceholders = $bag instanceof EnvPlaceholderParameterBag ? $bag->getEnvPlaceholders() : $this->envPlaceholders;
 
         foreach ($envPlaceholders as $env => $placeholders) {
             foreach ($placeholders as $placeholder) {
                 if (false !== stripos($value, $placeholder)) {
-                    $value = str_ireplace($placeholder, sprintf($format, $env), $value);
+                    if (true === $format) {
+                        $resolved = $bag->escapeValue($this->getEnv($env));
+                    } else {
+                        $resolved = sprintf($format, $env);
+                    }
+                    $value = str_ireplace($placeholder, $resolved, $value);
                     $usedEnvs[$env] = $env;
                     $this->envCounters[$env] = isset($this->envCounters[$env]) ? 1 + $this->envCounters[$env] : 1;
                 }

@@ -78,7 +78,7 @@ class AdapterOptions extends AbstractOptions
      * Adapter using this instance
      *
      * @param  StorageInterface|null $adapter
-     * @return AdapterOptions
+     * @return AdapterOptions Provides a fluent interface
      */
     public function setAdapter(StorageInterface $adapter = null)
     {
@@ -91,7 +91,7 @@ class AdapterOptions extends AbstractOptions
      *
      * @param  string $keyPattern
      * @throws Exception\InvalidArgumentException
-     * @return AdapterOptions
+     * @return AdapterOptions Provides a fluent interface
      */
     public function setKeyPattern($keyPattern)
     {
@@ -132,7 +132,7 @@ class AdapterOptions extends AbstractOptions
      * Set namespace.
      *
      * @param  string $namespace
-     * @return AdapterOptions
+     * @return AdapterOptions Provides a fluent interface
      */
     public function setNamespace($namespace)
     {
@@ -159,7 +159,7 @@ class AdapterOptions extends AbstractOptions
      * Enable/Disable reading data from cache.
      *
      * @param  bool $readable
-     * @return AbstractAdapter
+     * @return AdapterOptions Provides a fluent interface
      */
     public function setReadable($readable)
     {
@@ -185,7 +185,7 @@ class AdapterOptions extends AbstractOptions
      * Set time to live.
      *
      * @param  int|float $ttl
-     * @return AdapterOptions
+     * @return AdapterOptions Provides a fluent interface
      */
     public function setTtl($ttl)
     {
@@ -211,7 +211,7 @@ class AdapterOptions extends AbstractOptions
      * Enable/Disable writing data to cache.
      *
      * @param  bool $writable
-     * @return AdapterOptions
+     * @return AdapterOptions Provides a fluent interface
      */
     public function setWritable($writable)
     {
