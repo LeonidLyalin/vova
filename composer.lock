@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "30e10a4930256ce0f49dbaaa2ac11c1b",
-    "content-hash": "7e6a5dc6409ff94bb995653ed418df99",
+    "hash": "77d05e73a8677717785d56763377e21e",
+    "content-hash": "92128bb73b5b61c37d7788b451e8c332",
     "packages": [
         {
             "name": "2amigos/yii2-date-picker-widget",
@@ -448,16 +448,16 @@
         },
         {
             "name": "bower-asset/jquery.inputmask",
-            "version": "3.2.7",
+            "version": "3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "5a72c563b502b8e05958a524cdfffafe9987be38"
+                "reference": "8a882bc471ba4077c4f8ecbe3d9d61c7558f3ef2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/5a72c563b502b8e05958a524cdfffafe9987be38",
-                "reference": "5a72c563b502b8e05958a524cdfffafe9987be38",
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/8a882bc471ba4077c4f8ecbe3d9d61c7558f3ef2",
+                "reference": "8a882bc471ba4077c4f8ecbe3d9d61c7558f3ef2",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,14 @@
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": [
-                    "./dist/inputmask/inputmask.js"
+                    "./dist/inputmask/inputmask.dependencyLib",
+                    "./dist/inputmask/inputmask",
+                    "./dist/inputmask/inputmask.extensions",
+                    "./dist/inputmask/inputmask.date.extensions",
+                    "./dist/inputmask/inputmask.numeric.extensions",
+                    "./dist/inputmask/inputmask.phone.extensions",
+                    "./dist/inputmask/inputmask.regex.extensions",
+                    "./dist/inputmask/jquery.inputmask"
                 ],
                 "bower-asset-ignore": [
                     "**/*",
@@ -1563,24 +1570,21 @@
         },
         {
             "name": "kartik-v/yii2-grid",
-            "version": "dev-master",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-grid.git",
-                "reference": "58deb2ca56172dd325a87b09644f5af62d47654f"
+                "reference": "448db13904dad68153ef466bbc905b916a2a5900"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/58deb2ca56172dd325a87b09644f5af62d47654f",
-                "reference": "58deb2ca56172dd325a87b09644f5af62d47654f",
+                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/448db13904dad68153ef466bbc905b916a2a5900",
+                "reference": "448db13904dad68153ef466bbc905b916a2a5900",
                 "shasum": ""
             },
             "require": {
                 "kartik-v/yii2-dialog": "~1.0",
                 "kartik-v/yii2-krajee-base": "~1.7"
-            },
-            "suggest": {
-                "kartik-v/yii2-mpdf": "For exporting grids to PDF"
             },
             "type": "yii2-extension",
             "extra": {
@@ -1612,7 +1616,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-12-19 21:36:49"
+            "time": "2016-10-22 16:52:42"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -1753,52 +1757,6 @@
             "description": "A parsing and comparison library for semantic versioning.",
             "homepage": "http://github.com/kherge/Version",
             "time": "2012-08-16 17:13:03"
-        },
-        {
-            "name": "lajax/yii2-language-picker",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lajax/yii2-language-picker.git",
-                "reference": "71fdcdc59b42570d3857bf3e43fb0ea21b087cc0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lajax/yii2-language-picker/zipball/71fdcdc59b42570d3857bf3e43fb0ea21b087cc0",
-                "reference": "71fdcdc59b42570d3857bf3e43fb0ea21b087cc0",
-                "shasum": ""
-            },
-            "require": {
-                "phpspec/php-diff": ">=1.0.2",
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "lajax\\languagepicker\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Lajos Molnar",
-                    "email": "lajax.m@gmail.com"
-                }
-            ],
-            "description": "Yii2 Language Picker Widget",
-            "keywords": [
-                "extension",
-                "languagepicker",
-                "multilanguage",
-                "sample",
-                "translate",
-                "widget",
-                "yii2"
-            ],
-            "time": "2015-09-01 16:53:13"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -2695,6 +2653,47 @@
             "time": "2016-10-10 12:19:37"
         },
         {
+            "name": "pvlg/yii2-language-switcher",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pvlg/yii2-language-switcher.git",
+                "reference": "5cf6eb3cbdd7c82759520178f11795c215351f39"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pvlg/yii2-language-switcher/zipball/5cf6eb3cbdd7c82759520178f11795c215351f39",
+                "reference": "5cf6eb3cbdd7c82759520178f11795c215351f39",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "pvlg\\language\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pavel Gurin",
+                    "email": "gurinpavel.a@gmail.com"
+                }
+            ],
+            "description": "Yii Framework 2.0 Component language switcher",
+            "keywords": [
+                "language",
+                "switcher",
+                "yii2"
+            ],
+            "time": "2014-12-28 22:27:27"
+        },
+        {
             "name": "seld/jsonlint",
             "version": "1.5.0",
             "source": {
@@ -3566,21 +3565,21 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.10",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "5bfcb7a6dfa9771e2248eb8c4448613330f343ff"
+                "reference": "ba13118bbf233a70ea24412b4284f6577508c2f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/5bfcb7a6dfa9771e2248eb8c4448613330f343ff",
-                "reference": "5bfcb7a6dfa9771e2248eb8c4448613330f343ff",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/ba13118bbf233a70ea24412b4284f6577508c2f4",
+                "reference": "ba13118bbf233a70ea24412b4284f6577508c2f4",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/jquery": "2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
-                "bower-asset/jquery.inputmask": "~3.2.2",
+                "bower-asset/jquery.inputmask": "~3.2.2 | ~3.3.3",
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1",
                 "cebe/markdown": "~1.0.0 | ~1.1.0",
@@ -3656,7 +3655,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2016-10-20 12:02:50"
+            "time": "2016-12-26 16:15:19"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -6568,12 +6567,12 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "kartik-v/yii2-grid": 20,
         "phpmd/phpmd": 0
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.4.0"

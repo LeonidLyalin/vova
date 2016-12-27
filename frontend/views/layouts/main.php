@@ -4,6 +4,7 @@
 
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
+use lajax\languagepicker\widgets\LanguagePicker;
 use modernkernel\bootstrapsocial\Button;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -11,6 +12,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
 use yii\widgets\Breadcrumbs;
+use common\components\languageSwitcher;
 
 AppAsset::register($this);
 ?>
@@ -63,16 +65,16 @@ function setBootstrap($className, $option, $params, $media = '@media only screen
         <div class="container" style="background-image: url(<?= Url::to('@web/images/backgound/7.jpg') ?>)">
             <div class="row" >
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <?= Html::style(setBootstrap('imgn', 'padding-left', ['0px', '10px', '20px', '40px'])) ?>
                     <img  class="imgn img-responsive" src="<?= Url::to('@web/images/logo.png') ?>">
                 </div>
                 <?= Html::style(setBootstrap('imgn1', 'padding-left', ['5px', '15px', '25px', '30px'])) ?>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <h1 class="imgn1"><?= Yii::t('frontend', 'House</br>maintenance</br>company') ?></h1>
                 </div>
-                <?= Html::style(setBootstrap('imgn2', 'padding-left', ['40px', '45px', '35px', '100px']))?>
-                <div class="col-md-4">
+                <?= Html::style(setBootstrap('imgn2', 'padding-left', ['40px', '45px', '35px', '100px'])) ?>
+                <div class="col-md-3">
                     <div class="imgn2">
                         <div class="row">
                             <?=
@@ -130,10 +132,19 @@ function setBootstrap($className, $option, $params, $media = '@media only screen
                         </div>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <?= Html::a('Russian',['site/language', 'language'=>'ru-Ru']);?></br>
+                    <?= Html::a('English',['site/language', 'language' =>'en-En']);?></br>
+                    <?= Html::a('中文',['site/language','language' => 'zh-Cn']);?></br>
+                    <?= languageSwitcher::Widget() ?>
+                    
+                   
+                </div>
             </div>
         </div>
+
         <div class="wrap">
-            <?= Html::style(setBootstrap('.glyphicon', 'padding-right', ['0px', '3px', '7px', '10px']))    ?> 
+            <?= Html::style(setBootstrap('.glyphicon', 'padding-right', ['0px', '3px', '7px', '10px'])) ?> 
             <?php
             NavBar::begin([
                 'brandLabel' => false,
@@ -145,7 +156,9 @@ function setBootstrap($className, $option, $params, $media = '@media only screen
                                 border-color: #1e213a;'
                 ],
             ]);
+           
             $menuItems = [
+                
                 ['label' => '<span class="glyphicon glyphicon-home"></span>' . Yii::t('frontend', 'HOME'), 'url' => ['/site/index']],
                 ['label' => '<span class="glyphicon glyphicon-file"></span>' . Yii::t('frontend', 'ABOUT'), 'url' => ['/site/about']],
                 ['label' => '<span class="glyphicon glyphicon-info-sign"></span>' . Yii::t('frontend', 'INFO'), 'url' => ['/site/info']],
@@ -179,8 +192,8 @@ function setBootstrap($className, $option, $params, $media = '@media only screen
                     'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 ])
                 ?>
-                <?= Alert::widget() ?>
-                <?= $content ?>
+<?= Alert::widget() ?>
+<?= $content ?>
             </div>
         </div>
 
@@ -192,7 +205,7 @@ function setBootstrap($className, $option, $params, $media = '@media only screen
             </div>
         </footer>
 
-        <?php $this->endBody() ?>
+<?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>

@@ -3,24 +3,6 @@
 $vendorDir = dirname(__DIR__);
 
 return array (
-  'yiisoft/yii2-swiftmailer' => 
-  array (
-    'name' => 'yiisoft/yii2-swiftmailer',
-    'version' => '2.0.6.0',
-    'alias' => 
-    array (
-      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
-    ),
-  ),
-  'yiisoft/yii2-bootstrap' => 
-  array (
-    'name' => 'yiisoft/yii2-bootstrap',
-    'version' => '2.0.6.0',
-    'alias' => 
-    array (
-      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
-    ),
-  ),
   'yiisoft/yii2-gii' => 
   array (
     'name' => 'yiisoft/yii2-gii',
@@ -129,15 +111,6 @@ return array (
       '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
     ),
   ),
-  'lajax/yii2-language-picker' => 
-  array (
-    'name' => 'lajax/yii2-language-picker',
-    'version' => '1.2.0.0',
-    'alias' => 
-    array (
-      '@lajax/languagepicker' => $vendorDir . '/lajax/yii2-language-picker',
-    ),
-  ),
   'mdmsoft/yii2-admin' => 
   array (
     'name' => 'mdmsoft/yii2-admin',
@@ -174,15 +147,6 @@ return array (
       '@kartik/field' => $vendorDir . '/kartik-v/yii2-field-range',
     ),
   ),
-  'kartik-v/yii2-grid' => 
-  array (
-    'name' => 'kartik-v/yii2-grid',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
-    ),
-  ),
   'modernkernel/yii2-slugify' => 
   array (
     'name' => 'modernkernel/yii2-slugify',
@@ -190,6 +154,42 @@ return array (
     'alias' => 
     array (
       '@modernkernel/slugify' => $vendorDir . '/modernkernel/yii2-slugify',
+    ),
+  ),
+  'yiisoft/yii2-bootstrap' => 
+  array (
+    'name' => 'yiisoft/yii2-bootstrap',
+    'version' => '2.0.6.0',
+    'alias' => 
+    array (
+      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
+    ),
+  ),
+  'yiisoft/yii2-swiftmailer' => 
+  array (
+    'name' => 'yiisoft/yii2-swiftmailer',
+    'version' => '2.0.6.0',
+    'alias' => 
+    array (
+      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
+    ),
+  ),
+  'kartik-v/yii2-grid' => 
+  array (
+    'name' => 'kartik-v/yii2-grid',
+    'version' => '3.1.3.0',
+    'alias' => 
+    array (
+      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid',
+    ),
+  ),
+  'pvlg/yii2-language-switcher' => 
+  array (
+    'name' => 'pvlg/yii2-language-switcher',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@pvlg/language' => $vendorDir . '/pvlg/yii2-language-switcher',
     ),
   ),
 );

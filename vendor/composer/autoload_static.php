@@ -34,6 +34,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             'voime\\GoogleMaps\\' => 17,
         ),
+        'p' => 
+        array (
+            'pvlg\\language\\' => 14,
+        ),
         'm' => 
         array (
             'modernkernel\\slugify\\' => 21,
@@ -42,10 +46,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
             'modernkernel\\flagiconcss\\' => 25,
             'modernkernel\\bootstrapsocial\\' => 29,
             'mdm\\admin\\' => 10,
-        ),
-        'l' => 
-        array (
-            'lajax\\languagepicker\\' => 21,
         ),
         'k' => 
         array (
@@ -176,6 +176,10 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         array (
             0 => __DIR__ . '/..' . '/voime/yii2-google-maps',
         ),
+        'pvlg\\language\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pvlg/yii2-language-switcher',
+        ),
         'modernkernel\\slugify\\' => 
         array (
             0 => __DIR__ . '/..' . '/modernkernel/yii2-slugify',
@@ -199,10 +203,6 @@ class ComposerStaticInita84a89c8339be03f542e33069d3ba516
         'mdm\\admin\\' => 
         array (
             0 => __DIR__ . '/..' . '/mdmsoft/yii2-admin',
-        ),
-        'lajax\\languagepicker\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/lajax/yii2-language-picker',
         ),
         'kartik\\mpdf\\' => 
         array (

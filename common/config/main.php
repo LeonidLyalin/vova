@@ -10,8 +10,8 @@ return [
         '@mdm/admin' => '$PATH\yii2-admin-1.0.3',
     ],
     'modules' => [
-        'polls2'=>[
-            'class'=>'common\modules\polls\Module'],
+        'polls2' => [
+            'class' => 'common\modules\polls\Module'],
         'redactor' => [
             'class' => 'yii\redactor\RedactorModule',
             'uploadDir' => '@webroot/common/image',
@@ -25,7 +25,7 @@ return [
             'controllerMap' => [
                 'assignment' => [
                     'class' => 'mdm\admin\controllers\AssignmentController',
-                    'userClassName' => 'common\models\User',//change app for common
+                    'userClassName' => 'common\models\User', //change app for common
                     'idField' => 'id',
                 ]
             ],
@@ -37,8 +37,23 @@ return [
             ],
         ]
     ],
-    'language' => 'zh-Cn',
+    'language' => 'en-En',
     'components' => [
+        
+//        'languagepicker' => [
+//            'class' => 'lajax\languagepicker\Component',
+//            'languages' => ['en-En', 'ru-Ru', 'zh-Cn'], // List of available languages (icons only)
+//            'cookieName' => 'language', // Name of the cookie.
+//            'cookieDomain' => 'example.com', // Domain of the cookie.
+//            'expireDays' => 64, // The expiration time of the cookie is 64 days.
+//            'callback' => function() {
+//                if (!\Yii::$app->user->isGuest) {
+//                    $user = \Yii::$app->user->identity;
+//                    $user->language = \Yii::$app->language;
+//                    $user->save();
+//                }
+//            }
+//        ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@app/mailer',
@@ -51,30 +66,26 @@ return [
                 'port' => '587',
                 'encryption' => 'tls',
             ],],
-        
         'i18n' => [
             'translations' => [
                 'sourceLanguage' => 'en-En',
-
                 'app*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
                 ],
-                
                 'frontend*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@common/messages',
-                    
+                ],
+                'about*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/messages',
                 ],
                 'home*' => [
                     'class' => 'yii\i18n\DbMessageSource',
-                    //'basePath' => '@common/messages',
+                //'basePath' => '@common/messages',
                 ],
             ],
-            
-            
-            
-            
         ],
 //        'formatter' => [
 //            'class' => 'yii\i18n\Formatter',
@@ -88,7 +99,6 @@ return [
          * http://www.open-open.com/lib/view/open1434638805348.html
          * Yii2-admin RBAC权限管理的实现
          */
-        
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -103,9 +113,8 @@ return [
             'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-           // 'rules' => ['<alias:\w+>' => 'site/<alias>',
-            ],
-        
+        // 'rules' => ['<alias:\w+>' => 'site/<alias>',
+        ],
     ],
 //    'as access' => [
 //        'class' => 'mdm\admin\components\AccessControl',
